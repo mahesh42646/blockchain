@@ -31,17 +31,17 @@ export default function Footer() {
 
   return (
     <footer className="bg-white border-t border-gray-200">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-12 mb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-12 mb-8">
           {/* Logo and QR Code Section */}
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2 mb-6">
+          <div className="flex flex-col sm:col-span-2 lg:col-span-1">
+            <div className="flex items-center gap-2 mb-4 sm:mb-6">
               <div className="w-6 h-6 bg-blue-600 rounded-sm flex items-center justify-center">
                 <div className="w-3 h-3 border-2 border-white"></div>
               </div>
-              <span className="text-xl font-semibold text-gray-900">Blockchain.com</span>
+              <span className="text-lg sm:text-xl font-semibold text-gray-900">Blockchain.com</span>
             </div>
-            <div className="w-32 h-32 bg-white border-2 border-gray-300 rounded mb-3 flex items-center justify-center p-2">
+            <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white border-2 border-gray-300 rounded mb-3 flex items-center justify-center p-2">
               <div className="w-full h-full bg-black grid grid-cols-8 gap-0.5 p-1">
                 {Array.from({ length: 64 }).map((_, i) => {
                   const row = Math.floor(i / 8);
@@ -257,8 +257,8 @@ export default function Footer() {
         </div>
 
         {/* Social Media Icons */}
-        <div className="flex justify-end mb-8">
-          <div className="flex items-center gap-4">
+        <div className="flex justify-center sm:justify-end mb-6 sm:mb-8">
+          <div className="flex items-center gap-3 sm:gap-4">
             <a href="#" className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>

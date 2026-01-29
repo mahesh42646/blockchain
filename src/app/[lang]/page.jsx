@@ -8,31 +8,31 @@ export default function Page() {
 
   return (
     <>
-      <section className="relative h-130 w-full overflow-hidden">
+      <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] w-full overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center "
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: "url('/images/home/home-hero-gradient.svg')",
           }}
         />
 
-        <div className="relative container mx-auto flex justify-center pt-20">
-          <div className="max-w-3xl text-white">
-            <h1 className="text-5xl font-bold leading-tight">
+        <div className="relative container mx-auto flex justify-center pt-12 sm:pt-16 md:pt-20 px-4">
+          <div className="max-w-3xl text-white text-center sm:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
               {t('home.heroTitle')}
             </h1>
 
-            <p className="mt-6 text-[24px] font-sans text-white/90">
+            <p className="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl font-sans text-white/90">
               {t('home.heroSubtitle')}
             </p>
 
-            <div className="mt-8 flex max-w-xl gap-4">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row max-w-xl gap-3 sm:gap-4">
               <input
                 type="email"
                 placeholder={t('home.emailPlaceholder')}
-                className="flex-1 rounded-lg bg-white/10 px-5 py-4 text-white placeholder-white/70 outline-none backdrop-blur-md"
+                className="flex-1 rounded-lg bg-white/10 px-4 sm:px-5 py-3 sm:py-4 text-white placeholder-white/70 outline-none backdrop-blur-md text-sm sm:text-base"
               />
-              <button className="rounded-lg bg-white px-6 py-4 font-semibold text-indigo-600 hover:bg-gray-100">
+              <button className="rounded-lg bg-white px-5 sm:px-6 py-3 sm:py-4 font-semibold text-indigo-600 hover:bg-gray-100 text-sm sm:text-base whitespace-nowrap">
                 {t('home.signUpButton')}
               </button>
             </div>
@@ -40,9 +40,9 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="-mt-45 w-full">
-        <div className="relative z-50 container max-w-5xl mx-auto px-6 mt-32 pb-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <section className="-mt-20 sm:-mt-32 md:-mt-45 w-full">
+        <div className="relative z-50 container max-w-5xl mx-auto px-4 sm:px-6 mt-16 sm:mt-24 md:mt-32 pb-8 sm:pb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               {
                 name: "Bitcoin",
@@ -104,57 +104,57 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="container mx-auto px-6">
+      <section className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-800">{t('home.whyChooseUs')}</h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">{t('home.whyChooseUs')}</h2>
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
             {t('home.whyChooseUsSubtitle')}
           </p>
         </div>
       </section>
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-7xl mx-auto bg-purple-50 rounded-3xl overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="pl-8 md:pl-20 py-12 md:py-16 flex flex-col justify-center">
-                <div className="inline-flex items-center gap-2 rounded-full bg-[#efe7ff] px-4 py-2 text-purple-600 font-medium mb-8 w-fit">
-                  <span className="text-lg">📱</span>
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto bg-purple-50 rounded-2xl sm:rounded-3xl overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+              <div className="px-6 sm:pl-8 md:pl-12 lg:pl-20 py-8 sm:py-12 md:py-16 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 rounded-full bg-[#efe7ff] px-3 sm:px-4 py-1.5 sm:py-2 text-purple-600 font-medium mb-6 sm:mb-8 w-fit text-sm sm:text-base">
+                  <span className="text-base sm:text-lg">📱</span>
                   {t('nav.wallet')}
                 </div>
 
-                <h2 className="text-[42px] leading-tight font-bold text-purple-700 mb-10">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-tight font-bold text-purple-700 mb-6 sm:mb-8 md:mb-10">
                   {t('home.walletTitle')}
                 </h2>
 
-                <div className="space-y-4 mb-14">
-                  <div className="rounded-xl border border-purple-200 bg-[#f3edff] p-5 text-purple-700">
-                    <h4 className="font-semibold mb-2">
+                <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-12 md:mb-14">
+                  <div className="rounded-lg sm:rounded-xl border border-purple-200 bg-[#f3edff] p-4 sm:p-5 text-purple-700">
+                    <h4 className="font-semibold mb-2 text-sm sm:text-base">
                       {t('home.walletFeature1')}
                     </h4>
-                    <p className="text-sm leading-relaxed text-purple-600">
+                    <p className="text-xs sm:text-sm leading-relaxed text-purple-600">
                       {t('home.walletFeature1Desc')}
                     </p>
                   </div>
 
-                  <div className="rounded-xl border border-purple-200 bg-transparent p-5 text-purple-700 font-medium">
+                  <div className="rounded-lg sm:rounded-xl border border-purple-200 bg-transparent p-4 sm:p-5 text-purple-700 font-medium text-sm sm:text-base">
                     {t('home.walletFeature2')}
                   </div>
 
-                  <div className="rounded-xl border border-purple-200 bg-transparent p-5 text-purple-700 font-medium">
+                  <div className="rounded-lg sm:rounded-xl border border-purple-200 bg-transparent p-4 sm:p-5 text-purple-700 font-medium text-sm sm:text-base">
                     {t('home.walletFeature3')}
                   </div>
 
-                  <div className="rounded-xl border border-purple-200 bg-transparent p-5 text-purple-700 font-medium">
+                  <div className="rounded-lg sm:rounded-xl border border-purple-200 bg-transparent p-4 sm:p-5 text-purple-700 font-medium text-sm sm:text-base">
                     {t('home.walletFeature4')}
                   </div>
                 </div>
 
-                <button className="rounded-lg bg-purple-700 px-8 py-4 text-white font-semibold hover:bg-purple-800 transition-colors w-fit">
+                <button className="rounded-lg bg-purple-700 px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold hover:bg-purple-800 transition-colors w-full sm:w-fit text-sm sm:text-base">
                   {t('home.getStarted')}
                 </button>
               </div>
               <div
-                className="bg-cover bg-center min-h-[500px] md:min-h-[600px]"
+                className="bg-cover bg-center min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px]"
                 style={{
                   backgroundImage:
                     "url('/images/home/homepage-app-shapes-bg@2x.png')",

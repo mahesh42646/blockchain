@@ -1,62 +1,71 @@
+'use client';
+
 import Link from "next/link";
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function MegaNavContact() {
+  const params = useParams();
+  const locale = params?.lang || 'en';
+  const { t } = useTranslation();
+
+  const getLocalizedPath = (path) => {
+    return `/${locale}${path}`;
+  };
+
   return (
     <div className="group relative">
-      {/* Trigger Button */}
-      <button className="relative font-bold  text-[20px] justify-center text-slate-300 transition-colors duration-300 hover:text-white cursor-pointer">
+      <button className="relative font-bold text-[20px] justify-center text-slate-300 transition-colors duration-300 hover:text-white cursor-pointer px-2 py-1">
         ...
         <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-linear-to-r from-blue-400 to-purple-500 transition-all duration-300 group-hover:w-full"></span>
       </button>
 
-      {/* Hover buffer (prevents flicker) */}
       <div className="absolute left-0 top-full h-4 w-full" />
 
-      {/* Mega menu */}
-      <div className="absolute font-sans left-1/2 top-12 hidden w-[560] -translate-x-1/2 group-hover:block">
-        <div className="mx-auto max-w-6xl rounded-2xl bg-white px-12 py-14 shadow-2xl ring-1 ring-slate-200">
-          <div className="grid grid-cols-3 gap-16">
-            {/* Column 1 */}
+      <div className="absolute font-sans left-1/2 top-12 hidden w-[560px] -translate-x-1/2 group-hover:block z-50">
+        <div className="mx-auto max-w-6xl rounded-2xl bg-white px-8 sm:px-12 py-10 sm:py-14 shadow-2xl ring-1 ring-slate-200">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 lg:gap-16">
+            {/* Column 1 - Products */}
             <div>
-              <h3 className="mb-6 text-sm font-semibold uppercase tracking-wide text-slate-900">
-                Products
+              <h3 className="mb-4 sm:mb-6 text-xs sm:text-sm font-semibold uppercase tracking-wide text-slate-900">
+                {t('footer.products')}
               </h3>
-              <ul className="space-y-4 text-sm text-slate-600">
+              <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-slate-600">
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/wallet')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
-                    Wallet
+                    {t('nav.wallet')}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/exchange')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
-                    Exchange
+                    {t('nav.exchange')}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/explorer')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
-                    Explorer
+                    {t('nav.explorer')}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/pay')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
-                    Pay
+                    {t('nav.pay')}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/earn')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Earn
@@ -64,7 +73,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/learn')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Learn
@@ -72,7 +81,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/prices')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Prices
@@ -80,7 +89,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/charts')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Charts
@@ -88,32 +97,40 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/nft')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     NFT
                   </Link>
                 </li>
-              </ul>
-            </div>
-
-            {/* Column 2 */}
-            <div>
-              <h3 className="mb-6 text-sm font-semibold uppercase tracking-wide text-slate-900">
-                Resources
-              </h3>
-              <ul className="space-y-4 text-sm text-slate-600">
                 <li>
                   <Link
-                    href="/contact/enterprise"
-                    className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
+                    href={getLocalizedPath('/institutional')}
+                    className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900 font-semibold"
                   >
-                    Enterprise
+                    {t('nav.institutional')}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/bitcoin-treasury')}
+                    className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900 ml-4"
+                  >
+                    Bitcoin Treasury
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 2 - Resources */}
+            <div>
+              <h3 className="mb-4 sm:mb-6 text-xs sm:text-sm font-semibold uppercase tracking-wide text-slate-900">
+                {t('footer.resources')}
+              </h3>
+              <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-slate-600">
+                <li>
+                  <Link
+                    href={getLocalizedPath('/apis')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     APIs
@@ -121,7 +138,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/status')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Status
@@ -129,7 +146,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/open-source')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Open Source
@@ -137,7 +154,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/research')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Research
@@ -145,7 +162,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/legal-privacy')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Legal & Privacy
@@ -153,7 +170,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/support')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Support
@@ -161,7 +178,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/blog')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Blog
@@ -169,7 +186,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/security')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Security
@@ -177,7 +194,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/podcast')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Podcast
@@ -186,15 +203,15 @@ export default function MegaNavContact() {
               </ul>
             </div>
 
-            {/* Column 3 */}
+            {/* Column 3 - Company */}
             <div>
-              <h3 className="mb-6 text-sm font-semibold uppercase tracking-wide text-slate-900">
-                Company
+              <h3 className="mb-4 sm:mb-6 text-xs sm:text-sm font-semibold uppercase tracking-wide text-slate-900">
+                {t('footer.company')}
               </h3>
-              <ul className="space-y-4 text-sm text-slate-600">
+              <ul className="space-y-3 sm:space-y-4 text-xs sm:text-sm text-slate-600">
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/about')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     About
@@ -202,7 +219,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/careers')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Careers
@@ -210,7 +227,7 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/press-center')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Press Center
@@ -218,22 +235,23 @@ export default function MegaNavContact() {
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/ventures')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Ventures
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact/enterprise">
-                    <h1 className=" mb-6 text-sm font-semibold uppercase tracking-wide text-slate-900">
-                      Investors
-                    </h1>
+                  <Link
+                    href={getLocalizedPath('/investors')}
+                    className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900 font-semibold"
+                  >
+                    Investors
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/contact/enterprise"
+                    href={getLocalizedPath('/bitcoin-treasury')}
                     className="block rounded-md px-2 py-1 transition hover:bg-slate-100 hover:text-slate-900"
                   >
                     Bitcoin Treasury
