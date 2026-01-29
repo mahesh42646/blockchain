@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
+/* =========================
+   Design Tokens (Source)
+   ========================= */
 :root {
+  /* Base colors */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Brand colors (RGB space-separated for Tailwind) */
+  --primary: 20 23 51; /* rgb(20,23,51) */
+  --secondary: 91 140 255; /* rgb(91,140,255) */
 }
 
+/* =========================
+   Tailwind Theme Mapping
+   ========================= */
 @theme inline {
+  /* Semantic colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+
+  --color-primary: rgb(var(--primary));
+  --color-secondary: rgb(var(--secondary));
+
+  /* Fonts (mapped from next/font variables) */
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* =========================
+   Base Styles
+   ========================= */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }
