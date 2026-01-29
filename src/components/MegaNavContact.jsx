@@ -13,7 +13,7 @@ export default function MegaNavContact() {
       <div className="absolute left-0 top-full h-4 w-full" />
 
       {/* Mega menu */}
-      <div className="absolute font-sans left-1/2 top-12 hidden w-[560px] -translate-x-1/2 group-hover:block">
+      <div className="absolute font-sans left-1/2 top-12 hidden w-[560] -translate-x-1/2 group-hover:block">
         <div className="mx-auto max-w-6xl rounded-2xl bg-white px-12 py-14 shadow-2xl ring-1 ring-slate-200">
           <div className="grid grid-cols-3 gap-16">
             {/* Column 1 */}

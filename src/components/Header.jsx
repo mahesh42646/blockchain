@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <nav
       role="navigation"
-      className="sticky top-0 z-50 border-b border-slate-750 bg-primary shadow-lg py-2"
+      className="sticky top-0 z-999 border-b border-slate-750 bg-primary shadow-lg py-2"
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
         {/* Logo */}
