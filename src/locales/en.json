@@ -1,0 +1,74 @@
+{
+  "common": {
+    "logo": "Block Chain",
+    "search": "Search",
+    "login": "Log In",
+    "signup": "Sign Up",
+    "welcome": "Welcome",
+    "morePrices": "More Prices →"
+  },
+  "nav": {
+    "wallet": "Wallet",
+    "exchange": "Exchange",
+    "explorer": "Explorer",
+    "pay": "Pay",
+    "institutional": "Institutional"
+  },
+  "home": {
+    "heroTitle": "Be early to the future of finance",
+    "heroSubtitle": "Buy Bitcoin, Ethereum, and other leading cryptocurrencies on a platform trusted by millions.",
+    "emailPlaceholder": "Your email address",
+    "signUpButton": "Sign Up",
+    "whyChooseUs": "Why Choose Us?",
+    "whyChooseUsSubtitle": "We provide a secure, user-friendly platform for buying and trading cryptocurrencies.",
+    "walletTitle": "The only crypto wallet you'll ever need",
+    "walletFeature1": "Buy, sell, and swap with ease",
+    "walletFeature1Desc": "Use a card or bank account to buy BTC, ETH, stablecoins, and other assets.",
+    "walletFeature2": "Earn rewards on your crypto",
+    "walletFeature3": "Be Your Own Bank® with self-custody",
+    "walletFeature4": "Connect to DeFi",
+    "getStarted": "Get started"
+  },
+  "exchange": {
+    "title": "Welcome to Exchange Page"
+  },
+  "explorer": {
+    "title": "Welcome to Explorer Page"
+  },
+  "institutional": {
+    "title": "Welcome to Institutional Page"
+  },
+  "pay": {
+    "title": "Welcome to Pay Page"
+  },
+  "wallet": {
+    "title": "Welcome to Wallet Page"
+  },
+  "user": {
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "forgotPassword": "Forgot Password",
+    "resetPassword": "Reset Password"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "users": "Users",
+    "settings": "Settings"
+  },
+  "footer": {
+    "scanToDownload": "Scan to Download",
+    "products": "Products",
+    "resources": "Resources",
+    "company": "Company",
+    "learn": "Learn",
+    "buyingGuides": "Buying Guides",
+    "careersHiring": "Hiring",
+    "copyright": "© Blockchain.com",
+    "language": "English"
+  }
+}

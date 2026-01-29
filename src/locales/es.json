@@ -1,0 +1,74 @@
+{
+  "common": {
+    "logo": "Cadena de Bloques",
+    "search": "Buscar",
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse",
+    "welcome": "Bienvenido",
+    "morePrices": "Más Precios →"
+  },
+  "nav": {
+    "wallet": "Billetera",
+    "exchange": "Intercambio",
+    "explorer": "Explorador",
+    "pay": "Pagar",
+    "institutional": "Institucional"
+  },
+  "home": {
+    "heroTitle": "Sé temprano al futuro de las finanzas",
+    "heroSubtitle": "Compra Bitcoin, Ethereum y otras criptomonedas líderes en una plataforma confiable por millones.",
+    "emailPlaceholder": "Tu dirección de correo electrónico",
+    "signUpButton": "Registrarse",
+    "whyChooseUs": "¿Por qué elegirnos?",
+    "whyChooseUsSubtitle": "Proporcionamos una plataforma segura y fácil de usar para comprar y operar criptomonedas.",
+    "walletTitle": "La única billetera cripto que necesitarás",
+    "walletFeature1": "Compra, vende e intercambia con facilidad",
+    "walletFeature1Desc": "Usa una tarjeta o cuenta bancaria para comprar BTC, ETH, stablecoins y otros activos.",
+    "walletFeature2": "Gana recompensas en tu cripto",
+    "walletFeature3": "Sé tu propio banco® con autocustodia",
+    "walletFeature4": "Conéctate a DeFi",
+    "getStarted": "Comenzar"
+  },
+  "exchange": {
+    "title": "Bienvenido a la Página de Intercambio"
+  },
+  "explorer": {
+    "title": "Bienvenido a la Página del Explorador"
+  },
+  "institutional": {
+    "title": "Bienvenido a la Página Institucional"
+  },
+  "pay": {
+    "title": "Bienvenido a la Página de Pago"
+  },
+  "wallet": {
+    "title": "Bienvenido a la Página de Billetera"
+  },
+  "user": {
+    "dashboard": "Panel",
+    "profile": "Perfil",
+    "settings": "Configuración"
+  },
+  "auth": {
+    "login": "Iniciar Sesión",
+    "signup": "Registrarse",
+    "forgotPassword": "Olvidé mi Contraseña",
+    "resetPassword": "Restablecer Contraseña"
+  },
+  "admin": {
+    "dashboard": "Panel de Administración",
+    "users": "Usuarios",
+    "settings": "Configuración"
+  },
+  "footer": {
+    "scanToDownload": "Escanear para Descargar",
+    "products": "Productos",
+    "resources": "Recursos",
+    "company": "Empresa",
+    "learn": "Aprender",
+    "buyingGuides": "Guías de Compra",
+    "careersHiring": "Contratando",
+    "copyright": "© Blockchain.com",
+    "language": "Español"
+  }
+}

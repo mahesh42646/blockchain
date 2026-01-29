@@ -1,0 +1,74 @@
+{
+  "common": {
+    "logo": "ब्लॉक चेन",
+    "search": "खोजें",
+    "login": "लॉग इन",
+    "signup": "साइन अप",
+    "welcome": "स्वागत है",
+    "morePrices": "अधिक कीमतें →"
+  },
+  "nav": {
+    "wallet": "वॉलेट",
+    "exchange": "एक्सचेंज",
+    "explorer": "एक्सप्लोरर",
+    "pay": "भुगतान",
+    "institutional": "संस्थागत"
+  },
+  "home": {
+    "heroTitle": "वित्त के भविष्य में जल्दी आएं",
+    "heroSubtitle": "Bitcoin, Ethereum और अन्य प्रमुख क्रिप्टोकरेंसी को लाखों लोगों द्वारा भरोसेमंद प्लेटफॉर्म पर खरीदें।",
+    "emailPlaceholder": "आपका ईमेल पता",
+    "signUpButton": "साइन अप",
+    "whyChooseUs": "हमें क्यों चुनें?",
+    "whyChooseUsSubtitle": "हम क्रिप्टोकरेंसी खरीदने और व्यापार करने के लिए एक सुरक्षित, उपयोगकर्ता-अनुकूल प्लेटफॉर्म प्रदान करते हैं।",
+    "walletTitle": "एकमात्र क्रिप्टो वॉलेट जिसकी आपको कभी आवश्यकता होगी",
+    "walletFeature1": "आसानी से खरीदें, बेचें और स्वैप करें",
+    "walletFeature1Desc": "BTC, ETH, स्टेबलकॉइन और अन्य संपत्तियां खरीदने के लिए कार्ड या बैंक खाते का उपयोग करें।",
+    "walletFeature2": "अपने क्रिप्टो पर पुरस्कार अर्जित करें",
+    "walletFeature3": "स्व-कस्टडी के साथ अपना खुद का बैंक® बनें",
+    "walletFeature4": "DeFi से कनेक्ट करें",
+    "getStarted": "शुरू करें"
+  },
+  "exchange": {
+    "title": "एक्सचेंज पेज में आपका स्वागत है"
+  },
+  "explorer": {
+    "title": "एक्सप्लोरर पेज में आपका स्वागत है"
+  },
+  "institutional": {
+    "title": "संस्थागत पेज में आपका स्वागत है"
+  },
+  "pay": {
+    "title": "भुगतान पेज में आपका स्वागत है"
+  },
+  "wallet": {
+    "title": "वॉलेट पेज में आपका स्वागत है"
+  },
+  "user": {
+    "dashboard": "डैशबोर्ड",
+    "profile": "प्रोफ़ाइल",
+    "settings": "सेटिंग्स"
+  },
+  "auth": {
+    "login": "लॉग इन",
+    "signup": "साइन अप",
+    "forgotPassword": "पासवर्ड भूल गए",
+    "resetPassword": "पासवर्ड रीसेट करें"
+  },
+  "admin": {
+    "dashboard": "एडमिन डैशबोर्ड",
+    "users": "उपयोगकर्ता",
+    "settings": "सेटिंग्स"
+  },
+  "footer": {
+    "scanToDownload": "डाउनलोड करने के लिए स्कैन करें",
+    "products": "उत्पाद",
+    "resources": "संसाधन",
+    "company": "कंपनी",
+    "learn": "सीखें",
+    "buyingGuides": "खरीदारी गाइड",
+    "careersHiring": "भर्ती",
+    "copyright": "© Blockchain.com",
+    "language": "हिंदी"
+  }
+}

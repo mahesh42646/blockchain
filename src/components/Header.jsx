@@ -1,6 +1,11 @@
+'use client';
+
 import Link from "next/link";
+import { useParams, usePathname } from "next/navigation";
 import MegaNavContact from "./MegaNavContact";
 import { Search } from "lucide-react";
+import { useTranslation } from "@/hooks/useTranslation";
+
 function NavLink({ href, label }) {
   return (
     <Link
@@ -14,29 +19,34 @@ function NavLink({ href, label }) {
 }
 
 export default function Header() {
+  const params = useParams();
+  const locale = params?.lang || 'en';
+  const { t } = useTranslation();
+
+  const getLocalizedPath = (path) => {
+    return `/${locale}${path}`;
+  };
+
   return (
     <nav
       role="navigation"
       className="sticky top-0 z-999 border-b border-slate-750 bg-primary shadow-lg py-2"
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
-        {/* Logo */}
         <Link
-          href="/"
+          href={getLocalizedPath('/')}
           className=" text-2xl font-bold text-white transition-transform duration-300 hover:scale-105"
         >
-          Block Chain
+          {t('common.logo')}
         </Link>
 
-        {/* Navigation Links */}
         <div className="flex items-center space-x-10 justify-between font-sans py-">
-          <NavLink href="/wallet" label="Wallet" />
-          <NavLink href="/exchange" label="Exchange" />
-          <NavLink href="/explorer" label="Explorer" />
-          <NavLink href="/pay" label="Pay" />
-          <NavLink href="/institutional" label="Institutional" />
+          <NavLink href={getLocalizedPath('/wallet')} label={t('nav.wallet')} />
+          <NavLink href={getLocalizedPath('/exchange')} label={t('nav.exchange')} />
+          <NavLink href={getLocalizedPath('/explorer')} label={t('nav.explorer')} />
+          <NavLink href={getLocalizedPath('/pay')} label={t('nav.pay')} />
+          <NavLink href={getLocalizedPath('/institutional')} label={t('nav.institutional')} />
 
-          {/* Menu-trigger item */}
           <MegaNavContact />
         </div>
         <div className="flex items-center space-x-4">
@@ -44,12 +54,18 @@ export default function Header() {
             <Search className="h-5 w-5 text-white" />
           </button>
 
-          <button className=" rounded-md bg-primary px-4 py-2 border-2 text-white hover:bg-slate-800 transition-colors duration-300 cursor-pointer">
-            Log In
-          </button>
-          <button className=" rounded-md bg-white px-4 py-2 text-primary hover:bg-white-700 hover:text-gray-800 transition-colors duration-300 cursor-pointer">
-            Sign Up
-          </button>
+          <Link
+            href={getLocalizedPath('/auth')}
+            className=" rounded-md bg-primary px-4 py-2 border-2 text-white hover:bg-slate-800 transition-colors duration-300 cursor-pointer"
+          >
+            {t('common.login')}
+          </Link>
+          <Link
+            href={getLocalizedPath('/auth')}
+            className=" rounded-md bg-white px-4 py-2 text-primary hover:bg-white-700 hover:text-gray-800 transition-colors duration-300 cursor-pointer"
+          >
+            {t('common.signup')}
+          </Link>
         </div>
       </div>
     </nav>
