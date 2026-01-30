@@ -8,23 +8,23 @@ export default function Page() {
   return (
     <>
       <section
+        className="w-full bg-cover bg-center overflow-hidden"
         style={{
           backgroundImage: "url('/images/home/home-hero-gradient.svg')",
         }}
-        className=" w-full bg-cover    overflow-hidden"
       >
-        <div className="py-24 px-16 sm:px-24 md:px-36    ">
-          <div className="text-white container   py-12  ">
-            <div className="max-w-3xl text- text-center sm:text-left">
+        <div className="container max-w-7xl px-6 sm:px-8 md:px-12 lg:px-16">
+          <div className="min-h-[70vh] flex items-center justify-center">
+            <div className="max-w-4xl text-white text-center sm:text-left">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                 {t("home.heroTitle")}
               </h1>
 
-              <p className="  text-lg sm:text-xl md:text-2xl font-sans text-white/90">
+              <p className="mt-4 text-lg sm:text-xl md:text-2xl font-sans text-white/90">
                 {t("home.heroSubtitle")}
               </p>
 
-              <div className="  flex flex-col sm:flex-row max-w-xl gap-3 sm:gap-4">
+              <div className="mt-6 flex flex-col sm:flex-row max-w-xl gap-3 sm:gap-4">
                 <input
                   type="email"
                   placeholder={t("home.emailPlaceholder")}
@@ -40,7 +40,7 @@ export default function Page() {
       </section>
 
       <section className="-mt-20 sm:-mt-32 md:-mt-45 w-full">
-        <div className="relative z-50 container max-w-5xl mx-auto px-4 sm:px-6 mt-16 sm:mt-24 md:mt-32 pb-8 sm:pb-12">
+        <div className="relative z-1 container max-w-7xl mx-auto px-4 sm:px-6 mt-16 sm:mt-24 md:mt-32 pb-8 sm:pb-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               {
@@ -72,7 +72,7 @@ export default function Page() {
                 key={coin.symbol}
                 className="rounded-xl bg-white p-5 shadow-lg"
               >
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between pb-3 items-center">
                   <h3 className="font-semibold">
                     {coin.name}{" "}
                     <span className="text-gray-500">{coin.symbol}</span>
@@ -160,8 +160,9 @@ export default function Page() {
     relative
     flex
     items-end
+    bottom-0
     justify-center
-    bg-cover
+    bg-contain
     bg-center
     bg-no-repeat
     min-h-[320px]
@@ -185,17 +186,185 @@ export default function Page() {
                   alt="Mobile app preview"
                   className="
       absolute
-      bottom-30
-      right-10
+      bottom-65
+      right-auto
       w-[170px]
       sm:w-[210px]
-      md:w-[250px]
+      md:w-[240px]
       lg:w-[280px]
       object-contain
       drop-shadow-2xl
     "
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto bg-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center py-20 sm:py-22 md:py-36 gap-6 sm:gap-8">
+              {/* LEFT CONTENT */}
+              <div className="px-10  md:pl-12 lg:pl-20 py-8 sm:py-12 md:py-16 justify-center">
+                <div className="inline-flex items-center gap-2 rounded-full bg-[#e6e9f0] px-4 py-2 text-gray-600 font-medium mb-8 w-fit">
+                  🏛 Institutional
+                </div>
+
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-gray-900 mb-6 leading-tight">
+                  High-touch crypto solutions for institutions
+                </h2>
+
+                <p className="text-gray-600 max-w-md mb-8">
+                  Spot OTC, derivatives, structured products, and margin
+                  lending.
+                </p>
+
+                <button className="rounded-lg bg-gray-700 px-6 py-3 text-white font-semibold hover:bg-gray-800 transition">
+                  Become a client
+                </button>
+              </div>
+
+              {/* RIGHT ILLUSTRATION */}
+              <div className="relative flex justify-center items-center min-h-[320px] sm:min-h-[420px] md:min-h-[480px] lg:min-h-[520px]">
+                <img
+                  src="/images/home/homepage-institutional-shapes-bg@2x.png"
+                  alt="Institutional crypto illustration"
+                  className="w-full max-w-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-7xl mx-auto bg-[#fff6ea] rounded-2xl sm:rounded-3xl overflow-hidden md:overflow-visible">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+              {/* LEFT CONTENT */}
+              <div className="px-6 sm:px-10 md:px-14 lg:px-20 py-12 sm:py-16 md:py-20">
+                <div className="inline-flex items-center gap-2 rounded-full bg-[#ffedd6] px-4 py-2 text-orange-400 font-medium mb-8">
+                  <span className="text-lg">🔍</span>
+                  Explore
+                </div>
+
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-orange-400 leading-tight mb-6">
+                  Blockchain data is in our DNA
+                </h2>
+
+                <div className="space-y-4 mb-10 max-w-md">
+                  <div className="rounded-xl border border-orange-200 bg-[#fff1df] p-5 text-orange-400">
+                    Explore the top blockchains. Confirm transactions, analyze
+                    the market, or simply learn more about crypto.
+                  </div>
+
+                  <div className="rounded-xl border border-orange-200 p-5 text-orange-400">
+                    Powerful Blockchain Data API
+                  </div>
+
+                  <div className="rounded-xl border border-orange-200 p-5 text-orange-400">
+                    Industry leading charts
+                  </div>
+
+                  <div className="rounded-xl border border-orange-200 p-5 text-orange-400">
+                    Real-time crypto prices
+                  </div>
+                </div>
+
+                <button className="rounded-lg bg-orange-400 px-6 py-3 text-white font-semibold hover:bg-orange-500 transition">
+                  Explore now
+                </button>
+              </div>
+
+              {/* RIGHT ILLUSTRATION */}
+              <div
+                className="
+            relative
+            bg-contain
+            bg-center
+            bg-no-repeat
+            min-h-[360px]
+            sm:min-h-[460px]
+            md:min-h-[520px]
+            lg:min-h-[680px]
+            overflow-visible
+          "
+                style={{
+                  backgroundImage:
+                    "url('/images/home/homepage-explorer-shapes-bg@2x.png')",
+                }}
+              >
+                <img
+                  src="/images/home/prod-explore-blockchains-sm@2x.png"
+                  alt="Blockchain Explorer"
+                  className="
+              absolute
+              bottom-[1rem]
+              left-[7rem]
+              w-[420px]
+              sm:w-[480px]
+              md:w-[660px]
+              lg:w-[620px]
+              max-w-none
+              object-contain
+              z-10
+              drop-shadow-2xl
+            "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="py-8 sm:py-12 md:py-16">
+        <div className="container-fluide">
+          <div
+            className="
+        relative
+        bg-primary
+        px-6
+        sm:px-10
+        md:px-14
+        py-8
+        sm:py-10
+        overflow-hidden
+         min-h-[140px]
+        sm:min-h-[180px]
+        md:min-h-[220px]
+        justify-center
+        flex
+      "
+            style={{
+              backgroundImage: "url('/images/home/banner-bg.svg')",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "start",
+              backgroundSize: "cover",
+            }}
+          >
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-10">
+              {/* Text */}
+              <h2 className="text-white  text-xl sm:text-2xl md:text-3xl font-semibold text-center sm:text-left">
+                Let us take you from zero to crypto
+              </h2>
+
+              {/* CTA Button */}
+              <button
+                className="
+          shrink-0
+          rounded-lg
+          bg-white
+          px-6
+          sm:px-8
+          py-3
+          text-violet-900
+          font-semibold
+          hover:bg-gray-100
+          transition
+        "
+              >
+                Get started
+              </button>
             </div>
           </div>
         </div>
