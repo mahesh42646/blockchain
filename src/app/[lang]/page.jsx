@@ -1,40 +1,39 @@
-'use client';
+"use client";
 
-
-import { useTranslation } from '@/hooks/useTranslation';
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Page() {
   const { t } = useTranslation();
 
   return (
     <>
-      <section className="relative min-h-[500px] sm:min-h-[600px] md:min-h-[700px] w-full overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/images/home/home-hero-gradient.svg')",
-          }}
-        />
+      <section
+        style={{
+          backgroundImage: "url('/images/home/home-hero-gradient.svg')",
+        }}
+        className=" w-full bg-cover    overflow-hidden"
+      >
+        <div className="py-24 px-16 sm:px-24 md:px-36    ">
+          <div className="text-white container   py-12  ">
+            <div className="max-w-3xl text- text-center sm:text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                {t("home.heroTitle")}
+              </h1>
 
-        <div className="relative container mx-auto flex justify-center pt-12 sm:pt-16 md:pt-20 px-4">
-          <div className="max-w-3xl text-white text-center sm:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-              {t('home.heroTitle')}
-            </h1>
+              <p className="  text-lg sm:text-xl md:text-2xl font-sans text-white/90">
+                {t("home.heroSubtitle")}
+              </p>
 
-            <p className="mt-4 sm:mt-6 text-lg sm:text-xl md:text-2xl font-sans text-white/90">
-              {t('home.heroSubtitle')}
-            </p>
-
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row max-w-xl gap-3 sm:gap-4">
-              <input
-                type="email"
-                placeholder={t('home.emailPlaceholder')}
-                className="flex-1 rounded-lg bg-white/10 px-4 sm:px-5 py-3 sm:py-4 text-white placeholder-white/70 outline-none backdrop-blur-md text-sm sm:text-base"
-              />
-              <button className="rounded-lg bg-white px-5 sm:px-6 py-3 sm:py-4 font-semibold text-indigo-600 hover:bg-gray-100 text-sm sm:text-base whitespace-nowrap">
-                {t('home.signUpButton')}
-              </button>
+              <div className="  flex flex-col sm:flex-row max-w-xl gap-3 sm:gap-4">
+                <input
+                  type="email"
+                  placeholder={t("home.emailPlaceholder")}
+                  className="flex-1 rounded-lg bg-white/10 px-4 sm:px-5 py-3 sm:py-4 text-white placeholder-white/70 outline-none backdrop-blur-md text-sm sm:text-base"
+                />
+                <button className="rounded-lg bg-white px-5 sm:px-6 py-3 sm:py-4 font-semibold text-indigo-600 hover:bg-gray-100 text-sm sm:text-base whitespace-nowrap">
+                  {t("home.signUpButton")}
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -97,21 +96,24 @@ export default function Page() {
           </div>
 
           <div className="mt-6 text-sm font-medium">
-            <a href="#" className="inline-flex items-center gap-2 text-gray-900 hover:text-gray-700">
-              {t('common.morePrices')}
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 text-gray-900 hover:text-gray-700"
+            >
+              {t("common.morePrices")}
             </a>
           </div>
         </div>
       </section>
 
-      <section className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      {/* <section className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">{t('home.whyChooseUs')}</h2>
           <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
             {t('home.whyChooseUsSubtitle')}
           </p>
         </div>
-      </section>
+      </section> */}
       <section className="py-8 sm:py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto bg-purple-50 rounded-2xl sm:rounded-3xl overflow-hidden">
@@ -119,49 +121,81 @@ export default function Page() {
               <div className="px-6 sm:pl-8 md:pl-12 lg:pl-20 py-8 sm:py-12 md:py-16 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 rounded-full bg-[#efe7ff] px-3 sm:px-4 py-1.5 sm:py-2 text-purple-600 font-medium mb-6 sm:mb-8 w-fit text-sm sm:text-base">
                   <span className="text-base sm:text-lg">📱</span>
-                  {t('nav.wallet')}
+                  {t("nav.wallet")}
                 </div>
 
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-tight font-bold text-purple-700 mb-6 sm:mb-8 md:mb-10">
-                  {t('home.walletTitle')}
+                  {t("home.walletTitle")}
                 </h2>
 
                 <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-12 md:mb-14">
                   <div className="rounded-lg sm:rounded-xl border border-purple-200 bg-[#f3edff] p-4 sm:p-5 text-purple-700">
                     <h4 className="font-semibold mb-2 text-sm sm:text-base">
-                      {t('home.walletFeature1')}
+                      {t("home.walletFeature1")}
                     </h4>
                     <p className="text-xs sm:text-sm leading-relaxed text-purple-600">
-                      {t('home.walletFeature1Desc')}
+                      {t("home.walletFeature1Desc")}
                     </p>
                   </div>
 
                   <div className="rounded-lg sm:rounded-xl border border-purple-200 bg-transparent p-4 sm:p-5 text-purple-700 font-medium text-sm sm:text-base">
-                    {t('home.walletFeature2')}
+                    {t("home.walletFeature2")}
                   </div>
 
                   <div className="rounded-lg sm:rounded-xl border border-purple-200 bg-transparent p-4 sm:p-5 text-purple-700 font-medium text-sm sm:text-base">
-                    {t('home.walletFeature3')}
+                    {t("home.walletFeature3")}
                   </div>
 
                   <div className="rounded-lg sm:rounded-xl border border-purple-200 bg-transparent p-4 sm:p-5 text-purple-700 font-medium text-sm sm:text-base">
-                    {t('home.walletFeature4')}
+                    {t("home.walletFeature4")}
                   </div>
                 </div>
 
                 <button className="rounded-lg bg-purple-700 px-6 sm:px-8 py-3 sm:py-4 text-white font-semibold hover:bg-purple-800 transition-colors w-full sm:w-fit text-sm sm:text-base">
-                  {t('home.getStarted')}
+                  {t("home.getStarted")}
                 </button>
               </div>
               <div
-                className="bg-cover bg-center min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px]"
+                className="
+    relative
+    flex
+    items-end
+    justify-center
+    bg-cover
+    bg-center
+    bg-no-repeat
+    min-h-[320px]
+    sm:min-h-[420px]
+    md:min-h-[480px]
+    lg:min-h-[520px]
+    rounded-2xl
+    overflow-hidden
+  "
                 style={{
                   backgroundImage:
                     "url('/images/home/homepage-app-shapes-bg@2x.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
                 }}
-              ></div>
+              >
+                {/* Decorative overlay – keeps softness like screenshot */}
+                <div className="absolute inset-0 bg-transparent" />
+
+                {/* Phone mockup */}
+                <img
+                  src="/images/home/app-buy-with-ease@2x.png"
+                  alt="Mobile app preview"
+                  className="
+      absolute
+      bottom-30
+      right-10
+      w-[170px]
+      sm:w-[210px]
+      md:w-[250px]
+      lg:w-[280px]
+      object-contain
+      drop-shadow-2xl
+    "
+                />
+              </div>
             </div>
           </div>
         </div>
