@@ -15,7 +15,7 @@ export default function Page() {
       >
         <div className="container max-w-7xl px-6 sm:px-8 md:px-12 lg:px-16">
           <div className="min-h-[70vh] flex items-center justify-center">
-            <div className="max-w-4xl text-white text-center sm:text-left">
+            <div className="max-w-4xl px-4 text-white text-center sm:text-left">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                 {t("home.heroTitle")}
               </h1>
@@ -40,7 +40,7 @@ export default function Page() {
       </section>
 
       <section className="-mt-20 sm:-mt-32 md:-mt-45 w-full">
-        <div className="relative z-1 container max-w-7xl mx-auto px-4 sm:px-6 mt-16 sm:mt-24 md:mt-32 pb-8 sm:pb-12">
+        <div className="relative z-1 container max-w-6xl mx-auto px-4 sm:px-6 mt-16 sm:mt-24 md:mt-32 pb-8 sm:pb-12">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {[
               {
