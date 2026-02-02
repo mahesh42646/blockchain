@@ -1,7 +1,6 @@
 import { Inter, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import ConditionalLayout from "@/components/ConditionalLayout";
 import { supportedLocales } from "@/lib/i18n";
 
 const inter = Inter({
@@ -31,9 +30,9 @@ export default async function LangLayout({ children, params }) {
   return (
     <html lang={locale} className={`${inter.variable} ${geistMono.variable}`}>
       <body className="font-sans antialiased">
-        <Header />
-        {children}
-        <Footer />
+        <ConditionalLayout>
+          {children}
+        </ConditionalLayout>
       </body>
     </html>
   );

@@ -44,6 +44,69 @@
   "wallet": {
     "title": "Bienvenido a la Página de Billetera"
   },
+  "userDashboard": {
+    "sidebar": {
+      "home": "Inicio",
+      "assets": "Activos",
+      "discover": "Descubrir",
+      "memezone": "Memezone",
+      "earn": "Ganar",
+      "activity": "Actividad"
+    },
+    "header": {
+      "trading": "Trading",
+      "wallet": "Billetera",
+      "profile": "Perfil",
+      "settings": "Configuración",
+      "logout": "Cerrar Sesión"
+    },
+    "home": {
+      "tradingAccountBalance": "Saldo de Cuenta de Trading",
+      "buy": "Comprar",
+      "sell": "Vender",
+      "limitOrder": "Orden Límite",
+      "convert": "Convertir",
+      "deposit": "Depositar",
+      "send": "Enviar",
+      "addCash": "Agregar efectivo",
+      "cashOut": "Retirar",
+      "completeProfile": "Completa tu Perfil. Compra Cripto Hoy.",
+      "completeProfileDesc": "Termina de configurar tu cuenta de trading y comienza a comprar cripto hoy.",
+      "verificationSteps": "Pasos de Verificación",
+      "verifyEmail": "Verifica tu correo electrónico",
+      "verifyIdentity": "Verifica tu identidad",
+      "buyCrypto": "Compra cripto",
+      "around2Minutes": "Alrededor de 2 minutos",
+      "assets": "Activos",
+      "seeAll": "Ver todo",
+      "cashAndStablecoins": "Efectivo y Stablecoins",
+      "topMovers": "Principales Movimientos"
+    },
+    "assets": {
+      "title": "Activos",
+      "description": "Visualiza y gestiona tus activos aquí."
+    },
+    "discover": {
+      "title": "Descubrir",
+      "description": "Descubre nuevas criptomonedas y oportunidades de trading."
+    },
+    "memezone": {
+      "title": "Memezone",
+      "description": "Explora meme coins y tokens en tendencia."
+    },
+    "earn": {
+      "title": "Ganar",
+      "description": "Gana recompensas en tus tenencias de cripto."
+    },
+    "activity": {
+      "title": "Actividad",
+      "description": "Visualiza tu historial de transacciones y actividad."
+    },
+    "wallet": {
+      "title": "Billetera",
+      "description": "Gestiona tu billetera y visualiza tus saldos."
+    }
+  },
   "user": {
     "dashboard": "Panel",
     "profile": "Perfil",
@@ -70,5 +133,38 @@
     "careersHiring": "Contratando",
     "copyright": "© Blockchain.com",
     "language": "Español"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "userwallet": {
+    "title": "Bienvenido a la Página de Billetera",
+    "description": "Esta es la página de billetera"
   }
+
 }

@@ -59,7 +59,7 @@ export default function WalletPage() {
               {/* LEFT CONTENT */}
               <div className="text-white text-center lg:text-left max-w-xl">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight mb-6">
-                  The only crypto wallet you’ll ever need
+                  The only crypto wallet you'll ever need
                 </h1>
 
                 <p className="text-base sm:text-lg md:text-xl text-white/90 mb-10">

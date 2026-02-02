@@ -52,6 +52,69 @@
   "wallet": {
     "title": "Welcome to Wallet Page"
   },
+  "userDashboard": {
+    "sidebar": {
+      "home": "Home",
+      "assets": "Assets",
+      "discover": "Discover",
+      "memezone": "Memezone",
+      "earn": "Earn",
+      "activity": "Activity"
+    },
+    "header": {
+      "trading": "Trading",
+      "wallet": "Wallet",
+      "profile": "Profile",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+    "home": {
+      "tradingAccountBalance": "Trading Account Balance",
+      "buy": "Buy",
+      "sell": "Sell",
+      "limitOrder": "Limit Order",
+      "convert": "Convert",
+      "deposit": "Deposit",
+      "send": "Send",
+      "addCash": "Add cash",
+      "cashOut": "Cash out",
+      "completeProfile": "Complete Your Profile. Buy Crypto Today.",
+      "completeProfileDesc": "Finish setting up your trading account and start buying crypto today.",
+      "verificationSteps": "Verification Steps",
+      "verifyEmail": "Verify your email",
+      "verifyIdentity": "Verify your identity",
+      "buyCrypto": "Buy crypto",
+      "around2Minutes": "Around 2 minutes",
+      "assets": "Assets",
+      "seeAll": "See all",
+      "cashAndStablecoins": "Cash and Stablecoins",
+      "topMovers": "Top Movers"
+    },
+    "assets": {
+      "title": "Assets",
+      "description": "View and manage your assets here."
+    },
+    "discover": {
+      "title": "Discover",
+      "description": "Discover new cryptocurrencies and trading opportunities."
+    },
+    "memezone": {
+      "title": "Memezone",
+      "description": "Explore meme coins and trending tokens."
+    },
+    "earn": {
+      "title": "Earn",
+      "description": "Earn rewards on your crypto holdings."
+    },
+    "activity": {
+      "title": "Activity",
+      "description": "View your transaction history and activity."
+    },
+    "wallet": {
+      "title": "Wallet",
+      "description": "Manage your wallet and view your balances."
+    }
+  },
   "user": {
     "dashboard": "Dashboard",
     "profile": "Profile",
@@ -78,5 +141,10 @@
     "careersHiring": "Hiring",
     "copyright": "© Blockchain.com",
     "language": "English"
+  },
+  
+  "userwallet": {
+    "title": "Welcome to Wallet Page",
+    "description": "This is the wallet page"
   }
 }
