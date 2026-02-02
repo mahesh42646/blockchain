@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
@@ -22,7 +22,7 @@ function NavLink({ href, label }) {
 
 export default function Header() {
   const params = useParams();
-  const locale = params?.lang || 'en';
+  const locale = params?.lang || "en";
   const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -34,12 +34,12 @@ export default function Header() {
     <>
       <nav
         role="navigation"
-        className="sticky top-0 z-50 border-b border-slate-750 bg-primary shadow-lg"
+        className="sticky top-0 z-50 border-b border-white/10 bg-primary shadow-lg"
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-5 py-3">
           {/* Logo */}
           <Link
-            href={getLocalizedPath('/')}
+            href={getLocalizedPath("/")}
             className="flex items-center gap-2 text-xl sm:text-2xl font-bold text-white transition-transform duration-300 hover:scale-105"
           >
             <div className="w-5 h-5 sm:w-6 sm:h-6 bg-blue-600 rounded-sm flex items-center justify-center">
@@ -52,11 +52,23 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-10 font-sans">
-            <NavLink href={getLocalizedPath('/wallet')} label={t('nav.wallet')} />
-            <NavLink href={getLocalizedPath('/exchange')} label={t('nav.exchange')} />
-            <NavLink href={getLocalizedPath('/explorer')} label={t('nav.explorer')} />
-            <NavLink href={getLocalizedPath('/pay')} label={t('nav.pay')} />
-            <NavLink href={getLocalizedPath('/institutional')} label={t('nav.institutional')} />
+            <NavLink
+              href={getLocalizedPath("/wallet")}
+              label={t("nav.wallet")}
+            />
+            <NavLink
+              href={getLocalizedPath("/exchange")}
+              label={t("nav.exchange")}
+            />
+            <NavLink
+              href={getLocalizedPath("/explorer")}
+              label={t("nav.explorer")}
+            />
+            <NavLink href={getLocalizedPath("/pay")} label={t("nav.pay")} />
+            <NavLink
+              href={getLocalizedPath("/institutional")}
+              label={t("nav.institutional")}
+            />
             <MegaNavContact />
           </div>
 
@@ -70,16 +82,16 @@ export default function Header() {
             {/* Desktop Auth Buttons */}
             <div className="hidden md:flex items-center gap-3">
               <Link
-                href={getLocalizedPath('/auth')}
+                href={getLocalizedPath("/auth")}
                 className="rounded-md bg-primary px-4 py-2 border-2 border-white text-white hover:bg-slate-800 transition-colors duration-300 cursor-pointer text-sm font-medium"
               >
-                {t('common.login')}
+                {t("common.login")}
               </Link>
               <Link
-                href={getLocalizedPath('/auth')}
+                href={getLocalizedPath("/auth")}
                 className="rounded-md bg-white px-4 py-2 text-primary hover:bg-gray-100 transition-colors duration-300 cursor-pointer text-sm font-semibold"
               >
-                {t('common.signup')}
+                {t("common.signup")}
               </Link>
             </div>
 
@@ -96,7 +108,10 @@ export default function Header() {
       </nav>
 
       {/* Mobile Menu */}
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+      />
     </>
   );
 }
