@@ -36,7 +36,7 @@ export default function Header() {
         role="navigation"
         className="sticky top-0 z-50 border-b border-white/10 bg-primary shadow-lg"
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-5 py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
           {/* Logo */}
           <Link
             href={getLocalizedPath("/")}

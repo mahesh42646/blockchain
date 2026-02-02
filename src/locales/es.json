@@ -21,28 +21,102 @@
     "signUpButton": "Registrarse",
     "whyChooseUs": "¿Por qué elegirnos?",
     "whyChooseUsSubtitle": "Proporcionamos una plataforma segura y fácil de usar para comprar y operar criptomonedas.",
+    "feature1Title": "Seguro y Confiable",
+    "feature1Desc": "Seguridad de nivel empresarial con billeteras multi-firma y protocolos de encriptación avanzados.",
+    "feature2Title": "Súper Rápido",
+    "feature2Desc": "Ejecuta operaciones en milisegundos con nuestra infraestructura optimizada y sistemas de baja latencia.",
+    "feature3Title": "Impulsado por la Comunidad",
+    "feature3Desc": "Únete a millones de usuarios en todo el mundo en un ecosistema transparente y descentralizado.",
+    "feature4Title": "Mejores Tarifas",
+    "feature4Desc": "Tarifas de trading competitivas y datos de mercado en tiempo real para una toma de decisiones informada.",
     "walletTitle": "La única billetera cripto que necesitarás",
     "walletFeature1": "Compra, vende e intercambia con facilidad",
     "walletFeature1Desc": "Usa una tarjeta o cuenta bancaria para comprar BTC, ETH, stablecoins y otros activos.",
     "walletFeature2": "Gana recompensas en tu cripto",
     "walletFeature3": "Sé tu propio banco® con autocustodia",
     "walletFeature4": "Conéctate a DeFi",
-    "getStarted": "Comenzar"
-  },
-  "exchange": {
-    "title": "Bienvenido a la Página de Intercambio"
-  },
-  "explorer": {
-    "title": "Bienvenido a la Página del Explorador"
-  },
-  "institutional": {
-    "title": "Bienvenido a la Página Institucional"
-  },
-  "pay": {
-    "title": "Bienvenido a la Página de Pago"
+    "getStarted": "Comenzar",
+    "institutionalTitle": "Soluciones cripto de alto contacto para instituciones",
+    "institutionalDesc": "OTC spot, derivados, productos estructurados y préstamos con margen.",
+    "institutionalCta": "Conviértete en cliente",
+    "explorerTitle": "Los datos de blockchain están en nuestro ADN",
+    "explorerDesc": "Explora las principales blockchains. Confirma transacciones, analiza el mercado o simplemente aprende más sobre cripto.",
+    "explorerFeature1": "API de Datos de Blockchain Poderosa",
+    "explorerFeature2": "Gráficos líderes de la industria",
+    "explorerFeature3": "Precios de cripto en tiempo real",
+    "explorerCta": "Explorar ahora",
+    "bannerTitle": "Déjanos llevarte de cero a cripto"
   },
   "wallet": {
-    "title": "Bienvenido a la Página de Billetera"
+    "title": "Billetera",
+    "nav": {
+      "buy": "Comprar",
+      "earn": "Ganar",
+      "keys": "Claves",
+      "defi": "DeFi",
+      "assets": "Activos",
+      "security": "Seguridad"
+    },
+    "hero": {
+      "title": "La única billetera cripto que necesitarás",
+      "subtitle": "Compra, almacena y haz más con tu cripto.",
+      "getStarted": "Comenzar",
+      "downloadAppStore": "Descargar en App Store",
+      "downloadGooglePlay": "Obtener en Google Play"
+    },
+    "buySection": {
+      "title": "Compra, vende e intercambia cripto en minutos",
+      "description": "Verifica tu identidad y agrega un método de pago para comenzar a comprar cripto.",
+      "getStarted": "Comenzar"
+    },
+    "earnSection": {
+      "title": "Gana hasta 15% en tu cripto",
+      "description": "Obtén recompensas poniendo a trabajar tu Bitcoin, Ethereum y otros activos cripto.",
+      "learnMore": "Aprender más"
+    },
+    "keysSection": {
+      "title": "Tus claves, tu cripto",
+      "description": "Autocustodia tu cripto en Bitcoin, Ethereum, Polygon y otras blockchains líderes.",
+      "getStarted": "Comenzar"
+    },
+    "memecoinSection": {
+      "title": "El hogar definitivo para los fanáticos de memecoin",
+      "subtitle": "El trading de memecoin comienza aquí",
+      "listedCoins": "Monedas Listadas",
+      "learnMore": "Aprender Más"
+    },
+    "defiSection": {
+      "title": "Descubre el mundo de DeFi",
+      "subtitle": "Conéctate a dapps, gestiona tu colección de NFT y desbloquea el poder de web3.",
+      "downloadAppStore": "Descargar en App Store",
+      "downloadGooglePlay": "OBTÉNLO EN Google Play"
+    },
+    "assetsSection": {
+      "title": "Accede a docenas de activos cripto",
+      "morePrices": "Más Precios →",
+      "buy": "Comprar",
+      "trade": "Operar"
+    },
+    "banner": {
+      "title": "Déjanos llevarte de cero a cripto",
+      "getStarted": "Comenzar"
+    }
+  },
+  "exchange": {
+    "title": "Intercambio",
+    "description": "Opera criptomonedas con herramientas y características avanzadas."
+  },
+  "explorer": {
+    "title": "Explorador de Blockchain",
+    "description": "Explora datos de blockchain, transacciones e información del mercado."
+  },
+  "institutional": {
+    "title": "Servicios Institucionales",
+    "description": "Soluciones cripto de nivel empresarial para instituciones."
+  },
+  "pay": {
+    "title": "Pagar",
+    "description": "Envía y recibe pagos con cripto."
   },
   "userDashboard": {
     "sidebar": {
@@ -133,38 +207,5 @@
     "careersHiring": "Contratando",
     "copyright": "© Blockchain.com",
     "language": "Español"
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  "userwallet": {
-    "title": "Bienvenido a la Página de Billetera",
-    "description": "Esta es la página de billetera"
   }
-
 }

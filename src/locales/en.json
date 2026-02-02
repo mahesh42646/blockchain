@@ -35,22 +35,88 @@
     "walletFeature2": "Earn rewards on your crypto",
     "walletFeature3": "Be Your Own Bank® with self-custody",
     "walletFeature4": "Connect to DeFi",
-    "getStarted": "Get started"
-  },
-  "exchange": {
-    "title": "Welcome to Exchange Page"
-  },
-  "explorer": {
-    "title": "Welcome to Explorer Page"
-  },
-  "institutional": {
-    "title": "Welcome to Institutional Page"
-  },
-  "pay": {
-    "title": "Welcome to Pay Page"
+    "getStarted": "Get started",
+    "institutionalTitle": "High-touch crypto solutions for institutions",
+    "institutionalDesc": "Spot OTC, derivatives, structured products, and margin lending.",
+    "institutionalCta": "Become a client",
+    "explorerTitle": "Blockchain data is in our DNA",
+    "explorerDesc": "Explore the top blockchains. Confirm transactions, analyze the market, or simply learn more about crypto.",
+    "explorerFeature1": "Powerful Blockchain Data API",
+    "explorerFeature2": "Industry leading charts",
+    "explorerFeature3": "Real-time crypto prices",
+    "explorerCta": "Explore now",
+    "bannerTitle": "Let us take you from zero to crypto"
   },
   "wallet": {
-    "title": "Welcome to Wallet Page"
+    "title": "Wallet",
+    "nav": {
+      "buy": "Buy",
+      "earn": "Earn",
+      "keys": "Keys",
+      "defi": "DeFi",
+      "assets": "Assets",
+      "security": "Security"
+    },
+    "hero": {
+      "title": "The only crypto wallet you'll ever need",
+      "subtitle": "Buy, store, and do more with your crypto.",
+      "getStarted": "Get started",
+      "downloadAppStore": "Download on App Store",
+      "downloadGooglePlay": "Get it on Google Play"
+    },
+    "buySection": {
+      "title": "Buy, sell, and swap crypto in minutes",
+      "description": "Verify your identity and add a payment method to start buying crypto.",
+      "getStarted": "Get started"
+    },
+    "earnSection": {
+      "title": "Earn up to 15% on your crypto",
+      "description": "Get rewards by putting your Bitcoin, Ethereum, and other crypto assets to work.",
+      "learnMore": "Learn more"
+    },
+    "keysSection": {
+      "title": "Your keys, your crypto",
+      "description": "Self-custody your crypto across Bitcoin, Ethereum, Polygon, and other leading blockchains.",
+      "getStarted": "Get started"
+    },
+    "memecoinSection": {
+      "title": "The ultimate home for memecoin fans",
+      "subtitle": "Memecoin trading starts here",
+      "listedCoins": "Listed Coins",
+      "learnMore": "Learn More"
+    },
+    "defiSection": {
+      "title": "Discover the world of DeFi",
+      "subtitle": "Connect to dapps, manage your NFT collection, and unlock the power of web3.",
+      "downloadAppStore": "Download on the App Store",
+      "downloadGooglePlay": "GET IT ON Google Play"
+    },
+    "assetsSection": {
+      "title": "Access dozens of crypto assets",
+      "morePrices": "More Prices →",
+      "buy": "Buy",
+      "trade": "Trade"
+    },
+    "banner": {
+      "title": "Let us take you from zero to crypto",
+      "getStarted": "Get started"
+    }
+  },
+  "exchange": {
+    "title": "Exchange",
+    "description": "Trade cryptocurrencies with advanced tools and features."
+  },
+  "explorer": {
+    "title": "Blockchain Explorer",
+    "description": "Explore blockchain data, transactions, and market insights."
+  },
+  "institutional": {
+    "title": "Institutional Services",
+    "description": "Enterprise-grade crypto solutions for institutions."
+  },
+  "pay": {
+    "title": "Pay",
+    "description": "Send and receive payments with crypto."
   },
   "userDashboard": {
     "sidebar": {
@@ -141,10 +207,5 @@
     "careersHiring": "Hiring",
     "copyright": "© Blockchain.com",
     "language": "English"
-  },
-  
-  "userwallet": {
-    "title": "Welcome to Wallet Page",
-    "description": "This is the wallet page"
   }
 }

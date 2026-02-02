@@ -28,28 +28,29 @@ export default function UserHeader() {
   const isWallet = pathname?.includes('/user/wallet');
 
   return (
-    <header className="mx-auto fixed top-0 left-0 right-0 h-16 bg-primary border-b border-gray-200 z-40 shadow-sm">
-      <div className="flex items-center  justify-between h-full px-6">
+    <header className="mx-auto fixed top-0 left-0 right-0 h-14 sm:h-16 bg-primary border-b border-gray-200 z-40 shadow-sm">
+      <div className="flex items-center justify-between h-full px-4 sm:px-6 lg:px-8">
         {/* User Dashboard Logo */}
-        <div className="flex items-center">
-        <Link
+        <div className="flex items-center flex-shrink-0">
+          <Link
             href={getLocalizedPath('/')}
-            className="flex items-center gap-2 text-xl sm:text-2xl font-bold text-white transition-transform duration-300 hover:scale-105"
+            className="flex items-center gap-1.5 sm:gap-2 text-lg sm:text-xl lg:text-2xl font-bold text-white transition-transform duration-300 hover:scale-105"
           >
-            <div className="w-5 h-5 sm:w-6 sm:h-6 bg-blue-600 rounded-sm flex items-center justify-center">
-              <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 border-2 border-white"></div>
+            <div className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 bg-blue-600 rounded-sm flex items-center justify-center">
+              <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 lg:w-3 lg:h-3 border-2 border-white"></div>
             </div>
-            <span>
+            <span className="hidden sm:inline">
               Blockchain<span className="text-gray-300">.com</span>
             </span>
+            <span className="sm:hidden">BC</span>
           </Link>
         </div>
 
         {/* User Dashboard Trading/Wallet Tabs */}
-        <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+        <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-0.5 sm:p-1 mx-2 sm:mx-4 flex-1 max-w-xs sm:max-w-none justify-center">
           <Link
             href={getLocalizedPath('/user')}
-            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+            className={`px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
               isTrading
                 ? 'bg-white text-blue-600 shadow-sm'
                 : 'text-gray-600 hover:text-gray-900'
@@ -59,7 +60,7 @@ export default function UserHeader() {
           </Link>
           <Link
             href={getLocalizedPath('/user/wallet')}
-            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+            className={`px-2 sm:px-3 lg:px-4 py-1.5 sm:py-2 rounded-md text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
               isWallet
                 ? 'bg-white text-blue-600 shadow-sm'
                 : 'text-gray-600 hover:text-gray-900'
@@ -70,32 +71,32 @@ export default function UserHeader() {
         </div>
 
         {/* User Dashboard Right Side Actions */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 flex-shrink-0">
           {/* Balance Visibility Toggle - User Dashboard Feature */}
           <button
             onClick={() => setBalanceVisible(!balanceVisible)}
-            className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+            className="p-1.5 sm:p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
             aria-label={balanceVisible ? 'Hide balance' : 'Show balance'}
           >
-            {balanceVisible ? <Eye className="w-5 h-5" /> : <EyeOff className="w-5 h-5" />}
+            {balanceVisible ? <Eye className="w-4 h-4 sm:w-5 sm:h-5" /> : <EyeOff className="w-4 h-4 sm:w-5 sm:h-5" />}
           </button>
 
           {/* Refresh Balance - User Dashboard Feature */}
           <button
-            className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+            className="p-1.5 sm:p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors hidden sm:flex"
             aria-label="Refresh balance"
           >
-            <RefreshCw className="w-5 h-5" />
+            <RefreshCw className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
 
           {/* Profile Menu - User Dashboard Feature */}
           <div className="relative">
             <button
               onClick={() => setShowProfileMenu(!showProfileMenu)}
-              className="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+              className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
             >
-              <User className="w-5 h-5" />
-              <ChevronDown className="w-4 h-4" />
+              <User className="w-4 h-4 sm:w-5 sm:h-5" />
+              <ChevronDown className="w-3 h-3 sm:w-4 sm:h-4 hidden sm:block" />
             </button>
 
             {showProfileMenu && (

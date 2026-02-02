@@ -12,88 +12,88 @@ export default function UserDashboardPage() {
   const locale = params?.lang || 'en';
 
   return (
-    <div className="max-w-7xl mx-auto space-y-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-4 sm:space-y-6">
       {/* User Dashboard - Trading Account Balance Card */}
-      <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
-        <h2 className="text-sm font-medium text-gray-500 mb-2">
+      <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100">
+        <h2 className="text-xs sm:text-sm font-medium text-gray-500 mb-2">
           {t('userDashboard.home.tradingAccountBalance')}
         </h2>
-        <p className="text-3xl font-bold text-gray-900">$0.00</p>
+        <p className="text-2xl sm:text-3xl font-bold text-gray-900">$0.00</p>
       </div>
 
       {/* User Dashboard - Trading Actions Grid */}
-      <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
-        <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
-          <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
-            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-              <Plus className="w-5 h-5 text-blue-600" />
+      <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4">
+          <button className="flex flex-col items-center gap-2 p-3 sm:p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center">
+              <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
             </div>
-            <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.buy')}</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700 text-center">{t('userDashboard.home.buy')}</span>
           </button>
-          <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
-            <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-              <Minus className="w-5 h-5 text-red-600" />
+          <button className="flex flex-col items-center gap-2 p-3 sm:p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-100 rounded-full flex items-center justify-center">
+              <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-red-600" />
             </div>
-            <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.sell')}</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700 text-center">{t('userDashboard.home.sell')}</span>
           </button>
-          <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
-            <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
-              <ArrowUpDown className="w-5 h-5 text-purple-600" />
+          <button className="flex flex-col items-center gap-2 p-3 sm:p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-purple-100 rounded-full flex items-center justify-center">
+              <ArrowUpDown className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600" />
             </div>
-            <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.limitOrder')}</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700 text-center">{t('userDashboard.home.limitOrder')}</span>
           </button>
-          <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
-            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-              <ArrowUpDown className="w-5 h-5 text-green-600" />
+          <button className="flex flex-col items-center gap-2 p-3 sm:p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-100 rounded-full flex items-center justify-center">
+              <ArrowUpDown className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
             </div>
-            <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.convert')}</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700 text-center">{t('userDashboard.home.convert')}</span>
           </button>
-          <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
-            <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-              <ArrowDown className="w-5 h-5 text-blue-600" />
+          <button className="flex flex-col items-center gap-2 p-3 sm:p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center">
+              <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
             </div>
-            <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.deposit')}</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700 text-center">{t('userDashboard.home.deposit')}</span>
           </button>
-          <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
-            <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center">
-              <ArrowUp className="w-5 h-5 text-orange-600" />
+          <button className="flex flex-col items-center gap-2 p-3 sm:p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-orange-100 rounded-full flex items-center justify-center">
+              <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600" />
             </div>
-            <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.send')}</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700 text-center">{t('userDashboard.home.send')}</span>
           </button>
-          <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
-            <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
-              <Building2 className="w-5 h-5 text-indigo-600" />
+          <button className="flex flex-col items-center gap-2 p-3 sm:p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+              <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-indigo-600" />
             </div>
-            <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.addCash')}</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700 text-center">{t('userDashboard.home.addCash')}</span>
           </button>
-          <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
-            <div className="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center">
-              <DollarSign className="w-5 h-5 text-pink-600" />
+          <button className="flex flex-col items-center gap-2 p-3 sm:p-4 hover:bg-gray-50 rounded-lg transition-colors">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-pink-100 rounded-full flex items-center justify-center">
+              <DollarSign className="w-4 h-4 sm:w-5 sm:h-5 text-pink-600" />
             </div>
-            <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.cashOut')}</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700 text-center">{t('userDashboard.home.cashOut')}</span>
           </button>
         </div>
       </div>
 
       {/* User Dashboard - Profile Completion Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+        <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100">
+          <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
             {t('userDashboard.home.completeProfile')}
           </h3>
           <div className="flex items-center gap-3 mb-4">
             <div className="flex-1 bg-gray-200 rounded-full h-2">
               <div className="bg-blue-600 h-2 rounded-full" style={{ width: '33%' }}></div>
             </div>
-            <span className="text-sm font-medium text-gray-600">1/3</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-600">1/3</span>
           </div>
-          <p className="text-sm text-gray-600">
+          <p className="text-xs sm:text-sm text-gray-600">
             {t('userDashboard.home.completeProfileDesc')}
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">
+        <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100">
+          <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4">
             {t('userDashboard.home.verificationSteps')}
           </h3>
           <div className="space-y-3">
@@ -139,40 +139,40 @@ export default function UserDashboardPage() {
       </div>
 
       {/* User Dashboard - Assets Section */}
-      <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+      <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100">
         <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900">{t('userDashboard.home.assets')}</h3>
-          <Link href={`/${locale}/user/assets`} className="text-sm text-blue-600 hover:text-blue-700 font-medium">
+          <h3 className="text-base sm:text-lg font-semibold text-gray-900">{t('userDashboard.home.assets')}</h3>
+          <Link href={`/${locale}/user/assets`} className="text-xs sm:text-sm text-blue-600 hover:text-blue-700 font-medium">
             {t('userDashboard.home.seeAll')}
           </Link>
         </div>
-        <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-100">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-              <DollarSign className="w-5 h-5 text-green-600" />
+        <div className="flex items-center justify-between p-3 sm:p-4 bg-gray-50 rounded-lg border border-gray-100">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-100 rounded-full flex items-center justify-center">
+              <DollarSign className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
             </div>
             <div>
-              <p className="text-sm font-medium text-gray-900">
+              <p className="text-xs sm:text-sm font-medium text-gray-900">
                 {t('userDashboard.home.cashAndStablecoins')}
               </p>
             </div>
           </div>
-          <p className="text-lg font-semibold text-gray-900">$0.00</p>
+          <p className="text-base sm:text-lg font-semibold text-gray-900">$0.00</p>
         </div>
       </div>
 
       {/* User Dashboard - Top Movers Section */}
-      <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+      <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-100">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
-            <span className="text-lg font-semibold text-gray-900">{t('userDashboard.home.topMovers')}</span>
-            <span className="text-xl">🔥</span>
+            <span className="text-base sm:text-lg font-semibold text-gray-900">{t('userDashboard.home.topMovers')}</span>
+            <span className="text-lg sm:text-xl">🔥</span>
           </div>
-          <Link href={`/${locale}/user/discover`} className="text-sm text-blue-600 hover:text-blue-700 font-medium">
+          <Link href={`/${locale}/user/discover`} className="text-xs sm:text-sm text-blue-600 hover:text-blue-700 font-medium">
             {t('userDashboard.home.seeAll')}
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {[
             { symbol: 'EFI', price: '$0.0116', change: '-67.37%' },
             { symbol: 'SPACE', price: '$0.00892', change: '-17.14%' },
