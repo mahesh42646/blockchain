@@ -97,6 +97,11 @@
       "buy": "Comprar",
       "trade": "Operar"
     },
+    "securitySection": {
+      "title": "Obtén tranquilidad con seguridad de clase mundial",
+      "description": "Cuando se trata de asegurar que tu cripto esté seguro, pensamos en cada último detalle para que tú no tengas que hacerlo.",
+      "learnMore": "Aprender más"
+    },
     "banner": {
       "title": "Déjanos llevarte de cero a cripto",
       "getStarted": "Comenzar"
@@ -116,7 +121,35 @@
   },
   "pay": {
     "title": "Pagar",
-    "description": "Envía y recibe pagos con cripto."
+    "heroTitle": "Permite a tus usuarios comprar y vender cripto",
+    "heroDescription": "Permite que los usuarios compren o vendan cripto en tu aplicación usando la infraestructura de Blockchain.com, respaldada por nuestros sistemas propietarios internos.",
+    "getInTouch": "Ponerse en contacto",
+    "buyWidget": {
+      "title": "Comprar",
+      "amount": "Cantidad",
+      "asset": "Activo",
+      "summary": "Resumen",
+      "requoting": "Re-cotizando",
+      "previewBuy": "Vista previa de compra",
+      "copyright": "© Blockchain.com. Todos los derechos reservados."
+    },
+    "conversionSection": {
+      "title": "Impulsa la conversión con nuestros sistemas propietarios internos",
+      "description": "Hemos construido sistemas líderes en la industria de liquidez de cripto, pagos y anti-fraude, lo que significa mejor estabilidad, flexibilidad y precios.",
+      "highlightText": "liquidez de cripto",
+      "getInTouch": "Ponerse en contacto"
+    },
+    "kycSection": {
+      "title": "Cripto con 1 clic para nuestros millones de usuarios KYC'd",
+      "description": "Con más de 94M Blockchain.com Wallets, es una experiencia fluida de 1 clic para comprar y vender para usuarios que ya se han verificado (KYC) en Blockchain.com.",
+      "contactUs": "Contáctanos"
+    },
+    "integrationSection": {
+      "title": "Integra fácilmente con unas pocas líneas de código",
+      "description": "Agrega pagos en fiat con métodos de pago principales en más de 100 países, con solo unas pocas líneas de código.",
+      "getInTouch": "Ponerse en contacto",
+      "readDocumentation": "Leer documentación"
+    }
   },
   "userDashboard": {
     "sidebar": {

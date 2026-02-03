@@ -1,9 +1,40 @@
 "use client";
 
 import { useTranslation } from "@/hooks/useTranslation";
+import { useEffect } from "react";
 
 export default function WalletPage() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    const handleAnchorClick = (e) => {
+      const href = e.target.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        e.preventDefault();
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const navHeight = 64; // Height of sticky nav
+          const targetPosition = targetElement.offsetTop - navHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    navLinks.forEach(link => {
+      link.addEventListener('click', handleAnchorClick);
+    });
+
+    return () => {
+      navLinks.forEach(link => {
+        link.removeEventListener('click', handleAnchorClick);
+      });
+    };
+  }, []);
 
   return (
     <>
@@ -22,22 +53,22 @@ export default function WalletPage() {
 
             {/* RIGHT: Nav Links */}
             <div className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium text-white/90">
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#buy" className="hover:text-white transition-colors scroll-smooth">
                 {t('wallet.nav.buy')}
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#earn" className="hover:text-white transition-colors scroll-smooth">
                 {t('wallet.nav.earn')}
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#keys" className="hover:text-white transition-colors scroll-smooth">
                 {t('wallet.nav.keys')}
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#defi" className="hover:text-white transition-colors scroll-smooth">
                 {t('wallet.nav.defi')}
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#assets" className="hover:text-white transition-colors scroll-smooth">
                 {t('wallet.nav.assets')}
               </a>
-              <a href="#" className="hover:text-white transition-colors">
+              <a href="#security" className="hover:text-white transition-colors scroll-smooth">
                 {t('wallet.nav.security')}
               </a>
             </div>
@@ -99,7 +130,7 @@ export default function WalletPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+      <section id="buy" className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 bg-white scroll-mt-16">
         {/* LEFT BACKGROUND SHAPES */}
         <div
           className="absolute left-0 top-0 h-full w-1/2 bg-no-repeat bg-left bg-contain pointer-events-none hidden lg:block"
@@ -122,11 +153,11 @@ export default function WalletPage() {
 
               {/* RIGHT CONTENT */}
               <div className="text-black text-center lg:text-left max-w-xl mx-auto lg:mx-0 order-1 lg:order-2">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-medium leading-tight mb-4 sm:mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold leading-tight mb-4 sm:mb-6">
                   {t('wallet.buySection.title')}
                 </h1>
 
-                <p className="text-base sm:text-lg md:text-[18px] text-gray-700 mb-6 sm:mb-8 lg:mb-10">
+                <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8">
                   {t('wallet.buySection.description')}
                 </p>
                 <button className="text-blue-600 hover:text-blue-700 transition-colors text-base sm:text-lg font-medium inline-flex items-center gap-2">
@@ -139,7 +170,7 @@ export default function WalletPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+      <section id="earn" className="relative overflow-hidden bg-white py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-16">
         <div className="relative container mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 sm:gap-10 lg:gap-12 xl:gap-16">
             {/* LEFT CONTENT */}
@@ -173,7 +204,7 @@ export default function WalletPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#f7f4ff] py-12 sm:py-16 md:py-20 lg:py-24">
+      <section id="keys" className="relative overflow-hidden bg-[#f7f4ff] py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-16">
         {/* BACKGROUND GEOMETRIC PATTERN */}
         <div
           className="pointer-events-none absolute inset-0 bg-center bg-cover bg-no-repeat opacity-[0.06]"
@@ -200,17 +231,17 @@ export default function WalletPage() {
                 <span className="text-lg sm:text-xl">🔑</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[38px] font-bold text-gray-900 leading-tight mb-4 sm:mb-5">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
                 {t('wallet.keysSection.title')}
               </h2>
 
-              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-7">
+              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
                 {t('wallet.keysSection.description')}
               </p>
 
               <a
                 href="#"
-                className="inline-flex items-center gap-2 text-base sm:text-lg font-semibold text-gray-900 hover:text-purple-700 hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-base sm:text-lg font-medium text-gray-900 hover:text-purple-700 hover:gap-3 transition-all"
               >
                 {t('wallet.keysSection.getStarted')}
                 <span aria-hidden>→</span>
@@ -219,12 +250,12 @@ export default function WalletPage() {
           </div>
         </div>
       </section>
-      <section className="relative w-full bg-gradient-to-r from-[#141733] to-[#232642] overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24">
+      <section id="defi" className="relative w-full bg-gradient-to-r from-[#141733] to-[#232642] overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-center">
             {/* LEFT CONTENT */}
             <div className="text-center lg:text-left">
-              <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-semibold leading-tight">
+              <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold leading-tight">
                 {t('wallet.memecoinSection.title')}
               </h1>
 
@@ -281,23 +312,23 @@ export default function WalletPage() {
       </section>
 
       <section
-        className="relative w-full overflow-hidden"
+        id="defi"
+        className="relative w-full overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 scroll-mt-16"
         style={{
           background: "linear-gradient(135deg, #6B21A8 0%, #9333EA 50%, #3B82F6 100%)",
         }}
       >
-        <div className="container mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-          <div className="min-h-[70vh] sm:min-h-[80vh] lg:min-h-[85vh] flex items-center py-12 sm:py-16 md:py-20 lg:py-24">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-center w-full">
-              {/* LEFT CONTENT */}
-              <div className="text-white text-center lg:text-left max-w-xl mx-auto lg:mx-0 order-2 lg:order-1">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] font-bold leading-tight mb-4 sm:mb-6">
-                  {t('wallet.defiSection.title')}
-                </h1>
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 sm:gap-10 lg:gap-12 xl:gap-16">
+            {/* LEFT CONTENT */}
+            <div className="text-white text-center lg:text-left max-w-xl mx-auto lg:mx-0">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold leading-tight mb-4 sm:mb-6">
+                {t('wallet.defiSection.title')}
+              </h2>
 
-                <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 lg:mb-10 leading-relaxed">
-                  {t('wallet.defiSection.subtitle')}
-                </p>
+              <p className="text-base sm:text-lg text-white/90 mb-6 sm:mb-8">
+                {t('wallet.defiSection.subtitle')}
+              </p>
 
                 {/* APP STORE BUTTONS */}
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start items-center">
@@ -331,24 +362,19 @@ export default function WalletPage() {
                 </div>
               </div>
 
-              {/* RIGHT PHONE MOCKUP */}
-              <div className="relative flex justify-center lg:justify-end order-1 lg:order-2">
-                <div className="relative">
-                  <img
-                    src="/images/home/app-wallet-phone@2x.png"
-                    alt="DeFi App Interface"
-                    className="relative z-10 w-[240px] sm:w-[280px] md:w-[320px] lg:w-[360px] xl:w-[400px] max-h-[500px] sm:max-h-[600px] lg:max-h-[700px] object-contain drop-shadow-2xl transform hover:scale-105 transition-transform duration-300"
-                  />
-                  {/* Decorative glow effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-blue-400/20 blur-3xl rounded-full -z-0"></div>
-                </div>
-              </div>
+            {/* RIGHT PHONE MOCKUP */}
+            <div className="relative flex justify-center lg:justify-end">
+              <img
+                src="/images/home/app-wallet-phone@2x.png"
+                alt="DeFi App Interface"
+                className="relative z-10 w-[240px] sm:w-[280px] md:w-[300px] xl:w-[340px] 2xl:w-[380px] max-h-[400px] sm:max-h-[480px] xl:max-h-[580px] object-contain drop-shadow-2xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative w-full overflow-hidden py-16 sm:py-20 md:py-24 lg:py-28 bg-[#f7f4ff]">
+      <section id="assets" className="relative w-full overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 bg-[#f7f4ff] scroll-mt-16">
         {/* Background Pattern */}
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
@@ -359,14 +385,14 @@ export default function WalletPage() {
           }}
         />
 
-        <div className="relative container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative container mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-gray-900 text-center mb-8 sm:mb-10 lg:mb-12">
             {t('wallet.assetsSection.title')}
           </h2>
 
           {/* Crypto Cards Grid - 4 columns layout */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-8 sm:mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-6 sm:mb-8">
             {[
               {
                 name: "Bitcoin",
@@ -408,56 +434,46 @@ export default function WalletPage() {
                 icon: "L",
                 isPositive: true,
               },
-              {
-                name: "Solana",
-                symbol: "SOL",
-                price: "$100.00",
-                change: "-18.61%",
-                changeColor: "text-red-500",
-                iconBg: "bg-purple-800",
-                icon: "≡",
-                isPositive: false,
-              },
             ].map((coin) => (
               <div
                 key={coin.symbol}
-                className="bg-white rounded-xl p-5 sm:p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
+                className="bg-white rounded-lg p-4 sm:p-5 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
               >
                 {/* Header with Icon and Buttons */}
-                <div className="flex justify-between items-start mb-4">
-                  <div className="flex items-center gap-3 flex-1 min-w-0">
-                    <div className={`${coin.iconBg} w-11 h-11 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0`}>
-                      <span className="text-white font-bold text-lg sm:text-xl">{coin.icon}</span>
+                <div className="flex justify-between items-start mb-3">
+                  <div className="flex items-center gap-2.5 flex-1 min-w-0">
+                    <div className={`${coin.iconBg} w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center flex-shrink-0`}>
+                      <span className="text-white font-bold text-base sm:text-lg">{coin.icon}</span>
                     </div>
                     <div className="min-w-0">
-                      <h3 className="font-semibold text-gray-900 text-sm sm:text-base leading-tight truncate">
+                      <h3 className="font-semibold text-gray-900 text-sm leading-tight truncate">
                         {coin.name}
                       </h3>
-                      <span className="text-gray-500 text-xs sm:text-sm">{coin.symbol}</span>
+                      <span className="text-gray-500 text-xs">{coin.symbol}</span>
                     </div>
                   </div>
-                  <div className="flex gap-1.5 flex-shrink-0 ml-2">
-                    <button className="rounded-md bg-purple-100 hover:bg-purple-200 px-2.5 py-1 text-purple-600 text-xs font-medium transition-colors whitespace-nowrap">
+                  <div className="flex gap-1 flex-shrink-0 ml-2">
+                    <button className="rounded bg-purple-100 hover:bg-purple-200 px-2 py-0.5 text-purple-600 text-[10px] font-medium transition-colors whitespace-nowrap">
                       {t('wallet.assetsSection.buy')}
                     </button>
-                    <button className="rounded-md bg-green-100 hover:bg-green-200 px-2.5 py-1 text-green-600 text-xs font-medium transition-colors whitespace-nowrap">
+                    <button className="rounded bg-green-100 hover:bg-green-200 px-2 py-0.5 text-green-600 text-[10px] font-medium transition-colors whitespace-nowrap">
                       {t('wallet.assetsSection.trade')}
                     </button>
                   </div>
                 </div>
 
                 {/* Price and Change */}
-                <div className="mb-4">
-                  <div className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
+                <div className="mb-3">
+                  <div className="text-lg sm:text-xl font-bold text-gray-900 mb-0.5">
                     {coin.price}
                   </div>
-                  <div className={`text-sm font-medium ${coin.changeColor}`}>
+                  <div className={`text-xs font-medium ${coin.changeColor}`}>
                     {coin.change}
                   </div>
                 </div>
 
                 {/* Mini Chart */}
-                <div className="h-14 bg-gray-50 rounded-md flex items-end justify-center p-2 overflow-hidden border border-gray-100">
+                <div className="h-12 bg-gray-50 rounded flex items-end justify-center p-1.5 overflow-hidden border border-gray-100">
                   <svg className="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
                     {coin.isPositive ? (
                       <polyline
@@ -483,7 +499,7 @@ export default function WalletPage() {
           </div>
 
           {/* More Prices Link */}
-          <div className="text-start mt-6 sm:mt-8">
+          <div className="text-center sm:text-start mt-4 sm:mt-6">
             <a
               href="#"
               className="inline-flex items-center gap-2 text-base sm:text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
@@ -494,10 +510,54 @@ export default function WalletPage() {
         </div>
       </section>
 
-      <section className="py-8 sm:py-12 md:py-16 lg:py-20">
+      <section id="security" className="relative w-full overflow-hidden bg-white pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-0 scroll-mt-16">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-end">
+            {/* LEFT CONTENT */}
+            <div className="max-w-xl mx-auto lg:mx-0 pb-8 sm:pb-12 lg:pb-16">
+              {/* Icon Badge */}
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-purple-100 mb-6 sm:mb-8">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-purple-600 flex items-center justify-center">
+                  <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border-2 border-white"></div>
+                </div>
+              </div>
+
+              {/* Headline */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
+                {t('wallet.securitySection.title')}
+              </h2>
+
+              {/* Description */}
+              <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
+                {t('wallet.securitySection.description')}
+              </p>
+
+              {/* Learn More Link */}
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 text-base sm:text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors group"
+              >
+                {t('wallet.securitySection.learnMore')}
+                <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
+
+            {/* RIGHT - MOBILE PHONE IMAGE */}
+            <div className="relative flex justify-center lg:justify-end items-end">
+              <img
+                src="/images/wallet/app-security-new@1x.png"
+                alt="Security backup interface"
+                className="w-[240px] sm:w-[280px] md:w-[320px] lg:w-[360px] xl:w-[400px] object-contain drop-shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="">
         <div className="container mx-auto px-4 sm:px-6">
           <div
-            className="relative bg-primary px-6 sm:px-8 md:px-10 lg:px-14 py-8 sm:py-10 md:py-12 overflow-hidden min-h-[140px] sm:min-h-[160px] md:min-h-[180px] lg:min-h-[200px] flex items-center justify-center rounded-lg sm:rounded-xl"
+            className="relative bg-primary px-6 sm:px-8 md:px-10 lg:px-14  overflow-hidden min-h-[140px] sm:min-h-[160px] md:min-h-[180px] lg:min-h-[200px] flex items-center justify-center rounded-lg sm:rounded-xl"
             style={{
               backgroundImage: "url('/images/home/banner-bg.svg')",
               backgroundRepeat: "no-repeat",

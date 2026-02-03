@@ -124,7 +124,7 @@ export default function Page() {
                   {t("nav.wallet")}
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-tight font-bold text-purple-700 mb-6 sm:mb-8 md:mb-10">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] leading-tight font-bold text-purple-700 mb-4 sm:mb-6">
                   {t("home.walletTitle")}
                 </h2>
 
@@ -156,22 +156,7 @@ export default function Page() {
                 </button>
               </div>
               <div
-                className="
-    relative
-    flex
-    items-end
-    bottom-0
-    justify-center
-    bg-contain
-    bg-center
-    bg-no-repeat
-    min-h-[320px]
-    sm:min-h-[420px]
-    md:min-h-[480px]
-    lg:min-h-[520px]
-    rounded-2xl
-    overflow-hidden
-  "
+                className="relative flex items-end bottom-0 justify-center bg-contain bg-center bg-no-repeat min-h-[320px] sm:min-h-[420px] md:min-h-[480px] lg:min-h-[520px] rounded-2xl overflow-hidden"
                 style={{
                   backgroundImage:
                     "url('/images/home/homepage-app-shapes-bg@2x.png')",
@@ -184,17 +169,7 @@ export default function Page() {
                 <img
                   src="/images/home/app-buy-with-ease@2x.png"
                   alt="Mobile app preview"
-                  className="
-      absolute
-      bottom-65
-      right-auto
-      w-[170px]
-      sm:w-[210px]
-      md:w-[240px]
-      lg:w-[280px]
-      object-contain
-      drop-shadow-2xl
-    "
+                  className="absolute bottom-65 right-auto w-[170px] sm:w-[210px] md:w-[240px] lg:w-[280px] object-contain drop-shadow-2xl"
                 />
               </div>
             </div>
@@ -211,11 +186,11 @@ export default function Page() {
                   🏛 {t('nav.institutional')}
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-gray-900 mb-6 leading-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
                   {t('home.institutionalTitle')}
                 </h2>
 
-                <p className="text-gray-600 max-w-md mb-8">
+                <p className="text-base sm:text-lg text-gray-600 max-w-md mb-6 sm:mb-8">
                   {t('home.institutionalDesc')}
                 </p>
 
@@ -248,7 +223,7 @@ export default function Page() {
                   {t('nav.explorer')}
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-orange-400 leading-tight mb-6">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-orange-400 leading-tight mb-4 sm:mb-6">
                   {t('home.explorerTitle')}
                 </h2>
 
@@ -292,6 +267,9 @@ export default function Page() {
             </div>
           </div>
         </div>
+      </section>
+      <section>
+        
       </section>
       <section className="py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6">

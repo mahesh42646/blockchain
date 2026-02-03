@@ -97,6 +97,11 @@
       "buy": "Buy",
       "trade": "Trade"
     },
+    "securitySection": {
+      "title": "Get peace of mind with best-in-class security",
+      "description": "When it comes to ensuring your crypto is secure, we think about every last detail so you don't have to.",
+      "learnMore": "Learn more"
+    },
     "banner": {
       "title": "Let us take you from zero to crypto",
       "getStarted": "Get started"
@@ -116,7 +121,35 @@
   },
   "pay": {
     "title": "Pay",
-    "description": "Send and receive payments with crypto."
+    "heroTitle": "Empower your users to buy and sell crypto",
+    "heroDescription": "Let users buy or sell crypto in your app using Blockchain.com's infrastructure, underpinned by our proprietary in-house systems.",
+    "getInTouch": "Get in touch",
+    "buyWidget": {
+      "title": "Buy",
+      "amount": "Amount",
+      "asset": "Asset",
+      "summary": "Summary",
+      "requoting": "Re-quoting",
+      "previewBuy": "Preview buy",
+      "copyright": "© Blockchain.com. All rights reserved."
+    },
+    "conversionSection": {
+      "title": "Drive conversion with our in-house proprietary systems",
+      "description": "We have built industry leading crypto liquidity, payment and anti-fraud systems, which means better stability, flexibility, and pricing.",
+      "highlightText": "crypto liquidity",
+      "getInTouch": "Get in touch"
+    },
+    "kycSection": {
+      "title": "1-click crypto for our millions of KYC'd users",
+      "description": "With over 94M Blockchain.com Wallets, it's a seamless 1-click experience to buy and sell for users who have already KYC'd at Blockchain.com.",
+      "contactUs": "Contact Us"
+    },
+    "integrationSection": {
+      "title": "Easily integrate with a few lines of code",
+      "description": "Add fiat payments with major payment methods across 100+ countries, with just a few lines of code.",
+      "getInTouch": "Get in touch",
+      "readDocumentation": "Read Documentation"
+    }
   },
   "userDashboard": {
     "sidebar": {
