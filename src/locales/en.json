@@ -35,86 +35,123 @@
     "walletFeature2": "Earn rewards on your crypto",
     "walletFeature3": "Be Your Own Bank® with self-custody",
     "walletFeature4": "Connect to DeFi",
-    "getStarted": "Get started"
-  },
-  "exchange": {
-    "title": "Welcome to Exchange Page"
-  },
-  "explorer": {
-    "title": "Welcome to Explorer Page"
-  },
-  "institutional": {
-    "title": "Welcome to Institutional Page"
-  },
-  "pay": {
-    "title": "Welcome to Pay Page"
+    "getStarted": "Get started",
+    "institutionalTitle": "High-touch crypto solutions for institutions",
+    "institutionalDesc": "Spot OTC, derivatives, structured products, and margin lending.",
+    "institutionalCta": "Become a client",
+    "explorerTitle": "Blockchain data is in our DNA",
+    "explorerDesc": "Explore the top blockchains. Confirm transactions, analyze the market, or simply learn more about crypto.",
+    "explorerFeature1": "Powerful Blockchain Data API",
+    "explorerFeature2": "Industry leading charts",
+    "explorerFeature3": "Real-time crypto prices",
+    "explorerCta": "Explore now",
+    "bannerTitle": "Let us take you from zero to crypto"
   },
   "wallet": {
-    "title": "Welcome to Wallet Page"
-  },
-  "userDashboard": {
-    "sidebar": {
-      "home": "Home",
-      "assets": "Assets",
-      "discover": "Discover",
-      "memezone": "Memezone",
-      "earn": "Earn",
-      "activity": "Activity"
-    },
-    "header": {
-      "trading": "Trading",
-      "wallet": "Wallet",
-      "profile": "Profile",
-      "settings": "Settings",
-      "logout": "Logout"
-    },
-    "home": {
-      "tradingAccountBalance": "Trading Account Balance",
+    "title": "Wallet",
+    "nav": {
       "buy": "Buy",
-      "sell": "Sell",
-      "limitOrder": "Limit Order",
-      "convert": "Convert",
-      "deposit": "Deposit",
-      "send": "Send",
-      "addCash": "Add cash",
-      "cashOut": "Cash out",
-      "completeProfile": "Complete Your Profile. Buy Crypto Today.",
-      "completeProfileDesc": "Finish setting up your trading account and start buying crypto today.",
-      "verificationSteps": "Verification Steps",
-      "verifyEmail": "Verify your email",
-      "verifyIdentity": "Verify your identity",
-      "buyCrypto": "Buy crypto",
-      "around2Minutes": "Around 2 minutes",
+      "earn": "Earn",
+      "keys": "Keys",
+      "defi": "DeFi",
       "assets": "Assets",
-      "seeAll": "See all",
-      "cashAndStablecoins": "Cash and Stablecoins",
-      "topMovers": "Top Movers"
+      "security": "Security"
     },
-    "assets": {
-      "title": "Assets",
-      "description": "View and manage your assets here."
+    "hero": {
+      "title": "The only crypto wallet you'll ever need",
+      "subtitle": "Buy, store, and do more with your crypto.",
+      "getStarted": "Get started",
+      "downloadAppStore": "Download on App Store",
+      "downloadGooglePlay": "Get it on Google Play"
     },
-    "discover": {
-      "title": "Discover",
-      "description": "Discover new cryptocurrencies and trading opportunities."
+    "buySection": {
+      "title": "Buy, sell, and swap crypto in minutes",
+      "description": "Verify your identity and add a payment method to start buying crypto.",
+      "getStarted": "Get started"
     },
-    "memezone": {
-      "title": "Memezone",
-      "description": "Explore meme coins and trending tokens."
+    "earnSection": {
+      "title": "Earn up to 15% on your crypto",
+      "description": "Get rewards by putting your Bitcoin, Ethereum, and other crypto assets to work.",
+      "learnMore": "Learn more"
     },
-    "earn": {
-      "title": "Earn",
-      "description": "Earn rewards on your crypto holdings."
+    "keysSection": {
+      "title": "Your keys, your crypto",
+      "description": "Self-custody your crypto across Bitcoin, Ethereum, Polygon, and other leading blockchains.",
+      "getStarted": "Get started"
     },
-    "activity": {
-      "title": "Activity",
-      "description": "View your transaction history and activity."
+    "memecoinSection": {
+      "title": "The ultimate home for memecoin fans",
+      "subtitle": "Memecoin trading starts here",
+      "listedCoins": "Listed Coins",
+      "learnMore": "Learn More"
     },
-    "wallet": {
-      "title": "Wallet",
-      "description": "Manage your wallet and view your balances."
+    "defiSection": {
+      "title": "Discover the world of DeFi",
+      "subtitle": "Connect to dapps, manage your NFT collection, and unlock the power of web3.",
+      "downloadAppStore": "Download on the App Store",
+      "downloadGooglePlay": "GET IT ON Google Play"
+    },
+    "assetsSection": {
+      "title": "Access dozens of crypto assets",
+      "morePrices": "More Prices →",
+      "buy": "Buy",
+      "trade": "Trade"
+    },
+    "securitySection": {
+      "title": "Get peace of mind with best-in-class security",
+      "description": "When it comes to ensuring your crypto is secure, we think about every last detail so you don't have to.",
+      "learnMore": "Learn more"
+    },
+    "banner": {
+      "title": "Let us take you from zero to crypto",
+      "getStarted": "Get started"
     }
   },
+  "exchange": {
+    "title": "Exchange",
+    "description": "Trade cryptocurrencies with advanced tools and features."
+  },
+  "explorer": {
+    "title": "Blockchain Explorer",
+    "description": "Explore blockchain data, transactions, and market insights."
+  },
+  "institutional": {
+    "title": "Institutional Services",
+    "description": "Enterprise-grade crypto solutions for institutions."
+  },
+  "pay": {
+    "title": "Pay",
+    "heroTitle": "Empower your users to buy and sell crypto",
+    "heroDescription": "Let users buy or sell crypto in your app using Blockchain.com's infrastructure, underpinned by our proprietary in-house systems.",
+    "getInTouch": "Get in touch",
+    "buyWidget": {
+      "title": "Buy",
+      "amount": "Amount",
+      "asset": "Asset",
+      "summary": "Summary",
+      "requoting": "Re-quoting",
+      "previewBuy": "Preview buy",
+      "copyright": "© Blockchain.com. All rights reserved."
+    },
+    "conversionSection": {
+      "title": "Drive conversion with our in-house proprietary systems",
+      "description": "We have built industry leading crypto liquidity, payment and anti-fraud systems, which means better stability, flexibility, and pricing.",
+      "highlightText": "crypto liquidity",
+      "getInTouch": "Get in touch"
+    },
+    "kycSection": {
+      "title": "1-click crypto for our millions of KYC'd users",
+      "description": "With over 94M Blockchain.com Wallets, it's a seamless 1-click experience to buy and sell for users who have already KYC'd at Blockchain.com.",
+      "contactUs": "Contact Us"
+    },
+    "integrationSection": {
+      "title": "Easily integrate with a few lines of code",
+      "description": "Add fiat payments with major payment methods across 100+ countries, with just a few lines of code.",
+      "getInTouch": "Get in touch",
+      "readDocumentation": "Read Documentation"
+    }
+  },
+  
   "user": {
     "dashboard": "Dashboard",
     "profile": "Profile",
@@ -146,5 +183,270 @@
   "userwallet": {
     "title": "Welcome to Wallet Page",
     "description": "This is the wallet page"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  "userDashboard": {
+    "sidebar": {
+      "home": "Home",
+      "assets": "Assets",
+      "discover": "Discover",
+      "memezone": "Memezone",
+      "earn": "Earn",
+      "activity": "Activity"
+    },
+    "header": {
+      "trading": "Trading",
+      "wallet": "Wallet",
+      "profile": "Profile",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+    "home": {
+      "tradingAccountBalance": "Trading Account Balance",
+      "buy": "Buy",
+      "sell": "Sell",
+      "limitOrder": "Limit Order",
+      "convert": "Convert",
+      "deposit": "Deposit",
+      "send": "Send",
+      "addCash": "Add cash",
+      "cashOut": "Cash out",
+      "completeProfile": "Complete Your Profile.",
+      "buyCryptoToday": "Buy Crypto Today.",
+      "completeProfileDesc": "Finish setting up your trading account and start buying crypto today.",
+      "verificationSteps": "Verification Steps",
+      "verifyEmail": "Verify your email",
+      "verifyIdentity": "Verify your identity",
+      "buyCrypto": "Buy crypto",
+      "around2Minutes": "Around 2 minutes",
+      "assets": "Assets",
+      "seeAll": "See all",
+      "cashAndStablecoins": "Cash and Stablecoins",
+      "topMovers": "Top Movers",
+      "recurringBuys": "Recurring Buys",
+      "automateYourBuys": "Automate your buys",
+      "recurringBuysDesc": "Buy crypto daily, weekly, or monthly",
+      "go": "Go",
+      "news": "News",
+      "contactSupport": "Contact support",
+      "viewSupportCenter": "View support center",
+      "needHelp": "Need help?"
+    },
+    "assets": {
+      "title": "Assets",
+      "description": "View and manage your assets here.",
+      "totalBalance": "Total Balance",
+      "cash": "Cash",
+      "getStartedTitle": "To get started, buy or deposit crypto",
+      "searchPlaceholder": "Search assets",
+      "filter": { "all": "All", "crypto": "Crypto", "cash": "Cash" },
+      "asset": "Asset",
+      "balance": "Balance",
+      "value": "Value",
+      "trade": "Trade",
+      "noAssets": "No assets found"
+    },
+    "discover": {
+      "title": "Discover",
+      "description": "Discover new cryptocurrencies and trading opportunities.",
+      "searchPlaceholder": "Search by name or symbol",
+      "searchCoins": "Search Coins",
+      "explore": "Explore",
+      "tabs": { "tradable": "Tradable", "gainers": "Gainers", "losers": "Losers", "favorites": "Favorites" },
+      "sections": { "meme": "Meme", "other": "Other", "popular": "Popular" },
+      "category": { "all": "All", "gainers": "Gainers", "losers": "Losers" },
+      "asset": "Asset",
+      "price": "Price",
+      "change24h": "24h Change",
+      "chart": "Chart",
+      "trade": "Trade",
+      "noResults": "No results found"
+    },
+    "memezone": {
+      "title": "Memezone",
+      "description": "Explore meme coins and trending tokens.",
+      "searchPlaceholder": "Search meme coins",
+      "trending": "Trending meme coins",
+      "marketCap": "Market cap",
+      "rank": "Rank",
+      "trade": "Trade",
+      "noResults": "No meme coins found"
+    },
+    "earn": {
+      "title": "Earn",
+      "description": "Earn rewards on your crypto holdings.",
+      "subtitle": "Get rewards on your crypto.",
+      "legalDisclaimer": "Legal Disclaimer",
+      "secureEarn": "Earn securely",
+      "secureEarnDesc": "Your crypto is held with institutional-grade security while you earn.",
+      "apy": "APY",
+      "myAssets": "My Assets",
+      "searchCoins": "Search Coins",
+      "howItWorks": "How it works",
+      "step1Title": "Choose a product",
+      "step1Desc": "Select staking, flexible, or locked rewards based on your goals.",
+      "step2Title": "Deposit crypto",
+      "step2Desc": "Transfer your crypto to start earning rewards.",
+      "step3Title": "Earn rewards",
+      "step3Desc": "Rewards are paid out automatically to your account.",
+      "period": { "monthly": "Monthly", "daily": "Daily", "weekly": "Weekly", "compare": "Compare" },
+      "cards": {
+        "passiveRewards": "Passive Rewards",
+        "stakingRewards": "Staking Rewards",
+        "activeRewards": "Active Rewards",
+        "compareProducts": "Compare Products",
+        "compareSub": "See what suits you best"
+      },
+      "type": { "active": "00 Active", "staking": "A Staking", "passive": "% Passive" },
+      "table": { "assets": "Assets", "type": "Type", "maxRate": "Max Annual Rate", "action": "Action", "start": "Start" },
+      "products": {
+        "staking": "Staking",
+        "stakingDesc": "Lock your crypto to secure the network and earn rewards.",
+        "rewards": "Rewards",
+        "rewardsDesc": "Earn up to 5% on supported assets with no lock-up.",
+        "flexible": "Flexible",
+        "flexibleDesc": "Earn with the flexibility to withdraw anytime.",
+        "startEarning": "Start earning",
+        "learnMore": "Learn more",
+        "getStarted": "Get started"
+      }
+    },
+    "activity": {
+      "title": "Activity",
+      "description": "View your transaction history and activity.",
+      "noActivityTitle": "No activity",
+      "noActivitySubtitle": "To get started, buy or deposit crypto",
+      "searchPlaceholder": "Search transactions",
+      "filter": { "all": "All", "deposit": "Deposit", "buy": "Buy", "sell": "Sell", "convert": "Convert", "withdrawal": "Withdrawal" },
+      "type": "Type",
+      "amount": "Amount",
+      "date": "Date",
+      "status": "Status",
+      "types": { "deposit": "Deposit", "buy": "Buy", "sell": "Sell", "convert": "Convert", "withdrawal": "Withdrawal" },
+      "statuses": { "completed": "Completed", "pending": "Pending", "failed": "Failed" },
+      "details": "Details",
+      "noActivity": "No activity found"
+    },
+    "wallet": {
+      "title": "Wallet",
+      "description": "Manage your wallet and view your balances."
+    }
+  },
+
+  "defi": {
+    "sidebar": {
+      "home": "Home",
+      "assets": "Assets",
+      "discover": "Discover",
+      "stocks": "Stocks",
+      "dex": "DEX",
+      "activity": "Activity"
+    },
+    "right": {
+      "secureTitle": "Secure your wallet",
+      "secureDesc": "Backup your Recovery Phrase to keep your DeFi Wallet safe",
+      "stocksLive": "Stocks are now live"
+    },
+    "home": {
+      "balanceTitle": "DeFi Wallet Balance",
+      "sell": "Sell",
+      "swap": "Swap",
+      "deposit": "Deposit",
+      "send": "Send",
+      "topMovers": "Top Movers",
+      "seeAll": "See all",
+      "news": "News",
+      "needHelp": "Need help?",
+      "contactSupport": "Contact support",
+      "viewSupportCenter": "View support center",
+      "publishedBy": "Published By"
+    },
+    "assets": {
+      "tokens": "Tokens",
+      "collectibles": "Collectibles",
+      "allNetworks": "All networks",
+      "fundTitle": "Fund your wallet to start",
+      "fundDesc": "Transfer crypto from your account or another wallet",
+      "receive": "Receive",
+      "transferOrBuy": "Transfer from any wallet, or buy from a marketplace!"
+    },
+    "discover": {
+      "all": "All",
+      "trending": "Trending",
+      "stocks": "Stocks",
+      "favorites": "Favorites",
+      "searchCoins": "Search Coins",
+      "allNetworks": "All networks",
+      "topMovers": "Top Movers",
+      "name": "Name",
+      "price": "Price",
+      "change24h": "24h",
+      "marketCap": "Market cap",
+      "noFavorites": "No favorites added yet"
+    },
+    "stocks": {
+      "explore": "Explore",
+      "myStocks": "My Stocks",
+      "whatAreTokenizedStocks": "What are tokenized stocks?",
+      "searchCoins": "Search Coins",
+      "name": "Name",
+      "price": "Price",
+      "change24h": "24h",
+      "marketCap": "Market cap",
+      "addStocksToWallet": "Add stocks to your wallet",
+      "newToBlockchain": "New to Blockchain:",
+      "tokenizedStocks": "Tokenized Stocks",
+      "tokenizedStocksDesc": "These are blockchain-based tokens tracking the real-time prices of global equities and ETFs. Stocktastic.",
+      "keyAdvantages": "Key advantages",
+      "marketsNeverClose": "Markets never close",
+      "recordedOnBlockchain": "Every move is recorded on the blockchain",
+      "ownFraction": "Own a fraction of leading companies, starting small",
+      "gotIt": "Got it"
+    },
+    "dex": {
+      "swap": "Swap",
+      "youPay": "You Pay",
+      "youReceive": "You Receive",
+      "select": "Select",
+      "deposit": "Deposit",
+      "swapSettings": "Swap Settings",
+      "allowedSlippage": "Allowed Slippage",
+      "slippageDesc": "Slippage is the max price change you allow for a swap. If it exceeds that, the swap is canceled, and your assets are returned",
+      "crossChainOnly": "Cross-chain only",
+      "arrivalGas": "Arrival Gas",
+      "arrivalGasDesc": "Swap some of your tokens for gas on destination chain.",
+      "save": "Save",
+      "searchCoins": "Search Coins",
+      "network": "Network",
+      "yourXlmAddress": "Your XLM Address",
+      "useAddressOnly": "Use this address only to receive or deposit XLM on the Stellar network.",
+      "lostFundsWarning": "Lost funds cannot be recovered.",
+      "walletAddress": "Wallet Address",
+      "next": "Next",
+      "deFiWallet": "DeFi Wallet"
+    },
+    "activity": {
+      "searchCoins": "Search Coins",
+      "all": "All",
+      "noActivity": "No activity",
+      "noActivityDesc": "To get started, buy or deposit crypto",
+      "deposit": "Deposit"
+    }
   }
+
 }

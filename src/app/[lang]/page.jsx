@@ -13,18 +13,18 @@ export default function Page() {
           backgroundImage: "url('/images/home/home-hero-gradient.svg')",
         }}
       >
-        <div className="container max-w-7xl px-6 sm:px-8 md:px-12 lg:px-16">
-          <div className="min-h-[70vh] flex items-center justify-center">
-            <div className="max-w-4xl px-4 text-white text-center sm:text-left">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+        <div className="container max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
+          <div className="min-h-[70vh] flex items-center">
+            <div className="max-w-3xl text-white">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
                 {t("home.heroTitle")}
               </h1>
 
-              <p className="mt-4 text-lg sm:text-xl md:text-2xl font-sans text-white/90">
+              <p className="text-lg sm:text-xl md:text-2xl font-sans text-white/90 mb-6 sm:mb-8">
                 {t("home.heroSubtitle")}
               </p>
 
-              <div className="mt-6 flex flex-col sm:flex-row max-w-xl gap-3 sm:gap-4">
+              <div className="flex flex-col sm:flex-row max-w-xl gap-3 sm:gap-4">
                 <input
                   type="email"
                   placeholder={t("home.emailPlaceholder")}
@@ -39,9 +39,9 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="-mt-20 sm:-mt-32 md:-mt-45 w-full">
-        <div className="relative z-1 container max-w-6xl mx-auto px-4 sm:px-6 mt-16 sm:mt-24 md:mt-32 pb-8 sm:pb-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <section className="-mt-16 sm:-mt-24 md:-mt-32 lg:-mt-40 w-full">
+        <div className="relative z-1 container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 md:mt-20 lg:mt-24 pb-8 sm:pb-12 md:pb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
             {[
               {
                 name: "Bitcoin",
@@ -114,17 +114,17 @@ export default function Page() {
           </p>
         </div>
       </section> */}
-      <section className="py-8 sm:py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto bg-purple-50 rounded-2xl sm:rounded-3xl overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-              <div className="px-6 sm:pl-8 md:pl-12 lg:pl-20 py-8 sm:py-12 md:py-16 flex flex-col justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
+              <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-8 sm:py-12 md:py-16 lg:py-20 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 rounded-full bg-[#efe7ff] px-3 sm:px-4 py-1.5 sm:py-2 text-purple-600 font-medium mb-6 sm:mb-8 w-fit text-sm sm:text-base">
                   <span className="text-base sm:text-lg">📱</span>
                   {t("nav.wallet")}
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] leading-tight font-bold text-purple-700 mb-6 sm:mb-8 md:mb-10">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] leading-tight font-bold text-purple-700 mb-4 sm:mb-6">
                   {t("home.walletTitle")}
                 </h2>
 
@@ -156,22 +156,7 @@ export default function Page() {
                 </button>
               </div>
               <div
-                className="
-    relative
-    flex
-    items-end
-    bottom-0
-    justify-center
-    bg-contain
-    bg-center
-    bg-no-repeat
-    min-h-[320px]
-    sm:min-h-[420px]
-    md:min-h-[480px]
-    lg:min-h-[520px]
-    rounded-2xl
-    overflow-hidden
-  "
+                className="relative flex items-end bottom-0 justify-center bg-contain bg-center bg-no-repeat min-h-[320px] sm:min-h-[420px] md:min-h-[480px] lg:min-h-[520px] rounded-2xl overflow-hidden"
                 style={{
                   backgroundImage:
                     "url('/images/home/homepage-app-shapes-bg@2x.png')",
@@ -184,44 +169,33 @@ export default function Page() {
                 <img
                   src="/images/home/app-buy-with-ease@2x.png"
                   alt="Mobile app preview"
-                  className="
-      absolute
-      bottom-65
-      right-auto
-      w-[170px]
-      sm:w-[210px]
-      md:w-[240px]
-      lg:w-[280px]
-      object-contain
-      drop-shadow-2xl
-    "
+                  className="absolute bottom-65 right-auto w-[170px] sm:w-[210px] md:w-[240px] lg:w-[280px] object-contain drop-shadow-2xl"
                 />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="py-8 sm:py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto bg-gray-100 rounded-2xl sm:rounded-3xl overflow-hidden">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center py-20 sm:py-22 md:py-36 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 gap-6 sm:gap-8 lg:gap-10">
               {/* LEFT CONTENT */}
-              <div className="px-10  md:pl-12 lg:pl-20 py-8 sm:py-12 md:py-16 justify-center">
+              <div className="px-6 sm:px-8 md:px-10 lg:px-12 xl:px-20 py-8 sm:py-12 md:py-16 lg:py-20 justify-center">
                 <div className="inline-flex items-center gap-2 rounded-full bg-[#e6e9f0] px-4 py-2 text-gray-600 font-medium mb-8 w-fit">
-                  🏛 Institutional
+                  🏛 {t('nav.institutional')}
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-gray-900 mb-6 leading-tight">
-                  High-touch crypto solutions for institutions
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
+                  {t('home.institutionalTitle')}
                 </h2>
 
-                <p className="text-gray-600 max-w-md mb-8">
-                  Spot OTC, derivatives, structured products, and margin
-                  lending.
+                <p className="text-base sm:text-lg text-gray-600 max-w-md mb-6 sm:mb-8">
+                  {t('home.institutionalDesc')}
                 </p>
 
                 <button className="rounded-lg bg-gray-700 px-6 py-3 text-white font-semibold hover:bg-gray-800 transition">
-                  Become a client
+                  {t('home.institutionalCta')}
                 </button>
               </div>
 
@@ -238,58 +212,47 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-8 sm:py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto bg-[#fff6ea] rounded-2xl sm:rounded-3xl overflow-hidden md:overflow-visible">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6 sm:gap-8 lg:gap-10">
               {/* LEFT CONTENT */}
-              <div className="px-6 sm:px-10 md:px-14 lg:px-20 py-12 sm:py-16 md:py-20">
+              <div className="px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-12 sm:py-16 md:py-20 lg:py-24">
                 <div className="inline-flex items-center gap-2 rounded-full bg-[#ffedd6] px-4 py-2 text-orange-400 font-medium mb-8">
                   <span className="text-lg">🔍</span>
-                  Explore
+                  {t('nav.explorer')}
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] font-bold text-orange-400 leading-tight mb-6">
-                  Blockchain data is in our DNA
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-orange-400 leading-tight mb-4 sm:mb-6">
+                  {t('home.explorerTitle')}
                 </h2>
 
                 <div className="space-y-4 mb-10 max-w-md">
                   <div className="rounded-xl border border-orange-200 bg-[#fff1df] p-5 text-orange-400">
-                    Explore the top blockchains. Confirm transactions, analyze
-                    the market, or simply learn more about crypto.
+                    {t('home.explorerDesc')}
                   </div>
 
                   <div className="rounded-xl border border-orange-200 p-5 text-orange-400">
-                    Powerful Blockchain Data API
+                    {t('home.explorerFeature1')}
                   </div>
 
                   <div className="rounded-xl border border-orange-200 p-5 text-orange-400">
-                    Industry leading charts
+                    {t('home.explorerFeature2')}
                   </div>
 
                   <div className="rounded-xl border border-orange-200 p-5 text-orange-400">
-                    Real-time crypto prices
+                    {t('home.explorerFeature3')}
                   </div>
                 </div>
 
                 <button className="rounded-lg bg-orange-400 px-6 py-3 text-white font-semibold hover:bg-orange-500 transition">
-                  Explore now
+                  {t('home.explorerCta')}
                 </button>
               </div>
 
               {/* RIGHT ILLUSTRATION */}
               <div
-                className="
-            relative
-            bg-contain
-            bg-center
-            bg-no-repeat
-            min-h-[360px]
-            sm:min-h-[460px]
-            md:min-h-[520px]
-            lg:min-h-[680px]
-            overflow-visible
-          "
+                className="relative bg-contain bg-center bg-no-repeat min-h-[300px] sm:min-h-[400px] md:min-h-[480px] lg:min-h-[600px] xl:min-h-[680px] overflow-hidden flex items-center justify-center"
                 style={{
                   backgroundImage:
                     "url('/images/home/homepage-explorer-shapes-bg@2x.png')",
@@ -298,71 +261,35 @@ export default function Page() {
                 <img
                   src="/images/home/prod-explore-blockchains-sm@2x.png"
                   alt="Blockchain Explorer"
-                  className="
-              absolute
-              bottom-[1rem]
-              left-[7rem]
-              w-[420px]
-              sm:w-[480px]
-              md:w-[660px]
-              lg:w-[620px]
-              max-w-none
-              object-contain
-              z-10
-              drop-shadow-2xl
-            "
+                  className="relative w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[580px] xl:max-w-[620px] object-contain z-10 drop-shadow-2xl"
                 />
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="py-8 sm:py-12 md:py-16">
-        <div className="container-fluide">
+      <section>
+        
+      </section>
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6">
           <div
-            className="
-        relative
-        bg-primary
-        px-6
-        sm:px-10
-        md:px-14
-        py-8
-        sm:py-10
-        overflow-hidden
-         min-h-[140px]
-        sm:min-h-[180px]
-        md:min-h-[220px]
-        justify-center
-        flex
-      "
+            className="relative bg-primary px-6 sm:px-8 md:px-10 lg:px-14 py-8 sm:py-10 md:py-12 overflow-hidden min-h-[140px] sm:min-h-[160px] md:min-h-[180px] lg:min-h-[200px] flex items-center justify-center rounded-lg sm:rounded-xl"
             style={{
               backgroundImage: "url('/images/home/banner-bg.svg')",
               backgroundRepeat: "no-repeat",
-              backgroundPosition: "start",
+              backgroundPosition: "center",
               backgroundSize: "cover",
             }}
           >
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 md:gap-10">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 max-w-4xl mx-auto">
               {/* Text */}
-              <h2 className="text-white  text-xl sm:text-2xl md:text-3xl font-semibold text-center sm:text-left">
-                Let us take you from zero to crypto
+              <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center sm:text-left">
+                {t('home.bannerTitle')}
               </h2>
 
               {/* CTA Button */}
-              <button
-                className="
-          shrink-0
-          rounded-lg
-          bg-white
-          px-6
-          sm:px-8
-          py-3
-          text-violet-900
-          font-semibold
-          hover:bg-gray-100
-          transition
-        "
-              >
+              <button className="shrink-0 rounded-lg bg-white px-6 sm:px-8 py-2.5 sm:py-3 text-violet-900 font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base whitespace-nowrap">
                 Get started
               </button>
             </div>

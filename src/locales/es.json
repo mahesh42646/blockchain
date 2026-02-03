@@ -21,92 +21,137 @@
     "signUpButton": "Registrarse",
     "whyChooseUs": "¿Por qué elegirnos?",
     "whyChooseUsSubtitle": "Proporcionamos una plataforma segura y fácil de usar para comprar y operar criptomonedas.",
+    "feature1Title": "Seguro y Confiable",
+    "feature1Desc": "Seguridad de nivel empresarial con billeteras multi-firma y protocolos de encriptación avanzados.",
+    "feature2Title": "Súper Rápido",
+    "feature2Desc": "Ejecuta operaciones en milisegundos con nuestra infraestructura optimizada y sistemas de baja latencia.",
+    "feature3Title": "Impulsado por la Comunidad",
+    "feature3Desc": "Únete a millones de usuarios en todo el mundo en un ecosistema transparente y descentralizado.",
+    "feature4Title": "Mejores Tarifas",
+    "feature4Desc": "Tarifas de trading competitivas y datos de mercado en tiempo real para una toma de decisiones informada.",
     "walletTitle": "La única billetera cripto que necesitarás",
     "walletFeature1": "Compra, vende e intercambia con facilidad",
     "walletFeature1Desc": "Usa una tarjeta o cuenta bancaria para comprar BTC, ETH, stablecoins y otros activos.",
     "walletFeature2": "Gana recompensas en tu cripto",
     "walletFeature3": "Sé tu propio banco® con autocustodia",
     "walletFeature4": "Conéctate a DeFi",
-    "getStarted": "Comenzar"
-  },
-  "exchange": {
-    "title": "Bienvenido a la Página de Intercambio"
-  },
-  "explorer": {
-    "title": "Bienvenido a la Página del Explorador"
-  },
-  "institutional": {
-    "title": "Bienvenido a la Página Institucional"
-  },
-  "pay": {
-    "title": "Bienvenido a la Página de Pago"
+    "getStarted": "Comenzar",
+    "institutionalTitle": "Soluciones cripto de alto contacto para instituciones",
+    "institutionalDesc": "OTC spot, derivados, productos estructurados y préstamos con margen.",
+    "institutionalCta": "Conviértete en cliente",
+    "explorerTitle": "Los datos de blockchain están en nuestro ADN",
+    "explorerDesc": "Explora las principales blockchains. Confirma transacciones, analiza el mercado o simplemente aprende más sobre cripto.",
+    "explorerFeature1": "API de Datos de Blockchain Poderosa",
+    "explorerFeature2": "Gráficos líderes de la industria",
+    "explorerFeature3": "Precios de cripto en tiempo real",
+    "explorerCta": "Explorar ahora",
+    "bannerTitle": "Déjanos llevarte de cero a cripto"
   },
   "wallet": {
-    "title": "Bienvenido a la Página de Billetera"
-  },
-  "userDashboard": {
-    "sidebar": {
-      "home": "Inicio",
-      "assets": "Activos",
-      "discover": "Descubrir",
-      "memezone": "Memezone",
-      "earn": "Ganar",
-      "activity": "Actividad"
-    },
-    "header": {
-      "trading": "Trading",
-      "wallet": "Billetera",
-      "profile": "Perfil",
-      "settings": "Configuración",
-      "logout": "Cerrar Sesión"
-    },
-    "home": {
-      "tradingAccountBalance": "Saldo de Cuenta de Trading",
+    "title": "Billetera",
+    "nav": {
       "buy": "Comprar",
-      "sell": "Vender",
-      "limitOrder": "Orden Límite",
-      "convert": "Convertir",
-      "deposit": "Depositar",
-      "send": "Enviar",
-      "addCash": "Agregar efectivo",
-      "cashOut": "Retirar",
-      "completeProfile": "Completa tu Perfil. Compra Cripto Hoy.",
-      "completeProfileDesc": "Termina de configurar tu cuenta de trading y comienza a comprar cripto hoy.",
-      "verificationSteps": "Pasos de Verificación",
-      "verifyEmail": "Verifica tu correo electrónico",
-      "verifyIdentity": "Verifica tu identidad",
-      "buyCrypto": "Compra cripto",
-      "around2Minutes": "Alrededor de 2 minutos",
+      "earn": "Ganar",
+      "keys": "Claves",
+      "defi": "DeFi",
       "assets": "Activos",
-      "seeAll": "Ver todo",
-      "cashAndStablecoins": "Efectivo y Stablecoins",
-      "topMovers": "Principales Movimientos"
+      "security": "Seguridad"
     },
-    "assets": {
-      "title": "Activos",
-      "description": "Visualiza y gestiona tus activos aquí."
+    "hero": {
+      "title": "La única billetera cripto que necesitarás",
+      "subtitle": "Compra, almacena y haz más con tu cripto.",
+      "getStarted": "Comenzar",
+      "downloadAppStore": "Descargar en App Store",
+      "downloadGooglePlay": "Obtener en Google Play"
     },
-    "discover": {
-      "title": "Descubrir",
-      "description": "Descubre nuevas criptomonedas y oportunidades de trading."
+    "buySection": {
+      "title": "Compra, vende e intercambia cripto en minutos",
+      "description": "Verifica tu identidad y agrega un método de pago para comenzar a comprar cripto.",
+      "getStarted": "Comenzar"
     },
-    "memezone": {
-      "title": "Memezone",
-      "description": "Explora meme coins y tokens en tendencia."
+    "earnSection": {
+      "title": "Gana hasta 15% en tu cripto",
+      "description": "Obtén recompensas poniendo a trabajar tu Bitcoin, Ethereum y otros activos cripto.",
+      "learnMore": "Aprender más"
     },
-    "earn": {
-      "title": "Ganar",
-      "description": "Gana recompensas en tus tenencias de cripto."
+    "keysSection": {
+      "title": "Tus claves, tu cripto",
+      "description": "Autocustodia tu cripto en Bitcoin, Ethereum, Polygon y otras blockchains líderes.",
+      "getStarted": "Comenzar"
     },
-    "activity": {
-      "title": "Actividad",
-      "description": "Visualiza tu historial de transacciones y actividad."
+    "memecoinSection": {
+      "title": "El hogar definitivo para los fanáticos de memecoin",
+      "subtitle": "El trading de memecoin comienza aquí",
+      "listedCoins": "Monedas Listadas",
+      "learnMore": "Aprender Más"
     },
-    "wallet": {
-      "title": "Billetera",
-      "description": "Gestiona tu billetera y visualiza tus saldos."
+    "defiSection": {
+      "title": "Descubre el mundo de DeFi",
+      "subtitle": "Conéctate a dapps, gestiona tu colección de NFT y desbloquea el poder de web3.",
+      "downloadAppStore": "Descargar en App Store",
+      "downloadGooglePlay": "OBTÉNLO EN Google Play"
+    },
+    "assetsSection": {
+      "title": "Accede a docenas de activos cripto",
+      "morePrices": "Más Precios →",
+      "buy": "Comprar",
+      "trade": "Operar"
+    },
+    "securitySection": {
+      "title": "Obtén tranquilidad con seguridad de clase mundial",
+      "description": "Cuando se trata de asegurar que tu cripto esté seguro, pensamos en cada último detalle para que tú no tengas que hacerlo.",
+      "learnMore": "Aprender más"
+    },
+    "banner": {
+      "title": "Déjanos llevarte de cero a cripto",
+      "getStarted": "Comenzar"
     }
   },
+  "exchange": {
+    "title": "Intercambio",
+    "description": "Opera criptomonedas con herramientas y características avanzadas."
+  },
+  "explorer": {
+    "title": "Explorador de Blockchain",
+    "description": "Explora datos de blockchain, transacciones e información del mercado."
+  },
+  "institutional": {
+    "title": "Servicios Institucionales",
+    "description": "Soluciones cripto de nivel empresarial para instituciones."
+  },
+  "pay": {
+    "title": "Pagar",
+    "heroTitle": "Permite a tus usuarios comprar y vender cripto",
+    "heroDescription": "Permite que los usuarios compren o vendan cripto en tu aplicación usando la infraestructura de Blockchain.com, respaldada por nuestros sistemas propietarios internos.",
+    "getInTouch": "Ponerse en contacto",
+    "buyWidget": {
+      "title": "Comprar",
+      "amount": "Cantidad",
+      "asset": "Activo",
+      "summary": "Resumen",
+      "requoting": "Re-cotizando",
+      "previewBuy": "Vista previa de compra",
+      "copyright": "© Blockchain.com. Todos los derechos reservados."
+    },
+    "conversionSection": {
+      "title": "Impulsa la conversión con nuestros sistemas propietarios internos",
+      "description": "Hemos construido sistemas líderes en la industria de liquidez de cripto, pagos y anti-fraude, lo que significa mejor estabilidad, flexibilidad y precios.",
+      "highlightText": "liquidez de cripto",
+      "getInTouch": "Ponerse en contacto"
+    },
+    "kycSection": {
+      "title": "Cripto con 1 clic para nuestros millones de usuarios KYC'd",
+      "description": "Con más de 94M Blockchain.com Wallets, es una experiencia fluida de 1 clic para comprar y vender para usuarios que ya se han verificado (KYC) en Blockchain.com.",
+      "contactUs": "Contáctanos"
+    },
+    "integrationSection": {
+      "title": "Integra fácilmente con unas pocas líneas de código",
+      "description": "Agrega pagos en fiat con métodos de pago principales en más de 100 países, con solo unas pocas líneas de código.",
+      "getInTouch": "Ponerse en contacto",
+      "readDocumentation": "Leer documentación"
+    }
+  },
+  
   "user": {
     "dashboard": "Panel",
     "profile": "Perfil",
@@ -160,11 +205,167 @@
 
 
 
+"userDashboard": {
+    "sidebar": {
+      "home": "Inicio",
+      "assets": "Activos",
+      "discover": "Descubrir",
+      "memezone": "Memezone",
+      "earn": "Ganar",
+      "activity": "Actividad"
+    },
+    "header": {
+      "trading": "Trading",
+      "wallet": "Billetera",
+      "profile": "Perfil",
+      "settings": "Configuración",
+      "logout": "Cerrar Sesión"
+    },
+    "home": {
+      "tradingAccountBalance": "Saldo de Cuenta de Trading",
+      "buy": "Comprar",
+      "sell": "Vender",
+      "limitOrder": "Orden Límite",
+      "convert": "Convertir",
+      "deposit": "Depositar",
+      "send": "Enviar",
+      "addCash": "Agregar efectivo",
+      "cashOut": "Retirar",
+      "completeProfile": "Completa tu Perfil.",
+      "buyCryptoToday": "Compra Cripto Hoy.",
+      "completeProfileDesc": "Termina de configurar tu cuenta de trading y comienza a comprar cripto hoy.",
+      "verificationSteps": "Pasos de Verificación",
+      "verifyEmail": "Verifica tu correo electrónico",
+      "verifyIdentity": "Verifica tu identidad",
+      "buyCrypto": "Compra cripto",
+      "around2Minutes": "Alrededor de 2 minutos",
+      "assets": "Activos",
+      "seeAll": "Ver todo",
+      "cashAndStablecoins": "Efectivo y Stablecoins",
+      "topMovers": "Principales Movimientos",
+      "recurringBuys": "Compras Recurrentes",
+      "automateYourBuys": "Automatiza tus compras",
+      "recurringBuysDesc": "Compra cripto diario, semanal o mensual",
+      "go": "Ir",
+      "news": "Noticias",
+      "contactSupport": "Contactar soporte",
+      "viewSupportCenter": "Ver centro de soporte",
+      "needHelp": "¿Necesitas ayuda?"
+    },
+    "assets": {
+      "title": "Activos",
+      "description": "Visualiza y gestiona tus activos aquí.",
+      "totalBalance": "Saldo Total",
+      "cash": "Efectivo",
+      "getStartedTitle": "Para comenzar, compra o deposita cripto",
+      "searchPlaceholder": "Buscar activos",
+      "filter": { "all": "Todo", "crypto": "Cripto", "cash": "Efectivo" },
+      "asset": "Activo",
+      "balance": "Saldo",
+      "value": "Valor",
+      "trade": "Operar",
+      "noAssets": "No se encontraron activos"
+    },
+    "discover": {
+      "title": "Descubrir",
+      "description": "Descubre nuevas criptomonedas y oportunidades de trading.",
+      "searchPlaceholder": "Buscar por nombre o símbolo",
+      "searchCoins": "Buscar monedas",
+      "explore": "Explorar",
+      "tabs": { "tradable": "Negociable", "gainers": "Suben", "losers": "Bajan", "favorites": "Favoritos" },
+      "sections": { "meme": "Meme", "other": "Otros", "popular": "Popular" },
+      "category": { "all": "Todo", "gainers": "Suben", "losers": "Bajan" },
+      "asset": "Activo",
+      "price": "Precio",
+      "change24h": "Cambio 24h",
+      "chart": "Gráfico",
+      "trade": "Operar",
+      "noResults": "Sin resultados"
+    },
+    "memezone": {
+      "title": "Memezone",
+      "description": "Explora meme coins y tokens en tendencia.",
+      "searchPlaceholder": "Buscar meme coins",
+      "trending": "Meme coins en tendencia",
+      "marketCap": "Capitalización",
+      "rank": "Rango",
+      "trade": "Operar",
+      "noResults": "No se encontraron meme coins"
+    },
+    "earn": {
+      "title": "Ganar",
+      "description": "Gana recompensas en tus tenencias de cripto.",
+      "subtitle": "Obtén recompensas por tu cripto.",
+      "legalDisclaimer": "Aviso legal",
+      "secureEarn": "Gana de forma segura",
+      "secureEarnDesc": "Tu cripto se mantiene con seguridad institucional mientras ganas.",
+      "apy": "APY",
+      "myAssets": "Mis activos",
+      "searchCoins": "Buscar monedas",
+      "howItWorks": "Cómo funciona",
+      "step1Title": "Elige un producto",
+      "step1Desc": "Selecciona staking, flexible o recompensas bloqueadas según tus objetivos.",
+      "step2Title": "Deposita cripto",
+      "step2Desc": "Transfiere tu cripto para comenzar a ganar recompensas.",
+      "step3Title": "Gana recompensas",
+      "step3Desc": "Las recompensas se pagan automáticamente a tu cuenta.",
+      "period": { "monthly": "Mensual", "daily": "Diario", "weekly": "Semanal", "compare": "Comparar" },
+      "cards": {
+        "passiveRewards": "Recompensas pasivas",
+        "stakingRewards": "Recompensas de staking",
+        "activeRewards": "Recompensas activas",
+        "compareProducts": "Comparar productos",
+        "compareSub": "Descubre qué te conviene"
+      },
+      "type": { "active": "00 Activo", "staking": "A Staking", "passive": "% Pasivo" },
+      "table": { "assets": "Activos", "type": "Tipo", "maxRate": "Tasa anual máx.", "action": "Acción", "start": "Comenzar" },
+      "products": {
+        "staking": "Staking",
+        "stakingDesc": "Bloquea tu cripto para asegurar la red y ganar recompensas.",
+        "rewards": "Recompensas",
+        "rewardsDesc": "Gana hasta 5% en activos soportados sin bloqueo.",
+        "flexible": "Flexible",
+        "flexibleDesc": "Gana con la flexibilidad de retirar en cualquier momento.",
+        "startEarning": "Comenzar a ganar",
+        "learnMore": "Saber más",
+        "getStarted": "Comenzar"
+      }
+    },
+    "activity": {
+      "title": "Actividad",
+      "description": "Visualiza tu historial de transacciones y actividad.",
+      "noActivityTitle": "Sin actividad",
+      "noActivitySubtitle": "Para comenzar, compra o deposita cripto",
+      "searchPlaceholder": "Buscar transacciones",
+      "filter": { "all": "Todo", "deposit": "Depósito", "buy": "Comprar", "sell": "Vender", "convert": "Convertir", "withdrawal": "Retiro" },
+      "type": "Tipo",
+      "amount": "Monto",
+      "date": "Fecha",
+      "status": "Estado",
+      "types": { "deposit": "Depósito", "buy": "Comprar", "sell": "Vender", "convert": "Convertir", "withdrawal": "Retiro" },
+      "statuses": { "completed": "Completado", "pending": "Pendiente", "failed": "Fallido" },
+      "details": "Detalles",
+      "noActivity": "No se encontró actividad"
+    },
+    "wallet": {
+      "title": "Billetera",
+      "description": "Gestiona tu billetera y visualiza tus saldos."
+    }
+  },
 
+  "defi": {
+    "sidebar": { "home": "Inicio", "assets": "Activos", "discover": "Descubrir", "stocks": "Acciones", "dex": "DEX", "activity": "Actividad" },
+    "right": { "secureTitle": "Protege tu billetera", "secureDesc": "Respalda tu Frase de Recuperación para mantener tu Billetera DeFi segura", "stocksLive": "Las acciones ya están disponibles" },
+    "home": { "balanceTitle": "Saldo Billetera DeFi", "sell": "Vender", "swap": "Intercambiar", "deposit": "Depositar", "send": "Enviar", "topMovers": "Principales movimientos", "seeAll": "Ver todo", "news": "Noticias", "needHelp": "¿Necesitas ayuda?", "contactSupport": "Contactar soporte", "viewSupportCenter": "Ver centro de ayuda", "publishedBy": "Publicado por" },
+    "assets": { "tokens": "Tokens", "collectibles": "Coleccionables", "allNetworks": "Todas las redes", "fundTitle": "Fondear tu billetera para comenzar", "fundDesc": "Transfiere cripto desde tu cuenta u otra billetera", "receive": "Recibir", "transferOrBuy": "¡Transfiere desde cualquier billetera o compra en un mercado!" },
+    "discover": { "all": "Todo", "trending": "Tendencia", "stocks": "Acciones", "favorites": "Favoritos", "searchCoins": "Buscar monedas", "allNetworks": "Todas las redes", "topMovers": "Principales movimientos", "name": "Nombre", "price": "Precio", "change24h": "24h", "marketCap": "Cap. de mercado", "noFavorites": "Aún no hay favoritos añadidos" },
+    "stocks": { "explore": "Explorar", "myStocks": "Mis acciones", "whatAreTokenizedStocks": "¿Qué son las acciones tokenizadas?", "searchCoins": "Buscar monedas", "name": "Nombre", "price": "Precio", "change24h": "24h", "marketCap": "Cap. de mercado", "addStocksToWallet": "Añade acciones a tu billetera", "newToBlockchain": "Nuevo en Blockchain:", "tokenizedStocks": "Acciones tokenizadas", "tokenizedStocksDesc": "Son tokens basados en blockchain que rastrean los precios en tiempo real de acciones y ETF globales.", "keyAdvantages": "Ventajas clave", "marketsNeverClose": "Los mercados nunca cierran", "recordedOnBlockchain": "Cada movimiento se registra en la blockchain", "ownFraction": "Posee una fracción de empresas líderes, empezando pequeño", "gotIt": "Entendido" },
+    "dex": { "swap": "Intercambiar", "youPay": "Pagas", "youReceive": "Recibes", "select": "Seleccionar", "deposit": "Depositar", "swapSettings": "Ajustes de swap", "allowedSlippage": "Deslizamiento permitido", "slippageDesc": "El deslizamiento es el cambio de precio máximo que permites para un swap.", "crossChainOnly": "Solo cross-chain", "arrivalGas": "Gas de llegada", "arrivalGasDesc": "Intercambia parte de tus tokens por gas en la cadena de destino.", "save": "Guardar", "searchCoins": "Buscar monedas", "network": "Red", "yourXlmAddress": "Tu dirección XLM", "useAddressOnly": "Usa esta dirección solo para recibir o depositar XLM en la red Stellar.", "lostFundsWarning": "Los fondos perdidos no se pueden recuperar.", "walletAddress": "Dirección de billetera", "next": "Siguiente", "deFiWallet": "Billetera DeFi" },
+    "activity": { "searchCoins": "Buscar monedas", "all": "Todo", "noActivity": "Sin actividad", "noActivityDesc": "Para comenzar, compra o deposita cripto", "deposit": "Depositar" }
+  },
 
   "userwallet": {
     "title": "Bienvenido a la Página de Billetera",
     "description": "Esta es la página de billetera"
   }
-
 }
