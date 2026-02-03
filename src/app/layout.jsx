@@ -1,6 +1,6 @@
 import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import LangSetter from "@/components/LangSetter";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${geistMono.variable}`}>
       <body className="font-sans antialiased">
+        <LangSetter />
         {children}
       </body>
     </html>

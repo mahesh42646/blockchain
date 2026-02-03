@@ -1,0 +1,17 @@
+{
+  "loginOrSignup": "लॉग इन करें या साइन अप करें",
+  "beYourOwnBank": "अपना खुद का बैंक® बनें",
+  "emailOrWalletId": "ईमेल या वॉलेट आईडी",
+  "emailOrWalletIdPlaceholder": "अपना ईमेल या वॉलेट आईडी दर्ज करें",
+  "continue": "जारी रखें",
+  "orContinueWith": "या इसके साथ जारी रखें",
+  "google": "Google",
+  "importWallet": "वॉलेट आयात करें",
+  "termsAndPrivacy": "आगे बढ़कर, आप Blockchain.com की सेवा की शर्तें और गोपनीयता नीति से सहमत हैं।",
+  "termsOfService": "सेवा की शर्तें",
+  "privacyPolicy": "गोपनीयता नीति",
+  "copyright": "© Blockchain.com. सभी अधिकार सुरक्षित।",
+  "version": "संस्करण",
+  "loading": "लोड हो रहा है...",
+  "error": "एक त्रुटि हुई। कृपया पुनः प्रयास करें।"
+}
