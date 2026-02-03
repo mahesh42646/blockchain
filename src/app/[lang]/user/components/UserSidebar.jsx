@@ -1,8 +1,4 @@
-/**
- * User Dashboard Sidebar Component
- * This component is specifically for the user dashboard sidebar navigation
- * Matches Blockchain.com design exactly with white background and blue accents
- */
+
 'use client';
 
 import Link from 'next/link';
@@ -31,8 +27,9 @@ export default function UserSidebar() {
   };
 
   return (
-    <aside className="w-64 bg-white border-r border-gray-200 min-h-screen fixed left-0 top-0 pt-16">
-      <nav className="p-4 space-y-1">
+    <aside className="w-74 bg-transparent border-none  fixed left-5 top-0 pt-16 flex flex-col items-center">
+    <div className="mt-8 rounded-2xl bg-white shadow-sm w-full px-5 py-0" style={{ minHeight: 400 }}>
+      <nav className="py-2 px-0 flex flex-col ">
         {menuItems.map((item) => {
           const Icon = item.icon;
           const localizedPath = getLocalizedPath(item.path);
@@ -42,10 +39,10 @@ export default function UserSidebar() {
             <Link
               key={item.path}
               href={localizedPath}
-              className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
+              className={`flex items-center gap-3 px-4 py-3 my-2 rounded-2xl transition-colors ${
                 isActive
                   ? 'bg-blue-50 text-blue-600 font-medium'
-                  : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                  : 'text-gray-500 font-bold hover:bg-gray-50 hover:text-gray-900'
               }`}
             >
               <Icon className="w-5 h-5" />
@@ -54,6 +51,7 @@ export default function UserSidebar() {
           );
         })}
       </nav>
+      </div>
     </aside>
   );
 }

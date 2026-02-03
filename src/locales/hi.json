@@ -151,69 +151,7 @@
       "readDocumentation": "दस्तावेज़ पढ़ें"
     }
   },
-  "userDashboard": {
-    "sidebar": {
-      "home": "होम",
-      "assets": "संपत्ति",
-      "discover": "खोजें",
-      "memezone": "मेमज़ोन",
-      "earn": "कमाएं",
-      "activity": "गतिविधि"
-    },
-    "header": {
-      "trading": "ट्रेडिंग",
-      "wallet": "वॉलेट",
-      "profile": "प्रोफ़ाइल",
-      "settings": "सेटिंग्स",
-      "logout": "लॉगआउट"
-    },
-    "home": {
-      "tradingAccountBalance": "ट्रेडिंग खाता शेष",
-      "buy": "खरीदें",
-      "sell": "बेचें",
-      "limitOrder": "लिमिट ऑर्डर",
-      "convert": "कन्वर्ट",
-      "deposit": "जमा",
-      "send": "भेजें",
-      "addCash": "नकद जोड़ें",
-      "cashOut": "नकद निकालें",
-      "completeProfile": "अपनी प्रोफ़ाइल पूरी करें। आज ही क्रिप्टो खरीदें।",
-      "completeProfileDesc": "अपने ट्रेडिंग खाते की सेटअप समाप्त करें और आज ही क्रिप्टो खरीदना शुरू करें।",
-      "verificationSteps": "सत्यापन चरण",
-      "verifyEmail": "अपना ईमेल सत्यापित करें",
-      "verifyIdentity": "अपनी पहचान सत्यापित करें",
-      "buyCrypto": "क्रिप्टो खरीदें",
-      "around2Minutes": "लगभग 2 मिनट",
-      "assets": "संपत्ति",
-      "seeAll": "सभी देखें",
-      "cashAndStablecoins": "नकद और स्टेबलकॉइन",
-      "topMovers": "शीर्ष गतिविधियां"
-    },
-    "assets": {
-      "title": "संपत्ति",
-      "description": "यहां अपनी संपत्ति देखें और प्रबंधित करें।"
-    },
-    "discover": {
-      "title": "खोजें",
-      "description": "नई क्रिप्टोकरेंसी और ट्रेडिंग अवसर खोजें।"
-    },
-    "memezone": {
-      "title": "मेमज़ोन",
-      "description": "मेम कॉइन और ट्रेंडिंग टोकन एक्सप्लोर करें।"
-    },
-    "earn": {
-      "title": "कमाएं",
-      "description": "अपने क्रिप्टो होल्डिंग्स पर पुरस्कार अर्जित करें।"
-    },
-    "activity": {
-      "title": "गतिविधि",
-      "description": "अपना लेनदेन इतिहास और गतिविधि देखें।"
-    },
-    "wallet": {
-      "title": "वॉलेट",
-      "description": "अपने वॉलेट का प्रबंधन करें और अपने शेष राशि देखें।"
-    }
-  },
+ 
   "user": {
     "dashboard": "डैशबोर्ड",
     "profile": "प्रोफ़ाइल",
@@ -240,5 +178,186 @@
     "careersHiring": "भर्ती",
     "copyright": "© Blockchain.com",
     "language": "हिंदी"
+  },
+  "userwallet": {
+    "title": "वॉलेट पेज में आपका स्वागत है",
+    "description": "यह वॉलेट पेज है"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "userDashboard": {
+    "sidebar": {
+      "home": "होम",
+      "assets": "संपत्ति",
+      "discover": "खोजें",
+      "memezone": "मेमज़ोन",
+      "earn": "कमाएं",
+      "activity": "गतिविधि"
+    },
+    "header": {
+      "trading": "ट्रेडिंग",
+      "wallet": "वॉलेट",
+      "profile": "प्रोफ़ाइल",
+      "settings": "सेटिंग्स",
+      "logout": "लॉगआउट"
+    },
+    "home": {
+      "tradingAccountBalance": "ट्रेडिंग खाता शेष",
+      "buy": "खरीदें",
+      "sell": "बेचें",
+      "limitOrder": "लिमिट ऑर्डर",
+      "convert": "कन्वर्ट",
+      "deposit": "जमा",
+      "send": "भेजें",
+      "addCash": "नकद जोड़ें",
+      "cashOut": "नकद निकालें",
+      "completeProfile": "अपनी प्रोफ़ाइल पूरी करें।",
+      "buyCryptoToday": "आज ही क्रिप्टो खरीदें।",
+      "completeProfileDesc": "अपने ट्रेडिंग खाते की सेटअप समाप्त करें और आज ही क्रिप्टो खरीदना शुरू करें।",
+      "verificationSteps": "सत्यापन चरण",
+      "verifyEmail": "अपना ईमेल सत्यापित करें",
+      "verifyIdentity": "अपनी पहचान सत्यापित करें",
+      "buyCrypto": "क्रिप्टो खरीदें",
+      "around2Minutes": "लगभग 2 मिनट",
+      "assets": "संपत्ति",
+      "seeAll": "सभी देखें",
+      "cashAndStablecoins": "नकद और स्टेबलकॉइन",
+      "topMovers": "शीर्ष गतिविधियां",
+      "recurringBuys": "आवर्ती खरीद",
+      "automateYourBuys": "अपनी खरीद को स्वचालित करें",
+      "recurringBuysDesc": "दैनिक, साप्ताहिक या मासिक क्रिप्टो खरीदें",
+      "go": "जाओ",
+      "news": "समाचार",
+      "contactSupport": "सहायता से संपर्क करें",
+      "viewSupportCenter": "सहायता केंद्र देखें",
+      "needHelp": "मदद चाहिए?"
+    },
+    "assets": {
+      "title": "संपत्ति",
+      "description": "यहां अपनी संपत्ति देखें और प्रबंधित करें।",
+      "totalBalance": "कुल शेष",
+      "cash": "नकद",
+      "getStartedTitle": "शुरू करने के लिए क्रिप्टो खरीदें या जमा करें",
+      "searchPlaceholder": "संपत्ति खोजें",
+      "filter": { "all": "सभी", "crypto": "क्रिप्टो", "cash": "नकद" },
+      "asset": "संपत्ति",
+      "balance": "शेष",
+      "value": "मूल्य",
+      "trade": "ट्रेड",
+      "noAssets": "कोई संपत्ति नहीं मिली"
+    },
+    "discover": {
+      "title": "खोजें",
+      "description": "नई क्रिप्टोकरेंसी और ट्रेडिंग अवसर खोजें।",
+      "searchPlaceholder": "नाम या प्रतीक से खोजें",
+      "searchCoins": "कॉइन खोजें",
+      "explore": "एक्सप्लोर करें",
+      "tabs": { "tradable": "ट्रेडेबल", "gainers": "बढ़त", "losers": "गिरावट", "favorites": "पसंदीदा" },
+      "sections": { "meme": "मेम", "other": "अन्य", "popular": "लोकप्रिय" },
+      "category": { "all": "सभी", "gainers": "बढ़त", "losers": "गिरावट" },
+      "asset": "संपत्ति",
+      "price": "कीमत",
+      "change24h": "24घंटे परिवर्तन",
+      "chart": "चार्ट",
+      "trade": "ट्रेड",
+      "noResults": "कोई परिणाम नहीं मिला"
+    },
+    "memezone": {
+      "title": "मेमज़ोन",
+      "description": "मेम कॉइन और ट्रेंडिंग टोकन एक्सप्लोर करें।",
+      "searchPlaceholder": "मेम कॉइन खोजें",
+      "trending": "ट्रेंडिंग मेम कॉइन",
+      "marketCap": "मार्केट कैप",
+      "rank": "रैंक",
+      "trade": "ट्रेड",
+      "noResults": "कोई मेम कॉइन नहीं मिला"
+    },
+    "earn": {
+      "title": "कमाएं",
+      "description": "अपने क्रिप्टो होल्डिंग्स पर पुरस्कार अर्जित करें।",
+      "subtitle": "अपने क्रिप्टो पर पुरस्कार पाएं।",
+      "legalDisclaimer": "कानूनी अस्वीकरण",
+      "secureEarn": "सुरक्षित कमाएं",
+      "secureEarnDesc": "कमाते समय आपका क्रिप्टो संस्थागत-ग्रेड सुरक्षा के साथ रखा जाता है।",
+      "apy": "APY",
+      "myAssets": "मेरी संपत्ति",
+      "searchCoins": "कॉइन खोजें",
+      "howItWorks": "कैसे काम करता है",
+      "step1Title": "उत्पाद चुनें",
+      "step1Desc": "अपने लक्ष्यों के आधार पर स्टेकिंग, फ्लेक्सिबल या लॉक्ड रिवार्ड चुनें।",
+      "step2Title": "क्रिप्टो जमा करें",
+      "step2Desc": "पुरस्कार अर्जित करने के लिए अपना क्रिप्टो ट्रांसफर करें।",
+      "step3Title": "पुरस्कार अर्जित करें",
+      "step3Desc": "पुरस्कार स्वचालित रूप से आपके खाते में जमा होते हैं।",
+      "period": { "monthly": "मासिक", "daily": "दैनिक", "weekly": "साप्ताहिक", "compare": "तुलना" },
+      "cards": {
+        "passiveRewards": "पैसिव रिवार्ड",
+        "stakingRewards": "स्टेकिंग रिवार्ड",
+        "activeRewards": "एक्टिव रिवार्ड",
+        "compareProducts": "उत्पाद तुलना",
+        "compareSub": "देखें क्या आपके लिए सही है"
+      },
+      "type": { "active": "00 एक्टिव", "staking": "A स्टेकिंग", "passive": "% पैसिव" },
+      "table": { "assets": "संपत्ति", "type": "प्रकार", "maxRate": "अधिकतम वार्षिक दर", "action": "कार्रवाई", "start": "शुरू करें" },
+      "products": {
+        "staking": "स्टेकिंग",
+        "stakingDesc": "नेटवर्क सुरक्षित करने और पुरस्कार अर्जित करने के लिए क्रिप्टो लॉक करें।",
+        "rewards": "पुरस्कार",
+        "rewardsDesc": "बिना लॉक-अप के समर्थित संपत्ति पर 5% तक कमाएं।",
+        "flexible": "फ्लेक्सिबल",
+        "flexibleDesc": "किसी भी समय निकासी की लचीलापन के साथ कमाएं।",
+        "startEarning": "कमाना शुरू करें",
+        "learnMore": "और जानें",
+        "getStarted": "शुरू करें"
+      }
+    },
+    "activity": {
+      "title": "गतिविधि",
+      "description": "अपना लेनदेन इतिहास और गतिविधि देखें।",
+      "noActivityTitle": "कोई गतिविधि नहीं",
+      "noActivitySubtitle": "शुरू करने के लिए क्रिप्टो खरीदें या जमा करें",
+      "searchPlaceholder": "लेनदेन खोजें",
+      "filter": { "all": "सभी", "deposit": "जमा", "buy": "खरीद", "sell": "बिक्री", "convert": "कन्वर्ट", "withdrawal": "निकासी" },
+      "type": "प्रकार",
+      "amount": "राशि",
+      "date": "तारीख",
+      "status": "स्थिति",
+      "types": { "deposit": "जमा", "buy": "खरीद", "sell": "बिक्री", "convert": "कन्वर्ट", "withdrawal": "निकासी" },
+      "statuses": { "completed": "पूर्ण", "pending": "लंबित", "failed": "विफल" },
+      "details": "विवरण",
+      "noActivity": "कोई गतिविधि नहीं मिली"
+    },
+    "wallet": {
+      "title": "वॉलेट",
+      "description": "अपने वॉलेट का प्रबंधन करें और अपने शेष राशि देखें।"
+    }
+  },
+
+  "defi": {
+    "sidebar": { "home": "होम", "assets": "संपत्ति", "discover": "खोजें", "stocks": "स्टॉक", "dex": "DEX", "activity": "गतिविधि" },
+    "right": { "secureTitle": "अपना वॉलेट सुरक्षित करें", "secureDesc": "अपने DeFi वॉलेट को सुरक्षित रखने के लिए रिकवरी फ्रेज़ का बैकअप लें", "stocksLive": "स्टॉक अब लाइव हैं" },
+    "home": { "balanceTitle": "DeFi वॉलेट बैलेंस", "sell": "बेचें", "swap": "स्वैप", "deposit": "जमा", "send": "भेजें", "topMovers": "टॉप मूवर्स", "seeAll": "सभी देखें", "news": "समाचार", "needHelp": "मदद चाहिए?", "contactSupport": "सहायता से संपर्क करें", "viewSupportCenter": "सहायता केंद्र देखें", "publishedBy": "प्रकाशित" },
+    "assets": { "tokens": "टोकन", "collectibles": "कलेक्टिबल्स", "allNetworks": "सभी नेटवर्क", "fundTitle": "शुरू करने के लिए वॉलेट फंड करें", "fundDesc": "अपने अकाउंट या दूसरे वॉलेट से क्रिप्टो ट्रांसफर करें", "receive": "प्राप्त करें", "transferOrBuy": "किसी भी वॉलेट से ट्रांसफर करें या मार्केटप्लेस से खरीदें!" },
+    "discover": { "all": "सभी", "trending": "ट्रेंडिंग", "stocks": "स्टॉक", "favorites": "पसंदीदा", "searchCoins": "सिक्के खोजें", "allNetworks": "सभी नेटवर्क", "topMovers": "टॉप मूवर्स", "name": "नाम", "price": "कीमत", "change24h": "24घं", "marketCap": "मार्केट कैप", "noFavorites": "अभी तक कोई पसंदीदा नहीं जोड़ा गया" },
+    "stocks": { "explore": "एक्सप्लोर", "myStocks": "मेरे स्टॉक", "whatAreTokenizedStocks": "टोकनाइज़्ड स्टॉक क्या हैं?", "searchCoins": "सिक्के खोजें", "name": "नाम", "price": "कीमत", "change24h": "24घं", "marketCap": "मार्केट कैप", "addStocksToWallet": "अपने वॉलेट में स्टॉक जोड़ें", "newToBlockchain": "Blockchain के लिए नया:", "tokenizedStocks": "टोकनाइज़्ड स्टॉक", "tokenizedStocksDesc": "ये वैश्विक इक्विटी और ETF की रियल-टाइम कीमतों को ट्रैक करने वाले ब्लॉकचेन-आधारित टोकन हैं।", "keyAdvantages": "मुख्य लाभ", "marketsNeverClose": "मार्केट कभी बंद नहीं होते", "recordedOnBlockchain": "हर गतिविधि ब्लॉकचेन पर दर्ज होती है", "ownFraction": "छोटी शुरुआत के साथ अग्रणी कंपनियों का हिस्सा लें", "gotIt": "समझ गया" },
+    "dex": { "swap": "स्वैप", "youPay": "आप भुगतान", "youReceive": "आप प्राप्त", "select": "चुनें", "deposit": "जमा", "swapSettings": "स्वैप सेटिंग्स", "allowedSlippage": "अनुमत स्लिपेज", "slippageDesc": "स्लिपेज वह अधिकतम मूल्य परिवर्तन है जो आप स्वैप के लिए अनुमति देते हैं।", "crossChainOnly": "क्रॉस-चेन केवल", "arrivalGas": "आगमन गैस", "arrivalGasDesc": "गंतव्य चेन पर गैस के लिए अपने कुछ टोकन स्वैप करें।", "save": "सहेजें", "searchCoins": "सिक्के खोजें", "network": "नेटवर्क", "yourXlmAddress": "आपका XLM पता", "useAddressOnly": "स्टेलर नेटवर्क पर केवल XLM प्राप्त या जमा करने के लिए इस पते का उपयोग करें।", "lostFundsWarning": "खोई हुई धनराशि पुनर्प्राप्त नहीं की जा सकती।", "walletAddress": "वॉलेट पता", "next": "अगला", "deFiWallet": "DeFi वॉलेट" },
+    "activity": { "searchCoins": "सिक्के खोजें", "all": "सभी", "noActivity": "कोई गतिविधि नहीं", "noActivityDesc": "शुरू करने के लिए क्रिप्टो खरीदें या जमा करें", "deposit": "जमा" }
   }
 }
