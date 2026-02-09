@@ -1,11 +1,14 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Minus, ArrowLeftRight, ArrowDown, ArrowUp, MessageCircle, HelpCircle, ChevronRight } from 'lucide-react';
 import DefiRightSection from '@/app/[lang]/defi/components/DefiRightSection';
+import DefiDepositDrawer from '@/app/[lang]/defi/components/DefiDepositDrawer';
+import { useDefiBalance } from '@/app/[lang]/defi/context/DefiBalanceContext';
 
 const TOP_MOVERS = [
   { symbol: 'BMX', price: '$0.39', change: '12.14%', positive: true },
@@ -31,10 +34,19 @@ function MiniChart({ positive }) {
   );
 }
 
+const SUPPORT_CONTACT = 'https://support.blockchain.com/hc/en-us/requests/new';
+const SUPPORT_CENTER = 'https://support.blockchain.com/hc/en-us';
+
 export default function DefiHomePage() {
   const { t } = useTranslation();
   const params = useParams();
   const locale = params?.lang || 'en';
+  const [depositDrawerOpen, setDepositDrawerOpen] = useState(false);
+  const { balance, setBalance, balanceVisible } = useDefiBalance();
+
+  useEffect(() => {
+    setBalance('$0.00');
+  }, [setBalance]);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -42,7 +54,7 @@ export default function DefiHomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
             <h2 className="text-sm font-medium text-gray-600 mb-2">{t('defi.home.balanceTitle')}</h2>
-            <p className="text-3xl font-bold text-gray-900">$******</p>
+            <p className="text-3xl font-bold text-gray-900">{balanceVisible ? balance : '$******'}</p>
           </div>
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -58,12 +70,15 @@ export default function DefiHomePage() {
                 </div>
                 <span className="text-sm font-medium text-gray-700">{t('defi.home.swap')}</span>
               </button>
-              <button className="flex flex-col items-center gap-2 p-3 hover:bg-gray-50 rounded-xl transition-colors">
+              <button
+                type="button"
+                onClick={() => setDepositDrawerOpen(true)}
+                className="flex flex-col items-center gap-2 p-3 hover:bg-gray-50 rounded-xl transition-colors"
+              >
                 <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <ArrowDown className="w-5 h-5 text-gray-600" />
                 </div>
-                
-                <span   className="text-sm font-medium text-gray-700">{t('defi.home.deposit')}</span>
+                <span className="text-sm font-medium text-gray-700">{t('defi.home.deposit')}</span>
               </button>
               <button className="flex flex-col items-center gap-2 p-3 hover:bg-gray-50 rounded-xl transition-colors">
                 <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -134,14 +149,14 @@ export default function DefiHomePage() {
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
           <h3 className="text-base font-semibold text-gray-900 mb-4">{t('defi.home.needHelp')}</h3>
           <div className="space-y-0">
-            <a href="#" className="flex items-center justify-between py-3 px-0 text-gray-700 hover:text-gray-900 transition-colors border-b border-gray-100 last:border-0">
+            <a href={SUPPORT_CONTACT} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-3 px-0 text-gray-700 hover:text-gray-900 transition-colors border-b border-gray-100 last:border-0">
               <span className="flex items-center gap-3">
                 <MessageCircle className="w-5 h-5 text-gray-500" />
                 <span className="font-medium">{t('defi.home.contactSupport')}</span>
               </span>
               <ChevronRight className="w-5 h-5 text-gray-400" />
             </a>
-            <a href="#" className="flex items-center justify-between py-3 px-0 text-gray-700 hover:text-gray-900 transition-colors border-b border-gray-100 last:border-0">
+            <a href={SUPPORT_CENTER} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-3 px-0 text-gray-700 hover:text-gray-900 transition-colors border-b border-gray-100 last:border-0">
               <span className="flex items-center gap-3">
                 <HelpCircle className="w-5 h-5 text-gray-500" />
                 <span className="font-medium">{t('defi.home.viewSupportCenter')}</span>
@@ -154,6 +169,7 @@ export default function DefiHomePage() {
       <div className="lg:col-span-4 hidden lg:block">
         <DefiRightSection />
       </div>
+      <DefiDepositDrawer open={depositDrawerOpen} onClose={() => setDepositDrawerOpen(false)} />
     </div>
   );
 }

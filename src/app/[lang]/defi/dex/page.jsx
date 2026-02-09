@@ -1,60 +1,48 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
-import { ArrowDown, ChevronDown, Settings, X, Search, ChevronRight, ArrowLeft, Copy } from 'lucide-react';
-
-const DEPOSIT_COINS = [
-  { id: 'arg', name: 'Argentina ($ARG) - Chiliz', symbol: 'ARG', balance: '$******', balanceRaw: '****** ARG', type: 'DeFi Wallet' },
-  { id: 'axs', name: 'Axie Infinity Shard', symbol: 'AXS', balance: '$******', balanceRaw: '****** AXS', type: 'DeFi Wallet' },
-  { id: 'badger', name: 'Badger', symbol: 'BADGER', balance: '$******', balanceRaw: '****** BADGER', type: 'DeFi Wallet' },
-  { id: 'bal', name: 'Balancer', symbol: 'BAL', balance: '$******', balanceRaw: '****** BAL', type: 'DeFi Wallet' },
-  { id: 'band', name: 'Band Protocol', symbol: 'BAND', balance: '$******', balanceRaw: '****** BAND', type: 'DeFi Wallet' },
-  { id: 'bat', name: 'Basic Attention Token', symbol: 'BAT', balance: '$******', balanceRaw: '****** BAT', type: 'DeFi Wallet' },
-  { id: 'billy', name: 'BILLY', symbol: 'BILLY', balance: '$******', balanceRaw: '****** BILLY', type: 'DeFi Wallet' },
-  { id: 'xlm', name: 'Stellar Lumens', symbol: 'XLM', balance: '$******', balanceRaw: '****** XLM', type: 'DeFi Wallet' },
-];
+import { ArrowDown, ChevronDown, Settings, X } from 'lucide-react';
+import DefiDepositDrawer from '@/app/[lang]/defi/components/DefiDepositDrawer';
 
 const SLIPPAGE_OPTIONS = [0.5, 1, 2.5, 5];
-const SAMPLE_XLM_ADDRESS = 'GD6QFXSNLU6K4EULOXWWW7HHPIKDGTINATMXZYPSTQ4MKPCYJMPNT3JB';
 
 export default function DefiDexPage() {
   const { t } = useTranslation();
+  const [loading, setLoading] = useState(true);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [depositDrawerOpen, setDepositDrawerOpen] = useState(false);
-  const [depositStep, setDepositStep] = useState('list');
-  const [selectedCoin, setSelectedCoin] = useState(null);
   const [slippage, setSlippage] = useState(2.5);
   const [arrivalGas, setArrivalGas] = useState(false);
-  const [depositSearch, setDepositSearch] = useState('');
 
-  const filteredDepositCoins = depositSearch.trim()
-    ? DEPOSIT_COINS.filter(
-        (c) =>
-          c.name.toLowerCase().includes(depositSearch.toLowerCase()) || c.symbol.toLowerCase().includes(depositSearch.toLowerCase())
-      )
-    : DEPOSIT_COINS;
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 400);
+    return () => clearTimeout(timer);
+  }, []);
 
-  const openDeposit = () => {
-    setDepositDrawerOpen(true);
-    setDepositStep('list');
-    setSelectedCoin(null);
-    setDepositSearch('');
-  };
-
-  const selectCoinForDeposit = (coin) => {
-    setSelectedCoin(coin);
-    setDepositStep('qr');
-  };
-
-  const copyAddress = () => {
-    try {
-      navigator.clipboard.writeText(SAMPLE_XLM_ADDRESS);
-    } catch {}
-  };
+  if (loading) {
+    return (
+      <div className="max-w-3xl animate-pulse">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+          <div className="flex items-center justify-between mb-6">
+            <div className="h-7 w-24 bg-gray-200 rounded-lg" />
+            <div className="h-10 w-10 bg-gray-200 rounded-lg" />
+          </div>
+          <div className="space-y-4">
+            <div className="p-4 bg-gray-100 rounded-xl h-24" />
+            <div className="flex justify-center">
+              <div className="w-8 h-8 rounded-full bg-gray-200" />
+            </div>
+            <div className="p-4 bg-gray-100 rounded-xl h-24" />
+          </div>
+          <div className="mt-6 h-12 bg-gray-200 rounded-xl w-full" />
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="max-w-3xl">
+    <div className="max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-xl font-bold text-gray-900">{t('defi.dex.swap')}</h1>
@@ -106,7 +94,7 @@ export default function DefiDexPage() {
 
         <button
           type="button"
-          onClick={openDeposit}
+          onClick={() => setDepositDrawerOpen(true)}
           className="w-full mt-6 flex items-center justify-center gap-2 py-3.5 bg-gray-900 hover:bg-gray-800 text-white text-sm font-medium rounded-xl transition-colors"
         >
           <ArrowDown className="w-4 h-4" />
@@ -114,7 +102,9 @@ export default function DefiDexPage() {
         </button>
       </div>
 
-      {/* Swap Settings - center modal */}
+      <DefiDepositDrawer open={depositDrawerOpen} onClose={() => setDepositDrawerOpen(false)} />
+
+      {/* Swap Settings */}
       {settingsOpen && (
         <>
           <div className="fixed inset-0 bg-black/40 z-40" aria-hidden onClick={() => setSettingsOpen(false)} />
@@ -184,124 +174,6 @@ export default function DefiDexPage() {
               </button>
             </div>
           </div>
-        </>
-      )}
-
-      {/* Deposit drawer - right side: list then QR */}
-      {depositDrawerOpen && (
-        <>
-          <div className="fixed inset-0 bg-black/30 z-40" aria-hidden onClick={() => setDepositDrawerOpen(false)} />
-          <aside
-            className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white shadow-xl z-50 flex flex-col animate-in slide-in-from-right duration-200 overflow-hidden"
-            role="dialog"
-            aria-label="Deposit"
-          >
-            {depositStep === 'list' ? (
-              <>
-                <div className="flex items-center justify-between p-4 border-b border-gray-100">
-                  <h2 className="text-lg font-semibold text-gray-900">{t('defi.dex.deposit')}</h2>
-                  <button
-                    type="button"
-                    onClick={() => setDepositDrawerOpen(false)}
-                    className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-                    aria-label="Close"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
-                <div className="p-4 border-b border-gray-100">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    <input
-                      type="text"
-                      value={depositSearch}
-                      onChange={(e) => setDepositSearch(e.target.value)}
-                      placeholder={t('defi.dex.searchCoins')}
-                      className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    />
-                  </div>
-                </div>
-                <div className="flex-1 overflow-y-auto">
-                  <ul className="divide-y divide-gray-100">
-                    {filteredDepositCoins.map((coin) => (
-                      <li key={coin.id}>
-                        <button
-                          type="button"
-                          onClick={() => selectCoinForDeposit(coin)}
-                          className="w-full flex items-center gap-3 p-4 hover:bg-gray-50 transition-colors text-left"
-                        >
-                          <div className="w-10 h-10 rounded-full bg-gray-200 flex-shrink-0 flex items-center justify-center text-sm font-bold text-gray-700">
-                            {coin.symbol.charAt(0)}
-                          </div>
-                          <div className="flex-1 min-w-0">
-                            <p className="font-medium text-gray-900 truncate">
-                              {coin.name} ({t('defi.dex.deFiWallet')})
-                            </p>
-                            <p className="text-sm text-gray-500">{coin.balance} ({coin.balanceRaw})</p>
-                          </div>
-                          <ChevronRight className="w-5 h-5 text-gray-400 flex-shrink-0" />
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="flex items-center justify-between p-4 border-b border-gray-100">
-                  <button
-                    type="button"
-                    onClick={() => setDepositStep('list')}
-                    className="p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
-                    aria-label="Back"
-                  >
-                    <ArrowLeft className="w-5 h-5" />
-                  </button>
-                  <h2 className="text-lg font-semibold text-gray-900">
-                    {t('defi.dex.deposit')} {selectedCoin?.symbol || 'XLM'}
-                  </h2>
-                  <button
-                    type="button"
-                    onClick={() => setDepositDrawerOpen(false)}
-                    className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-                    aria-label="Close"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
-                <div className="flex-1 overflow-y-auto p-6 space-y-6">
-                  <div className="flex justify-center">
-                    <div className="w-48 h-48 bg-white border-2 border-gray-200 rounded-xl flex items-center justify-center p-2">
-                      <div className="grid gap-0.5 w-full h-full" style={{ gridTemplateColumns: 'repeat(20, 1fr)', gridTemplateRows: 'repeat(20, 1fr)' }}>
-                        {Array.from({ length: 400 }, (_, i) => (
-                          <div key={i} className={`min-w-0 min-h-0 ${(i + Math.floor(i / 20)) % 2 === 0 ? 'bg-gray-900' : 'bg-white'}`} />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-900 mb-1">{t('defi.dex.yourXlmAddress')}</h3>
-                    <p className="text-sm text-gray-600">{t('defi.dex.useAddressOnly')}</p>
-                    <p className="text-sm text-gray-600 mt-1">{t('defi.dex.lostFundsWarning')}</p>
-                  </div>
-                  <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
-                    <p className="text-xs font-medium text-gray-500 mb-2">{t('defi.dex.walletAddress')}</p>
-                    <div className="flex items-center gap-2">
-                      <code className="flex-1 text-xs text-gray-800 break-all font-mono">{SAMPLE_XLM_ADDRESS}</code>
-                      <button
-                        type="button"
-                        onClick={copyAddress}
-                        className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-200 rounded-lg transition-colors flex-shrink-0"
-                        aria-label="Copy"
-                      >
-                        <Copy className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </>
-            )}
-          </aside>
         </>
       )}
     </div>

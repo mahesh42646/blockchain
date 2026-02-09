@@ -2,9 +2,13 @@
 
 import { useTranslation } from '@/hooks/useTranslation';
 import { Lock } from 'lucide-react';
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
 
 export default function UserRightSection() {
   const { t } = useTranslation();
+  const params = useParams();
+  const locale = params?.lang || 'en';
 
   return (
     <aside className="space-y-6">

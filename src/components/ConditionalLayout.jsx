@@ -9,7 +9,8 @@ export default function ConditionalLayout({ children }) {
   const isUserRoute = pathname?.includes('/user');
   const isAuthRoute = pathname?.includes('/auth');
   const isDefiRoute = pathname?.includes('/defi');
-  const hideMainLayout = isUserRoute || isAuthRoute || isDefiRoute;
+  const isSettingsRoute = pathname?.includes('/settings');
+  const hideMainLayout = isUserRoute || isAuthRoute || isDefiRoute || isSettingsRoute;
 
   return (
     <>

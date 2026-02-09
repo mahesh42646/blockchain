@@ -97,6 +97,7 @@
       "buy": "Buy",
       "trade": "Trade"
     },
+
     "securitySection": {
       "title": "Get peace of mind with best-in-class security",
       "description": "When it comes to ensuring your crypto is secure, we think about every last detail so you don't have to.",
@@ -200,6 +201,78 @@
   
 
 
+  "settings": {
+    "sidebar": {
+      "breadcrumb": "Wallet | Settings",
+      "general": "General",
+      "limits": "Limits",
+      "airdrops": "Airdrops",
+      "taxCenter": "Tax Center"
+    },
+    "general": {
+      "title": "General",
+      "subtitle": "View your trading currency and other helpful links.",
+      "tradingCurrency": "Trading currency",
+      "tradingCurrencyDesc": "The currency you'll use to buy and sell crypto.",
+      "otherInformation": "Other information",
+      "privacyPolicy": "Privacy Policy",
+      "privacyPolicyDesc": "Read about the privacy and security of your personal information.",
+      "termsOfService": "Terms of Service",
+      "termsOfServiceDesc": "Read about the privacy and security of your personal information.",
+      "aboutBlockchain": "About Blockchain",
+      "aboutBlockchainDesc": "Learn more about our company.",
+      "appVersion": "App Version"
+    },
+    "limits": {
+      "title": "Trading Limits",
+      "subtitle": "View your trading limits.",
+      "upgradeTitle": "Upgrade Your Account",
+      "upgradeSubtitle": "Buy, Sell & Swap More Crypto.",
+      "upgradeDesc": "Verifying your identity unlocks access to Buying, Selling, Swapping & Rewards Accounts.",
+      "basicAccess": "Basic Access",
+      "basicAccessBadge": "Limited",
+      "basicFeature1": "Send and receive crypto Between DeFi Wallets",
+      "basicFeature2": "Convert crypto One-time between DeFi Wallets",
+      "fullAccess": "Full access",
+      "applyNow": "Apply Now",
+      "getVerified": "Get Verified",
+      "fullFeature1": "Convert crypto Between all wallets and accounts",
+      "fullFeature2": "Buying and selling Card or banking methods",
+      "fullFeature3": "Earn rewards Earn rewards on your crypto",
+      "fullIncludesBasic": "Full Access includes all Basic Access features"
+    },
+    "airdrops": {
+      "title": "Airdrops",
+      "subtitle": "The easiest way to try and discover new cryptos.",
+      "programTitle": "Airdrop Program",
+      "programDesc": "Complete your profile and verify your identity to get access to exclusive Airdrops.",
+      "verifyIdentity": "Verify Your Identity",
+      "history": "History",
+      "tableType": "Type",
+      "tableStatus": "Status",
+      "tableDate": "Date",
+      "tableTo": "To",
+      "tableAmount": "Amount",
+      "offerExpired": "Offer Expired"
+    },
+    "tax": {
+      "title": "Tax Center",
+      "subtitle": "Here's everything you'll need from Blockchain.com to file your taxes this year.",
+      "exportTitle": "Export your transaction history",
+      "exportDesc": "Get the full transaction history from your Wallet's Trading, Rewards, and Private Key accounts.",
+      "chooseYear": "Choose year",
+      "allTime": "All Time",
+      "generateReport": "Generate Report",
+      "generatedExports": "Generated Exports",
+      "uploadTitle": "Upload to a tax service",
+      "uploadDesc": "We've partnered with CoinTracker to make reporting your crypto taxes easy. CoinTracker is available in the US, Australia, UK, and Canada. Get a discount when you use Blockchain.com.",
+      "visitCoinTracker": "Visit CoinTracker",
+      "faqTitle": "FAQ",
+      "faq1": "Do I owe taxes on my crypto?",
+      "faq2": "How do I file?",
+      "faq3": "What if I use other crypto services?"
+    }
+  },
   "userDashboard": {
     "sidebar": {
       "home": "Home",
@@ -214,7 +287,8 @@
       "wallet": "Wallet",
       "profile": "Profile",
       "settings": "Settings",
-      "logout": "Logout"
+      "language": "Language",
+      "logout": "Sign Out"
     },
     "home": {
       "tradingAccountBalance": "Trading Account Balance",
@@ -224,6 +298,7 @@
       "convert": "Convert",
       "deposit": "Deposit",
       "send": "Send",
+      "withdraw": "Withdraw",
       "addCash": "Add cash",
       "cashOut": "Cash out",
       "completeProfile": "Complete Your Profile.",
@@ -245,7 +320,24 @@
       "news": "News",
       "contactSupport": "Contact support",
       "viewSupportCenter": "View support center",
-      "needHelp": "Need help?"
+      "needHelp": "Need help?",
+      "verifyToTrade": "Let's get you verified to trade",
+      "verifyToTradeDesc": "Help us verify your identity and protect your account by providing the following information",
+      "about2Minutes": "About 2 minutes",
+      "dateOfBirth": "Date of birth",
+      "firstLastName": "First and Last Name",
+      "homeAddress": "Home Address",
+      "govId": "Government issued ID",
+      "getStarted": "Get Started",
+      "nameAndDob": "Name and date of birth",
+      "nameAndDobDesc": "This should match your official ID. We need this information to verify your identity",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "continue": "Continue",
+      "buyUsdcCardBank": "Buy USDC with card/bank",
+      "buyUsdc": "Buy USDC",
+      "depositStablecoins": "Deposit Stablecoins",
+      "paxDollar": "Pax Dollar"
     },
     "assets": {
       "title": "Assets",
@@ -259,7 +351,13 @@
       "balance": "Balance",
       "value": "Value",
       "trade": "Trade",
-      "noAssets": "No assets found"
+      "noAssets": "No assets found",
+      "total": "Total",
+      "buySubtitle": "Get {symbol} with your Cash or Card",
+      "sellSubtitle": "Sell {symbol} to cash",
+      "convertSubtitle": "Convert {symbol} to another crypto",
+      "depositSubtitle": "Deposit {symbol} from other wallet",
+      "withdrawSubtitle": "Send {symbol} to other wallet"
     },
     "discover": {
       "title": "Discover",
@@ -292,6 +390,27 @@
       "description": "Earn rewards on your crypto holdings.",
       "subtitle": "Get rewards on your crypto.",
       "legalDisclaimer": "Legal Disclaimer",
+      "legalDisclaimerText1": "Digital/virtual currencies are not bank deposits, are not legal tender, are not backed by the government, and accounts and value balances are not subject to US Federal Deposit Insurance Corporation or Securities Investor Protection Corporation or any other non-US governmental or government-backed protections.",
+      "legalDisclaimerText2": "Legislative and regulatory changes or actions at the US State, Federal, or international level may adversely affect the use, transfer, exchange, and value of digital/virtual currencies.",
+      "close": "Close",
+      "allProducts": "All Products",
+      "downloadStatements": "Download Statements",
+      "noActivity": "No Activity",
+      "viewProducts": "View Products",
+      "noPassiveActivity": "No Passive Activity",
+      "noStakingActivity": "No Staking Activity",
+      "noActiveActivity": "No Active Activity",
+      "viewPassiveDesc": "View available Passive positions and deposit to start earning.",
+      "viewStakingDesc": "View available Staking positions and deposit to start earning.",
+      "viewActiveDesc": "View available Active positions and deposit to start earning.",
+      "viewPassive": "View Passive",
+      "viewStaking": "View Staking",
+      "viewActive": "View Active",
+      "activityType": "Type",
+      "activityDate": "Date",
+      "activityFrom": "From",
+      "activityTo": "To",
+      "activityAmount": "Amount",
       "secureEarn": "Earn securely",
       "secureEarnDesc": "Your crypto is held with institutional-grade security while you earn.",
       "apy": "APY",
@@ -314,6 +433,40 @@
       },
       "type": { "active": "00 Active", "staking": "A Staking", "passive": "% Passive" },
       "table": { "assets": "Assets", "type": "Type", "maxRate": "Max Annual Rate", "action": "Action", "start": "Start" },
+      "activeRewardsLearn": {
+        "whatIs": "What is Active Rewards?",
+        "whatIsDesc": "Active Rewards lets you earn rewards by forecasting the price of crypto. Payouts settle every Friday at 8:00 AM UTC.",
+        "benefits": "What are the benefits?",
+        "benefitsDesc": "Active Rewards offers a higher rewards rate than Passive Rewards, Staking Rewards, or simply holding crypto.",
+        "risks": "What are the risks?",
+        "risksDesc": "While Active Rewards offers fixed weekly rewards, market movements may reduce your crypto balance.",
+        "howItWorks": "How it works",
+        "howItWorksDesc": "Every week, Active Rewards sets a trigger price for crypto assets that is higher than the market price. If you believe the price will be under the trigger price at the end of the week, you can subscribe to a strategy that pays weekly rewards at an annual rate.",
+        "scenario1": "Scenario 1 - Price of BTC is at or lower than trigger price.",
+        "scenario1Desc": "You will receive your rewards for the week and be re-subscribed for the next week.",
+        "strategyDetails": "Strategy Details",
+        "subscribedAmount": "Subscribed Amount",
+        "annualRate": "Annual Rate",
+        "whatYouReceive": "What you'd receive",
+        "amount": "Amount",
+        "weeklyReward": "Weekly reward",
+        "faq": "Frequently asked questions",
+        "goToSupportCenter": "Go to Support Center"
+      },
+      "compare": {
+        "title": "Compare Products",
+        "passiveDesc": "Earn rewards for simply holding.",
+        "stakingDesc": "Earn rewards by securing networks.",
+        "activeDesc": "Earn rewards by forecasting the market.",
+        "for": "For",
+        "assets": "Assets",
+        "useCase": "Use Case",
+        "rate": "Rate",
+        "earned": "Earned",
+        "paid": "Paid",
+        "withdraw": "Withdraw",
+        "learnMore": "Learn More"
+      },
       "products": {
         "staking": "Staking",
         "stakingDesc": "Lock your crypto to secure the network and earn rewards.",
@@ -383,7 +536,19 @@
       "fundTitle": "Fund your wallet to start",
       "fundDesc": "Transfer crypto from your account or another wallet",
       "receive": "Receive",
-      "transferOrBuy": "Transfer from any wallet, or buy from a marketplace!"
+      "transferOrBuy": "Transfer from any wallet, or buy from a marketplace!",
+      "verifyTitle": "Let's get you verified to trade",
+      "verifyDesc": "Help us verify your identity and protect your account by providing the following information",
+      "about2Minutes": "About 2 minutes",
+      "dateOfBirth": "Date of birth",
+      "firstLastName": "First and Last Name",
+      "homeAddress": "Home Address",
+      "getStarted": "Get Started",
+      "nameAndDob": "Name and date of birth",
+      "nameAndDobDesc": "This should match your official ID. We need this information to verify your identity",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "continue": "Continue"
     },
     "discover": {
       "all": "All",
@@ -445,7 +610,13 @@
       "all": "All",
       "noActivity": "No activity",
       "noActivityDesc": "To get started, buy or deposit crypto",
-      "deposit": "Deposit"
+      "deposit": "Deposit",
+      "withdrawal": "Withdrawal",
+      "convert": "Convert",
+      "last7Days": "Last 7 Days",
+      "last30Days": "Last 30 Days",
+      "last90Days": "Last 90 Days",
+      "lastYear": "Last Year"
     }
   }
 
