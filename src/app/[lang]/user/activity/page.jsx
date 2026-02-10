@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
-import UserRightSection from '@/app/[lang]/user/components/UserRightsection'
+import UserRightSection from '@/app/[lang]/user/components/UserRightsection';
+import VerifyIdentityDrawer from '@/app/[lang]/user/components/VerifyIdentityDrawer';
 import {
   ArrowDown,
   ArrowUp,
@@ -11,7 +12,6 @@ import {
   Check,
   Clock,
   XCircle,
-  Plus,
 } from 'lucide-react';
 
 
@@ -32,7 +32,7 @@ const TYPE_CONFIG = {
   withdrawal: { icon: ArrowUp, color: 'text-red-600' },
 };
 
-function NoActivityCard() {
+function NoActivityCard({ onOpenVerify }) {
   const { t } = useTranslation();
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-12 flex flex-col items-center justify-center text-center">
@@ -45,12 +45,12 @@ function NoActivityCard() {
       <h2 className="text-xl font-bold text-gray-900 mb-2">{t('userDashboard.activity.noActivityTitle')}</h2>
       <p className="text-gray-500 text-sm mb-8">{t('userDashboard.activity.noActivitySubtitle')}</p>
       <div className="flex gap-3 w-full justify-center">
-        <button className="w-48 flex items-center justify-center gap-2 py-3 px-3 bg-blue-600 hover:bg-blue-700 text-white text-md font-bold rounded-3xl transition-colors">
-        <ArrowDown className="w-4 h-4 bg-white rounded-full p-1 text-blue-900 text-md font-bold" />
-        {t('userDashboard.home.buy')}
+        <button type="button" onClick={onOpenVerify} className="w-48 flex items-center justify-center gap-2 py-3 px-3 bg-blue-600 hover:bg-blue-700 text-white text-md font-bold rounded-3xl transition-colors">
+          <ArrowDown className="w-4 h-4 bg-white rounded-full p-1 text-blue-900 text-md font-bold" />
+          {t('userDashboard.home.buy')}
         </button>
-        <button className="w-48 flex items-center justify-center gap-2 py-3 px-3 bg-blue-600 hover:bg-blue-700 text-white text-md font-bold rounded-3xl transition-colors border border-blue-600">
-        <ArrowDown className="w-4 h-4 bg-white rounded-full p-1 text-blue-900 text-md font-bold" />
+        <button type="button" onClick={onOpenVerify} className="w-48 flex items-center justify-center gap-2 py-3 px-3 bg-blue-600 hover:bg-blue-700 text-white text-md font-bold rounded-3xl transition-colors border border-blue-600">
+          <ArrowDown className="w-4 h-4 bg-white rounded-full p-1 text-blue-900 text-md font-bold" />
           {t('userDashboard.home.deposit')}
         </button>
       </div>
@@ -62,6 +62,7 @@ export default function ActivityPage() {
   const { t } = useTranslation();
   const [filter, setFilter] = useState('all');
   const [search, setSearch] = useState('');
+  const [verifyOpen, setVerifyOpen] = useState(false);
   const hasActivity = ACTIVITY_ITEMS.length > 0;
 
   const filteredActivity = ACTIVITY_ITEMS.filter((item) => {
@@ -81,7 +82,7 @@ export default function ActivityPage() {
         {/* Main Content: col-span-9, matching width of user/page.jsx left section */}
         <div className="lg:col-span-8 space-y-6">
           {!hasActivity ? (
-            <NoActivityCard />
+            <NoActivityCard onOpenVerify={() => setVerifyOpen(true)} />
           ) : (
             <>
               <div>
@@ -205,6 +206,7 @@ export default function ActivityPage() {
           <UserRightSection />
         </div>
       </div>
+      <VerifyIdentityDrawer open={verifyOpen} onClose={() => setVerifyOpen(false)} />
     </div>
   );
 }

@@ -1,9 +1,12 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import { useParams } from 'next/navigation';
 import UserRightSection from '@/app/[lang]/user/components/UserRightsection';
 import Link from 'next/link';
+import { useUserBalance } from '@/app/[lang]/user/context/UserBalanceContext';
+import VerifyIdentityDrawer from '@/app/[lang]/user/components/VerifyIdentityDrawer';
 import {
   Plus,
   Minus,
@@ -53,6 +56,12 @@ export default function UserDashboardPage() {
   const { t } = useTranslation();
   const params = useParams();
   const locale = params?.lang || 'en';
+  const { balance, setBalance, balanceVisible } = useUserBalance();
+  const [verifyOpen, setVerifyOpen] = useState(false);
+
+  useEffect(() => {
+    setBalance('$0.00');
+  }, [setBalance]);
 
   return (
     <div className="">
@@ -60,29 +69,29 @@ export default function UserDashboardPage() {
         {/* Main Section (col-span-9) */}
         <div className="lg:col-span-8 space-y-6">
           {/* 1. Trading Account Balance - full width card on top */}
-          <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+          <div className="bg-white rounded-2xl shadow-sm p-3 border border-gray-100">
             <h2 className="text-sm font-medium text-gray-600 mb-2">
               {t('userDashboard.home.tradingAccountBalance')}
             </h2>
-            <p className="text-3xl font-bold text-gray-900">$0.00</p>
+            <p className="text-3xl font-bold text-gray-900">{balanceVisible ? balance : '$******'}</p>
           </div>
   
           {/* 2. Trading Actions Grid - separate card, colored circles with white icons */}
-          <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+          <div className="bg-white rounded-2xl shadow-sm p-1 border border-gray-100">
             <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
-              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+              <button type="button" onClick={() => setVerifyOpen(true)} className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-2xl transition-colors">
                 <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <Plus className="w-5 h-5 text-gray-600" />
                 </div>
                 <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.buy')}</span>
               </button>
-              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-2xl transition-colors">
                 <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <Minus className="w-5 h-5 text-gray-600" />
                 </div>
                 <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.sell')}</span>
               </button>
-              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-2xl transition-colors">
                   <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center gap-0.5 flex-shrink-0">
                   <Plus className="w-[14px] h-[14px] text-gray-600" />
                   <span className="text-gray-600 text-xs">/</span>
@@ -90,31 +99,31 @@ export default function UserDashboardPage() {
                 </div>
                 <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.limitOrder')}</span>
               </button>
-              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-2xl transition-colors">
                 <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <ArrowUpDown className="w-5 h-5 text-gray-600" />
                 </div>
                 <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.convert')}</span>
               </button>
-              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+              <button type="button" onClick={() => setVerifyOpen(true)} className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-2xl transition-colors">
                 <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <ArrowDown className="w-5 h-5 text-gray-600" />
                 </div>
                 <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.deposit')}</span>
               </button>
-              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-2xl transition-colors">
                 <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <ArrowUp className="w-5 h-5 text-gray-600" />
                 </div>
                 <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.send')}</span>
               </button>
-              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+              <button type="button" onClick={() => setVerifyOpen(true)} className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-2xl transition-colors">
                 <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <Building2 className="w-5 h-5 text-gray-600" />
                 </div>
                 <span className="text-sm font-medium text-gray-700">{t('userDashboard.home.addCash')}</span>
               </button>
-              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-lg transition-colors">
+              <button className="flex flex-col items-center gap-2 p-4 hover:bg-gray-50 rounded-2xl transition-colors">
                   <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <DollarSign className="w-5 h-5 text-gray-600" />
                 </div>
@@ -125,7 +134,7 @@ export default function UserDashboardPage() {
   
           {/* 3. Profile Completion + Verification - two columns */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+            <div className="bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-24 h-24 flex-shrink-0 mb-4">
                   <svg className="w-full h-full -rotate-90" viewBox="0 0 36 36">
@@ -156,12 +165,12 @@ export default function UserDashboardPage() {
               </div>
             </div>
   
-            <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+            <div className="bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 {t('userDashboard.home.verificationSteps')}
               </h3>
               <div className="space-y-3">
-                <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg border border-green-100">
+                <div className="flex items-center gap-3 p-3 bg-green-50 rounded-2xl border border-green-100">
                   <div className="w-6 h-6 bg-purple-700 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-4 h-4 text-white" />
                   </div>
@@ -170,7 +179,7 @@ export default function UserDashboardPage() {
                   </div>
                   <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
                 </div>
-                <div className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg cursor-pointer border border-transparent hover:border-gray-200 transition-colors">
+                <button type="button" onClick={() => setVerifyOpen(true)} className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-2xl cursor-pointer border border-transparent hover:border-gray-200 transition-colors w-full text-left">
                   <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <CreditCard className="w-4 h-4 text-white" />
                   </div>
@@ -179,8 +188,8 @@ export default function UserDashboardPage() {
                     <p className="text-xs text-gray-500">{t('userDashboard.home.around2Minutes')}</p>
                   </div>
                   <ArrowRight className="w-4 h-4 text-gray-400 flex-shrink-0" />
-                </div>
-                <div className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-lg cursor-pointer border border-transparent hover:border-gray-200 transition-colors">
+                </button>
+                <div className="flex items-center gap-3 p-3 hover:bg-gray-50 rounded-2xl cursor-pointer border border-transparent hover:border-gray-200 transition-colors">
                   <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <RefreshCw className="w-4 h-4 text-green-600" />
                   </div>
@@ -191,33 +200,33 @@ export default function UserDashboardPage() {
                   <ArrowRight className="w-4 h-4 text-gray-400 flex-shrink-0" />
                 </div>
               </div>
-              <button className="w-full mt-4 bg-blue-600 text-white py-2.5 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+              <button type="button" onClick={() => setVerifyOpen(true)} className="w-full mt-4 bg-blue-600 text-white py-2.5 px-4 rounded-2xl font-medium hover:bg-blue-700 transition-colors">
                 {t('userDashboard.home.verifyIdentity')}
               </button>
             </div>
           </div>
   
           {/* Assets */}
-          <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
-            <div className="flex items-center justify-between mb-4">
+          <div className="">
+            <div className="flex  items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">{t('userDashboard.home.assets')}</h3>
               <Link href={`/${locale}/user/assets`} className="text-sm text-blue-600 hover:text-blue-700 font-medium">
                 {t('userDashboard.home.seeAll')}
               </Link>
             </div>
-            <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-100">
+            <div className="flex bg-white rounded-2xl shadow-sm p-3 border border-gray-100 items-center justify-between p-4 bg-gray-50 rounded-2xl border border-gray-100">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <DollarSign className="w-5 h-5 text-green-700" />
                 </div>
-                <p className="text-sm font-medium text-gray-900">{t('userDashboard.home.cashAndStablecoins')}</p>
+                <p className="text-md font-bold text-gray-900">{t('userDashboard.home.cashAndStablecoins')}</p>
               </div>
               <p className="text-lg font-semibold text-gray-900">$0.00</p>
             </div>
           </div>
   
           {/* Top Movers - cards with border-gray-100, shadow-sm, shaded area under chart */}
-          <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+          <div className="">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
                 <span className="text-lg font-semibold text-gray-900">{t('userDashboard.home.topMovers')}</span>
@@ -229,41 +238,37 @@ export default function UserDashboardPage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
               {TOP_MOVERS.map((coin) => (
-                <div key={coin.symbol} className="p-4 border border-gray-100 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-white border border-gray-100 flex items-center justify-center flex-shrink-0">
-                        <span className="text-xs font-semibold text-gray-700">{coin.symbol.charAt(0)}</span>
-                      </div>
-                      <span className="font-semibold text-gray-900">{coin.symbol}</span>
-                    </div>
-                    <span className={`text-sm font-bold text-gray-900`}>{coin.price}</span>
-                  </div>
-                  <div className="flex items-center gap-1.5 mb-2">
-                    <span className={`text-xs font-medium ${coin.positive ? 'text-green-600' : 'text-red-600'}`}>
-                      {coin.positive ? '↑' : '↓'} {coin.change}
-                    </span>
-                  </div>
-                  <div className="w-full h-9">
-                    <MiniChart positive={coin.positive} />
-                  </div>
-                </div>
+               <div key={coin.symbol} className="bg-white rounded-xl shadow-sm border border-gray-100 p-4">
+               <div className="flex items-center gap-2 mb-2">
+                 <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                   <span className="text-xs font-bold text-gray-700">{coin.symbol.charAt(0)}</span>
+                 </div>
+                 <span className="font-semibold text-gray-900">{coin.symbol}</span>
+               </div>
+               <p className="text-sm font-semibold text-gray-900">{coin.price}</p>
+               <p className={`text-xs font-medium mb-2 ${coin.positive ? 'text-green-600' : 'text-red-600'}`}>
+                 {coin.positive ? '↑' : '↓'} {coin.change}
+               </p>
+               <div className="w-full h-10">
+                 <MiniChart positive={coin.positive} />
+               </div>
+             </div>
               ))}
             </div>
           </div>
   
           {/* Recurring Buys - light blue icon, rectangular Go button */}
-          <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-100">
+          <div className="">
             <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('userDashboard.home.recurringBuys')}</h3>
-            <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
+            <div className="flex bg-white rounded-2xl shadow-sm p-6 border border-gray-100 items-center gap-4 p-4 bg-gray-50 rounded-2xl border border-gray-100">
               <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
                 <RefreshCw className="w-5 h-5 text-blue-600" />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-gray-900">{t('userDashboard.home.automateYourBuys')}</p>
-                <p className="text-sm text-gray-600 mt-0.5">{t('userDashboard.home.recurringBuysDesc')}</p>
+                <p className="text-sm  text-gray-900">{t('userDashboard.home.automateYourBuys')}</p>
+                <p className="text-sm font-bold text-gray-900 mt-0.5">{t('userDashboard.home.recurringBuysDesc')}</p>
               </div>
-              <button className="px-5 py-2.5 bg-gray-800 text-white text-sm font-medium rounded-md hover:bg-gray-900 transition-colors flex-shrink-0">
+              <button type="button" onClick={() => setVerifyOpen(true)} className="px-3 py-2 bg-gray-800 text-white text-sm font-medium rounded-3xl hover:bg-gray-900 transition-colors flex-shrink-0">
                 {t('userDashboard.home.go')}
               </button>
             </div>
@@ -273,14 +278,14 @@ export default function UserDashboardPage() {
           <div>
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">{t('userDashboard.home.news')}</h3>
-              <Link href="#" className="text-sm text-blue-600 hover:text-blue-700 font-medium">
+              <Link href={`/${locale}/user/news`} className="text-sm text-blue-600 hover:text-blue-700 font-medium">
                 {t('userDashboard.home.seeAll')}
               </Link>
             </div>
             <div className="space-y-4">
               {NEWS_ITEMS.map((item, i) => (
-                <div key={i} className="bg-white rounded-lg shadow-sm p-6 border border-gray-100 flex gap-4 hover:shadow-md transition-shadow cursor-pointer">
-                  <div className="w-20 h-20 bg-gray-200 rounded-lg flex-shrink-0" />
+                <div key={i} className="bg-white rounded-2xl shadow-sm p-4 border border-gray-100 flex gap-4 hover:shadow-md transition-shadow cursor-pointer">
+                  <div className="w-23 h-23 bg-gray-200 rounded-2xl flex-shrink-0" />
                   <div className="min-w-0 flex-1">
                     <p className="text-sm font-semibold text-gray-900 line-clamp-2">{item.title}</p>
                     <p className="text-sm text-gray-600 mt-1">
@@ -294,27 +299,30 @@ export default function UserDashboardPage() {
           </div>
   
           {/* Need help - each option as white card */}
-          <div className="pt-4 pb-2">
+          <div className="pt-4  pb-2">
             <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('userDashboard.home.needHelp')}</h3>
-            <div className="space-y-3">
-              <button className="w-full flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:bg-gray-50 transition-colors text-left group">
+            <div className="space-y-3 bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
+              <a href="https://support.blockchain.com/hc/en-us/requests/new" target="_blank" rel="noopener noreferrer" className="w-full flex items-center gap-3 hover:bg-gray-50 transition-colors text-left group rounded-lg p-1 -m-1">
                 <MessageCircle className="w-5 h-5 text-gray-500 flex-shrink-0" />
                 <span className="text-base font-medium text-gray-900 flex-1">{t('userDashboard.home.contactSupport')}</span>
                 <ArrowRight className="w-4 h-4 text-gray-400 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
-              </button>
-              <button className="w-full flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm border border-gray-100 hover:bg-gray-50 transition-colors text-left group">
+              </a>
+              <div className="border-t border-gray-100 w-full" />
+              <a href="https://support.blockchain.com/hc/en-us" target="_blank" rel="noopener noreferrer" className="w-full flex items-center gap-3 hover:bg-gray-50 transition-colors text-left group rounded-lg p-1 -m-1">
                 <HelpCircle className="w-5 h-5 text-gray-500 flex-shrink-0" />
                 <span className="text-base font-medium text-gray-900 flex-1">{t('userDashboard.home.viewSupportCenter')}</span>
                 <ArrowRight className="w-4 h-4 text-gray-400 flex-shrink-0 group-hover:translate-x-0.5 transition-transform" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
+        
         {/* Right Section (col-span-3) */}
         <div className="lg:col-span-4  hidden lg:block">
           <UserRightSection />
         </div>
       </div>
+      <VerifyIdentityDrawer open={verifyOpen} onClose={() => setVerifyOpen(false)} />
     </div>
   );
 }

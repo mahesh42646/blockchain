@@ -2,11 +2,12 @@
 
 import { useState } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
-import { Search, Flame, Star, ChevronDown } from 'lucide-react';
-import UserRightSection from '@/app/[lang]/user/components/UserRightsection'
+import { Search, Flame, Star } from 'lucide-react';
 import Link from 'next/link';
-
-
+import { useParams } from 'next/navigation';
+import UserRightSection from '@/app/[lang]/user/components/UserRightsection';
+import VerifyIdentityDrawer from '@/app/[lang]/user/components/VerifyIdentityDrawer';
+import { useDiscoverFavorites } from '@/app/[lang]/user/context/DiscoverFavoritesContext';
 
 const TOP_MOVERS = [
   { symbol: 'EFI', price: '$0.0134', change: '-33.99%', positive: false },
@@ -18,25 +19,31 @@ const TOP_MOVERS = [
 const SECTIONS = [
   {
     key: 'meme',
+    title: 'Meme',
+    description: 'Meme coins are community-driven cryptocurrencies often inspired by internet culture.',
     rows: [
-      { name: 'Dogecoin', symbol: 'DOGE', price: '$0.11', change: '-4.81%', positive: false, marketCap: '$19.327B' },
+      { name: 'Dogecoin', symbol: 'DOGE', price: '$0.11', change: '+4.81%', positive: true, marketCap: '$19.327B' },
       { name: 'SHIBA INU', symbol: 'SHIB', price: '$0.00000728', change: '-2.85%', positive: false, marketCap: '$4.291B' },
-      { name: 'Pepe', symbol: 'PEPE', price: '$0.00000459', change: '-3.90%', positive: false, marketCap: '$1.931B' },
+      { name: 'Pepe', symbol: 'PEPE', price: '$0.00000459', change: '+3.90%', positive: true, marketCap: '$1.931B' },
     ],
   },
   {
     key: 'other',
+    title: 'Other',
+    description: 'Other notable cryptocurrencies and wrapped assets.',
     rows: [
       { name: 'Wrapped Bitcoin', symbol: 'WBTC', price: '$82,267.71', change: '-6.15%', positive: false, marketCap: '$10.280B' },
-      { name: 'Chainlink', symbol: 'LINK', price: '$10.70', change: '-7.20%', positive: false, marketCap: '$7.579B' },
+      { name: 'Chainlink', symbol: 'LINK', price: '$10.70', change: '+7.20%', positive: true, marketCap: '$7.579B' },
       { name: 'Chiliz', symbol: 'CHZ', price: '$0.0476', change: '-2.22%', positive: false, marketCap: '$487.440M' },
     ],
   },
   {
     key: 'popular',
+    title: 'Popular',
+    description: 'Most popular cryptocurrencies by market cap.',
     rows: [
       { name: 'Bitcoin', symbol: 'BTC', price: '$82,514.41', change: '-6.19%', positive: false, marketCap: '$1.651T' },
-      { name: 'Ethereum', symbol: 'ETH', price: '$2,729.32', change: '-6.90%', positive: false, marketCap: '$330.260B' },
+      { name: 'Ethereum', symbol: 'ETH', price: '$2,729.32', change: '+2.90%', positive: true, marketCap: '$330.260B' },
       { name: 'Binance Smart Chain', symbol: 'BNB', price: '$841.27', change: '-5.42%', positive: false, marketCap: '$114.746B' },
     ],
   },
@@ -54,7 +61,7 @@ function MiniChart({ positive }) {
   );
 }
 
-function CoinRow({ name, symbol, price, change, positive, marketCap }) {
+function CoinRow({ name, symbol, price, change, positive, marketCap, onBuy, onFavorite, isFavorited }) {
   const { t } = useTranslation();
   return (
     <div className="flex items-center justify-between py-4 px-4 border-b border-gray-100 last:border-0 hover:bg-gray-50/50 transition-colors">
@@ -69,25 +76,51 @@ function CoinRow({ name, symbol, price, change, positive, marketCap }) {
       </div>
       <p className="font-semibold text-gray-900 shrink-0 ml-2">{price}</p>
       <p className={`text-sm font-medium shrink-0 w-16 text-right ${positive ? 'text-green-600' : 'text-red-600'}`}>
-        ↓ {change}
+        {positive ? '↑' : '↓'} {change}
       </p>
       <p className="text-sm text-gray-500 shrink-0 w-24 text-right hidden sm:block">{marketCap}</p>
       <div className="flex items-center gap-2 shrink-0">
-        <button className="px-3 py-1.5 bg-blue-100 hover:bg-blue-200 text-blue-700 text-sm font-medium rounded-lg transition-colors">
+        <button type="button" onClick={onBuy} className="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors">
           {t('userDashboard.home.buy')}
         </button>
-        <button className="p-1.5 text-gray-400 hover:text-amber-500 rounded transition-colors" aria-label="Favorite">
-          <Star className="w-5 h-5 stroke-[1.5] text-gray-400 hover:text-amber-500 transition-colors" />
+        <button type="button" onClick={() => onFavorite(symbol)} className="p-1.5 rounded transition-colors" aria-label="Favorite">
+          <Star className={`w-5 h-5 stroke-[1.5] transition-colors ${isFavorited ? 'fill-amber-500 text-amber-500' : 'text-gray-400 hover:text-amber-500'}`} />
         </button>
       </div>
     </div>
   );
 }
 
+const ALL_ROWS = SECTIONS.flatMap((s) => s.rows.map((r) => ({ ...r, sectionKey: s.key })));
+const GAINERS_ROWS = ALL_ROWS.filter((r) => r.positive);
+const LOSERS_ROWS = ALL_ROWS.filter((r) => !r.positive);
+
 export default function DiscoverPage() {
   const { t } = useTranslation();
+  const params = useParams();
+  const locale = params?.lang || 'en';
+  const { toggleFavorite, isFavorite } = useDiscoverFavorites();
   const [search, setSearch] = useState('');
   const [tab, setTab] = useState('tradable');
+  const [verifyOpen, setVerifyOpen] = useState(false);
+
+  const getRowsForTab = () => {
+    if (tab === 'favorites') return ALL_ROWS.filter((r) => isFavorite(r.symbol));
+    if (tab === 'gainers') return GAINERS_ROWS;
+    if (tab === 'losers') return LOSERS_ROWS;
+    return ALL_ROWS;
+  };
+
+  const filteredBySearch = (rows) =>
+    !search.trim()
+      ? rows
+      : rows.filter(
+          (r) =>
+            r.name.toLowerCase().includes(search.toLowerCase()) ||
+            r.symbol.toLowerCase().includes(search.toLowerCase())
+        );
+
+  const displayRows = filteredBySearch(getRowsForTab());
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -134,13 +167,14 @@ export default function DiscoverPage() {
           </div>
 
           {/* Tabs: Tradable, Gainers, Losers, Favorites */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex bg-gray-200 rounded-full p-1 gap-1">
             {['tradable', 'gainers', 'losers', 'favorites'].map((key) => (
               <button
                 key={key}
+                type="button"
                 onClick={() => setTab(key)}
-                className={`px-4 py-2.5 rounded-full text-sm font-medium transition-colors ${
-                  tab === key ? 'bg-blue-600 text-white' : 'bg-white border border-gray-200 text-gray-700 hover:bg-gray-50'
+                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${
+                  tab === key ? 'bg-white shadow-sm text-blue-600' : 'text-gray-700 hover:text-gray-900'
                 }`}
               >
                 {t(`userDashboard.discover.tabs.${key}`)}
@@ -148,23 +182,51 @@ export default function DiscoverPage() {
             ))}
           </div>
 
-          {/* Category sections: Meme, Other, Popular */}
-          <div className="space-y-6">
-            {SECTIONS.map((section) => (
-              <div key={section.key} className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
-                <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
-                  <h3 className="text-base font-bold text-gray-900">{t(`userDashboard.discover.sections.${section.key}`)}</h3>
-                  <Link href="#" className="text-sm font-medium text-blue-600 hover:text-blue-700">
-                    {t('userDashboard.discover.explore')}
-                  </Link>
-                </div>
-                <div className="divide-y divide-gray-100">
-                  {section.rows.map((row) => (
-                    <CoinRow key={`${section.key}-${row.symbol}`} {...row} />
-                  ))}
-                </div>
+          {/* Content by tab */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            {tab !== 'tradable' ? (
+              <div className="divide-y divide-gray-100">
+                {displayRows.length === 0 ? (
+                  <div className="py-12 text-center text-gray-500">
+                    {tab === 'favorites' ? t('userDashboard.discover.noResults') : t('userDashboard.discover.noResults')}
+                  </div>
+                ) : (
+                  displayRows.map((row) => (
+                    <CoinRow
+                      key={row.symbol}
+                      {...row}
+                      onBuy={() => setVerifyOpen(true)}
+                      onFavorite={toggleFavorite}
+                      isFavorited={isFavorite(row.symbol)}
+                    />
+                  ))
+                )}
               </div>
-            ))}
+            ) : (
+              <>
+                {SECTIONS.map((section) => (
+                  <div key={section.key} className="border-b border-gray-100 last:border-0">
+                    <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-gray-50/30">
+                      <h3 className="text-base font-bold text-gray-900">{t(`userDashboard.discover.sections.${section.key}`)}</h3>
+                      <Link href={`/${locale}/user/discover/${section.key}`} className="text-sm font-medium text-blue-600 hover:text-blue-700">
+                        {t('userDashboard.discover.explore')}
+                      </Link>
+                    </div>
+                    <div className="divide-y divide-gray-100">
+                      {section.rows.map((row) => (
+                        <CoinRow
+                          key={`${section.key}-${row.symbol}`}
+                          {...row}
+                          onBuy={() => setVerifyOpen(true)}
+                          onFavorite={toggleFavorite}
+                          isFavorited={isFavorite(row.symbol)}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </>
+            )}
           </div>
         </div>
         {/* Right Section (col-span-3) */}
@@ -172,6 +234,7 @@ export default function DiscoverPage() {
           <UserRightSection />
         </div>
       </div>
+      <VerifyIdentityDrawer open={verifyOpen} onClose={() => setVerifyOpen(false)} />
     </div>
   );
 }

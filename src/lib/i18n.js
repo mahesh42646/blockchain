@@ -1,11 +1,14 @@
 import en from '@/locales/en.json';
 import hi from '@/locales/hi.json';
 import es from '@/locales/es.json';
+import authEn from '@/locales/auth/en.json';
+import authEs from '@/locales/auth/es.json';
+import authHi from '@/locales/auth/hi.json';
 
 const translations = {
-  en,
-  hi,
-  es,
+  en: { ...en, auth: authEn },
+  hi: { ...hi, auth: authHi },
+  es: { ...es, auth: authEs },
 };
 
 const defaultLocale = 'en';

@@ -319,7 +319,79 @@
 
 
 
-"userDashboard": {
+  "settings": {
+    "sidebar": {
+      "breadcrumb": "Billetera | Configuración",
+      "general": "General",
+      "limits": "Límites",
+      "airdrops": "Airdrops",
+      "taxCenter": "Centro de impuestos"
+    },
+    "general": {
+      "title": "General",
+      "subtitle": "Consulta tu moneda de trading y otros enlaces útiles.",
+      "tradingCurrency": "Moneda de trading",
+      "tradingCurrencyDesc": "La moneda que usarás para comprar y vender cripto.",
+      "otherInformation": "Otra información",
+      "privacyPolicy": "Política de privacidad",
+      "privacyPolicyDesc": "Lee sobre la privacidad y seguridad de tu información personal.",
+      "termsOfService": "Términos de servicio",
+      "termsOfServiceDesc": "Lee sobre la privacidad y seguridad de tu información personal.",
+      "aboutBlockchain": "Sobre Blockchain",
+      "aboutBlockchainDesc": "Conoce más sobre nuestra empresa.",
+      "appVersion": "Versión de la aplicación"
+    },
+    "limits": {
+      "title": "Límites de trading",
+      "subtitle": "Consulta tus límites de trading.",
+      "upgradeTitle": "Mejora tu cuenta",
+      "upgradeSubtitle": "Compra, vende e intercambia más cripto.",
+      "upgradeDesc": "Verificar tu identidad desbloquea acceso a Cuentas de compra, venta, intercambio y recompensas.",
+      "basicAccess": "Acceso básico",
+      "basicAccessBadge": "Limitado",
+      "basicFeature1": "Enviar y recibir cripto entre billeteras DeFi",
+      "basicFeature2": "Convertir cripto una vez entre billeteras DeFi",
+      "fullAccess": "Acceso completo",
+      "applyNow": "Aplicar ahora",
+      "getVerified": "Verificar identidad",
+      "fullFeature1": "Convertir cripto entre todas las billeteras y cuentas",
+      "fullFeature2": "Comprar y vender con tarjeta o métodos bancarios",
+      "fullFeature3": "Gana recompensas con tu cripto",
+      "fullIncludesBasic": "El acceso completo incluye todas las funciones del acceso básico"
+    },
+    "airdrops": {
+      "title": "Airdrops",
+      "subtitle": "La forma más fácil de probar y descubrir nuevos criptos.",
+      "programTitle": "Programa de airdrops",
+      "programDesc": "Completa tu perfil y verifica tu identidad para acceder a airdrops exclusivos.",
+      "verifyIdentity": "Verificar tu identidad",
+      "history": "Historial",
+      "tableType": "Tipo",
+      "tableStatus": "Estado",
+      "tableDate": "Fecha",
+      "tableTo": "Para",
+      "tableAmount": "Monto",
+      "offerExpired": "Oferta expirada"
+    },
+    "tax": {
+      "title": "Centro de impuestos",
+      "subtitle": "Todo lo que necesitas de Blockchain.com para declarar tus impuestos este año.",
+      "exportTitle": "Exportar tu historial de transacciones",
+      "exportDesc": "Obtén el historial completo de tu Billetera: Trading, Recompensas y cuentas de clave privada.",
+      "chooseYear": "Elegir año",
+      "allTime": "Todo el tiempo",
+      "generateReport": "Generar informe",
+      "generatedExports": "Exportaciones generadas",
+      "uploadTitle": "Subir a un servicio de impuestos",
+      "uploadDesc": "Nos asociamos con CoinTracker para facilitar la declaración de impuestos en cripto. Disponible en EE. UU., Australia, Reino Unido y Canadá. Descuento al usar Blockchain.com.",
+      "visitCoinTracker": "Visitar CoinTracker",
+      "faqTitle": "Preguntas frecuentes",
+      "faq1": "¿Debo impuestos por mi cripto?",
+      "faq2": "¿Cómo declaro?",
+      "faq3": "¿Y si uso otros servicios cripto?"
+    }
+  },
+  "userDashboard": {
     "sidebar": {
       "home": "Inicio",
       "assets": "Activos",
@@ -333,7 +405,8 @@
       "wallet": "Billetera",
       "profile": "Perfil",
       "settings": "Configuración",
-      "logout": "Cerrar Sesión"
+      "language": "Idioma",
+      "logout": "Cerrar sesión"
     },
     "home": {
       "tradingAccountBalance": "Saldo de Cuenta de Trading",

@@ -1,10 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import { DollarSign, Plus, ArrowDown } from 'lucide-react';
-import Link from 'next/link';
-import { useParams } from 'next/navigation';
-import UserRightSection from '@/app/[lang]/user/components/UserRightsection'
+import UserRightSection from '@/app/[lang]/user/components/UserRightsection';
+import UserDepositDrawer from '@/app/[lang]/user/components/UserDepositDrawer';
+import VerifyIdentityDrawer from '@/app/[lang]/user/components/VerifyIdentityDrawer';
+import AssetActionDrawer from '@/app/[lang]/user/components/AssetActionDrawer';
 
 const CASH_ASSETS = [
   { id: 'usdc', name: 'USDC', symbol: 'USDC', balance: '0', value: '$0.00', color: 'bg-blue-100', iconColor: 'text-blue-700' },
@@ -14,8 +16,10 @@ const CASH_ASSETS = [
 
 export default function AssetsPage() {
   const { t } = useTranslation();
-  const params = useParams();
-  const locale = params?.lang || 'en';
+  const [depositOpen, setDepositOpen] = useState(false);
+  const [verifyOpen, setVerifyOpen] = useState(false);
+  const [assetDrawerOpen, setAssetDrawerOpen] = useState(false);
+  const [selectedAsset, setSelectedAsset] = useState(null);
 
   return (
     <div className="max-w-7xl mx-auto space-y-6">
@@ -26,18 +30,24 @@ export default function AssetsPage() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
             <div className="flex items-center justify-between mb-4">
               <h2 className="text-lg font-bold text-gray-900">{t('userDashboard.assets.cash')}</h2>
-              <Link
-                href={`/${locale}/user`}
+              <button
+                type="button"
+                onClick={() => setDepositOpen(true)}
                 className="text-sm font-medium text-blue-600 hover:text-blue-700"
               >
                 {t('userDashboard.home.deposit')}
-              </Link>
+              </button>
             </div>
             <div className="space-y-3">
               {CASH_ASSETS.map((asset) => (
-                <div
+                <button
                   key={asset.id}
-                  className="flex items-center justify-between p-4 rounded-lg border border-gray-100 bg-gray-50/50 hover:bg-gray-50 transition-colors"
+                  type="button"
+                  onClick={() => {
+                    setSelectedAsset(asset);
+                    setAssetDrawerOpen(true);
+                  }}
+                  className="w-full flex items-center justify-between p-4 rounded-lg border border-gray-100 bg-gray-50/50 hover:bg-gray-50 transition-colors text-left"
                 >
                   <div className="flex items-center gap-3">
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 ${asset.color}`}>
@@ -52,7 +62,7 @@ export default function AssetsPage() {
                     <p className="font-semibold text-gray-900">{asset.balance} {asset.symbol}</p>
                     <p className="text-sm text-gray-500">{asset.value}</p>
                   </div>
-                </div>
+                </button>
               ))}
             </div>
           </div>
@@ -69,11 +79,11 @@ export default function AssetsPage() {
             </div>
             <p className="text-lg font-semibold text-gray-900 mb-2">{t('userDashboard.assets.getStartedTitle')}</p>
             <div className="flex gap-3 mt-6 w-full max-w-sm justify-center">
-              <button className="flex items-center justify-center gap-2 py-3 px-5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors">
+              <button type="button" onClick={() => setVerifyOpen(true)} className="flex items-center justify-center gap-2 py-3 px-5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors">
                 <Plus className="w-4 h-4" />
                 {t('userDashboard.home.buy')}
               </button>
-              <button className="flex items-center justify-center gap-2 py-3 px-5 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm font-medium rounded-lg transition-colors">
+              <button type="button" onClick={() => setVerifyOpen(true)} className="flex items-center justify-center gap-2 py-3 px-5 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 text-sm font-medium rounded-lg transition-colors">
                 <ArrowDown className="w-4 h-4 text-blue-600" />
                 {t('userDashboard.home.deposit')}
               </button>
@@ -85,6 +95,24 @@ export default function AssetsPage() {
           <UserRightSection />
         </div>
       </div>
+      <UserDepositDrawer
+        open={depositOpen}
+        onClose={() => setDepositOpen(false)}
+        onSelectOption={() => {
+          setDepositOpen(false);
+          setVerifyOpen(true);
+        }}
+      />
+      <VerifyIdentityDrawer open={verifyOpen} onClose={() => setVerifyOpen(false)} />
+      <AssetActionDrawer
+        open={assetDrawerOpen}
+        onClose={() => setAssetDrawerOpen(false)}
+        asset={selectedAsset}
+        onSelectAction={() => {
+          setAssetDrawerOpen(false);
+          setVerifyOpen(true);
+        }}
+      />
     </div>
   );
 }

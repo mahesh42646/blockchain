@@ -5,7 +5,7 @@ export async function generateStaticParams() {
   return supportedLocales.map((locale) => ({ lang: locale }));
 }
 
-export default function LangLayout({ children }) {
+export default async function LangLayout({ children }) {
   return (
         <ConditionalLayout>
           {children}

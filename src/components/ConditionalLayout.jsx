@@ -7,8 +7,10 @@ import Footer from '@/components/Footer';
 export default function ConditionalLayout({ children }) {
   const pathname = usePathname();
   const isUserRoute = pathname?.includes('/user');
+  const isAuthRoute = pathname?.includes('/auth');
   const isDefiRoute = pathname?.includes('/defi');
-  const hideMainLayout = isUserRoute || isDefiRoute;
+  const isSettingsRoute = pathname?.includes('/settings');
+  const hideMainLayout = isUserRoute || isAuthRoute || isDefiRoute || isSettingsRoute;
 
   return (
     <>

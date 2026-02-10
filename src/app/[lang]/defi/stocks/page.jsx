@@ -1,15 +1,36 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
-import { Search, Info, Star, ChevronUp, X, Clock, Lock, RefreshCw } from 'lucide-react';
+import { Search, Info, Star, ChevronUp, ChevronDown, ChevronsUpDown, X, Clock, Lock, RefreshCw } from 'lucide-react';
 import DefiRightSection from '@/app/[lang]/defi/components/DefiRightSection';
 
 const STOCKS = [
-  { name: 'Abbott', ticker: 'ABTon', price: '$110.36', change: '0.53%', positive: true, marketCap: '$1.508M', logo: 'A', color: 'bg-blue-100 text-blue-700' },
-  { name: 'AbbVie', ticker: 'ABBVON', price: '$225.67', change: '0.86%', positive: true, marketCap: '$50,207.00', logo: 'O', color: 'bg-indigo-100 text-indigo-700' },
-  { name: 'abrdn Physical Palladi...', ticker: 'PALLON', price: '$150.90', change: '-2.96%', positive: false, marketCap: '$5,40,734.00', logo: 'P', color: 'bg-amber-100 text-amber-700' },
+  { name: 'Abbott', symbol: 'ABTon', price: '$110.36', change: '0.53%', positive: true, marketCap: '$1.508M', logo: 'A', color: 'bg-blue-100 text-blue-700', isStock: true },
+  { name: 'AbbVie', symbol: 'ABBVON', price: '$225.67', change: '0.86%', positive: true, marketCap: '$50,207.00', logo: 'O', color: 'bg-indigo-100 text-indigo-700', isStock: true },
+  { name: 'abrdn Physical Palladi...', symbol: 'PALLON', price: '$150.90', change: '-2.96%', positive: false, marketCap: '$5,40,734.00', logo: 'P', color: 'bg-amber-100 text-amber-700', isStock: true },
+  { name: 'Aave', symbol: 'AAVE', price: '$126.65', change: '-0.68%', positive: false, marketCap: '$1.923B', logo: 'A', color: 'bg-sky-100 text-sky-700', isStock: false },
+  { name: '1INCH Token', symbol: '1INCH', price: '$0.11', change: '2.70%', positive: true, marketCap: '$160.519M', logo: '1', color: 'bg-gray-100 text-gray-700', isStock: false },
 ];
+
+const DEFI_FAVORITES_KEY = 'defi-favorites';
+
+function loadFavorites() {
+  if (typeof window === 'undefined') return new Set();
+  try {
+    const raw = window.localStorage.getItem(DEFI_FAVORITES_KEY);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+function saveFavorites(set) {
+  if (typeof window === 'undefined') return;
+  try {
+    window.localStorage.setItem(DEFI_FAVORITES_KEY, JSON.stringify([...set]));
+  } catch {}
+}
 
 const COMPANY_LOGO_COLORS = ['bg-blue-500', 'bg-green-600', 'bg-gray-800', 'bg-orange-500', 'bg-blue-600'];
 
@@ -21,6 +42,9 @@ export default function DefiStocksPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [tokenizedPopupOpen, setTokenizedPopupOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [favorites, setFavorites] = useState(() => loadFavorites());
+  const [sortKey, setSortKey] = useState('name');
+  const [sortDir, setSortDir] = useState('asc');
 
   useEffect(() => {
     setMounted(true);
@@ -36,6 +60,12 @@ export default function DefiStocksPage() {
     }
   }, [mounted]);
 
+  useEffect(() => {
+    const handler = () => setFavorites(loadFavorites());
+    window.addEventListener('defi-favorites-updated', handler);
+    return () => window.removeEventListener('defi-favorites-updated', handler);
+  }, []);
+
   const closeTokenizedPopup = () => {
     setTokenizedPopupOpen(false);
     try {
@@ -43,12 +73,56 @@ export default function DefiStocksPage() {
     } catch {}
   };
 
-  const filteredStocks = searchQuery.trim()
-    ? STOCKS.filter(
-        (s) =>
-          s.name.toLowerCase().includes(searchQuery.toLowerCase()) || s.ticker.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : STOCKS;
+  const filteredStocks = useMemo(() => {
+    let list = activeView === 'myStocks' ? STOCKS.filter((s) => favorites.has(s.symbol)) : [...STOCKS];
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      list = list.filter((s) => s.name.toLowerCase().includes(q) || s.symbol.toLowerCase().includes(q));
+    }
+    if (sortKey === 'name') {
+      list.sort((a, b) => (sortDir === 'asc' ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name)));
+    } else if (sortKey === 'price') {
+      list.sort((a, b) => {
+        const pa = parseFloat(a.price.replace(/[$,]/g, '')) || 0;
+        const pb = parseFloat(b.price.replace(/[$,]/g, '')) || 0;
+        return sortDir === 'asc' ? pa - pb : pb - pa;
+      });
+    } else if (sortKey === 'change') {
+      list.sort((a, b) => {
+        const pa = parseFloat(a.change) || 0;
+        const pb = parseFloat(b.change) || 0;
+        return sortDir === 'asc' ? pa - pb : pb - pa;
+      });
+    } else if (sortKey === 'marketCap') {
+      list.sort((a, b) => {
+        const pa = parseFloat(a.marketCap.replace(/[$,MK]/g, '')) * (a.marketCap.includes('M') ? 1e6 : a.marketCap.includes('B') ? 1e9 : 1) || 0;
+        const pb = parseFloat(b.marketCap.replace(/[$,MK]/g, '')) * (b.marketCap.includes('M') ? 1e6 : b.marketCap.includes('B') ? 1e9 : 1) || 0;
+        return sortDir === 'asc' ? pa - pb : pb - pa;
+      });
+    }
+    return list;
+  }, [activeView, searchQuery, favorites, sortKey, sortDir]);
+
+  const toggleSort = (key) => {
+    if (sortKey === key) setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'));
+    else setSortKey(key);
+  };
+
+  const toggleFavorite = (symbol) => {
+    setFavorites((prev) => {
+      const next = new Set(prev);
+      if (next.has(symbol)) next.delete(symbol);
+      else next.add(symbol);
+      saveFavorites(next);
+      if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('defi-favorites-updated'));
+      return next;
+    });
+  };
+
+  const SortIcon = ({ column }) => {
+    if (sortKey !== column) return <ChevronsUpDown className="w-4 h-4 inline text-gray-400" />;
+    return sortDir === 'asc' ? <ChevronUp className="w-4 h-4 inline" /> : <ChevronDown className="w-4 h-4 inline" />;
+  };
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -95,7 +169,7 @@ export default function DefiStocksPage() {
           </div>
         </div>
 
-        {(activeView === 'explore' || activeView === 'myStocks') && (
+        {activeView === 'myStocks' && filteredStocks.length === 0 && (
           <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-100 flex flex-col items-center text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
               {COMPANY_LOGO_COLORS.map((color, i) => (
@@ -110,6 +184,7 @@ export default function DefiStocksPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-2">{t('defi.stocks.addStocksToWallet')}</h2>
             <button
               type="button"
+              onClick={() => setActiveView('explore')}
               className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-xl transition-colors"
             >
               {t('defi.stocks.explore')}
@@ -117,27 +192,38 @@ export default function DefiStocksPage() {
           </div>
         )}
 
-        {activeView === 'explore' && filteredStocks.length > 0 && (
+        {((activeView === 'explore' && filteredStocks.length > 0) || (activeView === 'myStocks' && filteredStocks.length > 0)) && (
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full min-w-[500px]">
                 <thead>
                   <tr className="border-b border-gray-100 bg-gray-50/50">
                     <th className="text-left py-4 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                      <span className="inline-flex items-center gap-1">
-                        {t('defi.stocks.name')}
-                        <ChevronUp className="w-4 h-4" />
-                      </span>
+                      <button type="button" onClick={() => toggleSort('name')} className="inline-flex items-center gap-1 hover:text-gray-700">
+                        {t('defi.stocks.name')} <SortIcon column="name" />
+                      </button>
                     </th>
-                    <th className="text-left py-4 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">{t('defi.stocks.price')}</th>
-                    <th className="text-left py-4 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">{t('defi.stocks.change24h')}</th>
-                    <th className="text-left py-4 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">{t('defi.stocks.marketCap')}</th>
+                    <th className="text-left py-4 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                      <button type="button" onClick={() => toggleSort('price')} className="inline-flex items-center gap-1 hover:text-gray-700">
+                        {t('defi.stocks.price')} <SortIcon column="price" />
+                      </button>
+                    </th>
+                    <th className="text-left py-4 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                      <button type="button" onClick={() => toggleSort('change')} className="inline-flex items-center gap-1 hover:text-gray-700">
+                        {t('defi.stocks.change24h')} <SortIcon column="change" />
+                      </button>
+                    </th>
+                    <th className="text-left py-4 px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                      <button type="button" onClick={() => toggleSort('marketCap')} className="inline-flex items-center gap-1 hover:text-gray-700">
+                        {t('defi.stocks.marketCap')} <SortIcon column="marketCap" />
+                      </button>
+                    </th>
                     <th className="w-10 py-4 px-4" />
                   </tr>
                 </thead>
                 <tbody>
                   {filteredStocks.map((stock) => (
-                    <tr key={stock.ticker} className="border-b border-gray-100 last:border-0 hover:bg-gray-50/50 transition-colors">
+                    <tr key={stock.symbol} className="border-b border-gray-100 last:border-0 hover:bg-gray-50/50 transition-colors">
                       <td className="py-4 px-4">
                         <div className="flex items-center gap-3">
                           <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${stock.color}`}>
@@ -145,7 +231,7 @@ export default function DefiStocksPage() {
                           </div>
                           <div>
                             <p className="font-medium text-gray-900">{stock.name}</p>
-                            <p className="text-sm text-gray-500">{stock.ticker}</p>
+                            <p className="text-sm text-gray-500">{stock.symbol}</p>
                           </div>
                         </div>
                       </td>
@@ -157,8 +243,13 @@ export default function DefiStocksPage() {
                       </td>
                       <td className="py-4 px-4 text-sm text-gray-600">{stock.marketCap}</td>
                       <td className="py-4 px-4">
-                        <button className="p-1 text-gray-400 hover:text-amber-500 transition-colors" aria-label="Add to favorites">
-                          <Star className="w-5 h-5" />
+                        <button
+                          type="button"
+                          onClick={() => toggleFavorite(stock.symbol)}
+                          className="p-1 text-gray-400 hover:text-amber-500 transition-colors"
+                          aria-label="Add to favorites"
+                        >
+                          <Star className={`w-5 h-5 ${favorites.has(stock.symbol) ? 'fill-amber-500 text-amber-500' : ''}`} />
                         </button>
                       </td>
                     </tr>

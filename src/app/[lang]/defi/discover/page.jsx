@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
 import { Search, ChevronDown, Star, ChevronUp, ChevronsUpDown } from 'lucide-react';
 import DefiRightSection from '@/app/[lang]/defi/components/DefiRightSection';
@@ -38,15 +38,40 @@ function MiniChart({ positive }) {
   );
 }
 
+const DEFI_FAVORITES_KEY = 'defi-favorites';
+
+function loadFavorites() {
+  if (typeof window === 'undefined') return new Set();
+  try {
+    const raw = window.localStorage.getItem(DEFI_FAVORITES_KEY);
+    return raw ? new Set(JSON.parse(raw)) : new Set();
+  } catch {
+    return new Set();
+  }
+}
+
+function saveFavorites(set) {
+  if (typeof window === 'undefined') return;
+  try {
+    window.localStorage.setItem(DEFI_FAVORITES_KEY, JSON.stringify([...set]));
+  } catch {}
+}
+
 export default function DefiDiscoverPage() {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTab, setActiveTab] = useState('trending');
   const [searchQuery, setSearchQuery] = useState('');
   const [networkDrawerOpen, setNetworkDrawerOpen] = useState(false);
   const [selectedNetworks, setSelectedNetworks] = useState(['all']);
-  const [favorites, setFavorites] = useState(new Set());
+  const [favorites, setFavorites] = useState(() => loadFavorites());
   const [sortKey, setSortKey] = useState('name');
   const [sortDir, setSortDir] = useState('asc');
+
+  useEffect(() => {
+    const handler = () => setFavorites(loadFavorites());
+    window.addEventListener('defi-favorites-updated', handler);
+    return () => window.removeEventListener('defi-favorites-updated', handler);
+  }, []);
 
   const tabs = [
     { key: 'all', labelKey: 'all' },
@@ -64,7 +89,7 @@ export default function DefiDiscoverPage() {
     if (activeTab === 'trending') {
       list = list.filter((c) => c.positive === true || (c.change !== '0.00%' && c.positive !== null));
     } else if (activeTab === 'stocks') {
-      list = list.filter((c) => c.isStock);
+      list = list.filter((c) => c.positive === true || (c.change !== '0.00%' && c.positive !== null));
     } else if (activeTab === 'favorites') {
       list = list.filter((c) => favorites.has(c.symbol));
     }
@@ -102,6 +127,8 @@ export default function DefiDiscoverPage() {
       const next = new Set(prev);
       if (next.has(symbol)) next.delete(symbol);
       else next.add(symbol);
+      saveFavorites(next);
+      if (typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('defi-favorites-updated'));
       return next;
     });
   };
@@ -111,17 +138,19 @@ export default function DefiDiscoverPage() {
     return sortDir === 'asc' ? <ChevronUp className="w-4 h-4 inline" /> : <ChevronDown className="w-4 h-4 inline" />;
   };
 
+  const showTopMovers = activeTab === '' || activeTab === 'trending';
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
       <div className="lg:col-span-8 space-y-6">
         <div className="flex flex-wrap items-center gap-3">
-          <div className="flex rounded-xl overflow-hidden border border-gray-200 bg-gray-50 p-0.5">
+          <div className="flex gap-3 overflow-hidden  p-0.5">
             {tabs.map((tab) => (
               <button
                 key={tab.key}
                 onClick={() => setActiveTab(tab.key)}
-                className={`px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${
-                  activeTab === tab.key ? 'bg-blue-600 text-white' : 'text-gray-600 hover:text-gray-900'
+                className={`px-4 py-2.5 border border-gray-200 text-sm font-medium rounded-3xl transition-colors ${
+                  activeTab === tab.key ? 'bg-gray-700 text-white' : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {t(`defi.discover.${tab.labelKey}`)}
@@ -136,51 +165,48 @@ export default function DefiDiscoverPage() {
             <span>{t('defi.discover.allNetworks')}</span>
             <ChevronDown className="w-4 h-4 text-gray-500" />
           </button>
-          <div className="relative flex-1 min-w-[180px] max-w-xs">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={t('defi.discover.searchCoins')}
-              className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-          </div>
+        </div>
+        <div className="relative w-full">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder={t('defi.discover.searchCoins')}
+            className="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl bg-white text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          />
         </div>
 
-        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900">
+        {showTopMovers && (
+          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
               {t('defi.discover.topMovers')} <span aria-hidden>🔥</span>
             </h3>
-            <a href="#" className="text-sm text-blue-600 hover:text-blue-700 font-medium">
-              {t('defi.home.seeAll')}
-            </a>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {TOP_MOVERS.map((coin) => (
-              <div key={coin.symbol} className="p-4 border border-gray-100 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
-                      <span className="text-xs font-semibold text-gray-700">{coin.symbol.charAt(0)}</span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+              {TOP_MOVERS.map((coin) => (
+                <div key={coin.symbol} className="p-4 border border-gray-100 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center flex-shrink-0">
+                        <span className="text-xs font-semibold text-gray-700">{coin.symbol.charAt(0)}</span>
+                      </div>
+                      <span className="font-semibold text-gray-900">{coin.symbol}</span>
                     </div>
-                    <span className="font-semibold text-gray-900">{coin.symbol}</span>
+                    <span className="text-sm font-bold text-gray-900">{coin.price}</span>
                   </div>
-                  <span className="text-sm font-bold text-gray-900">{coin.price}</span>
+                  <div className="flex items-center gap-1.5 mb-2">
+                    <span className={`text-xs font-medium ${coin.positive ? 'text-green-600' : 'text-red-600'}`}>
+                      {coin.positive ? '↑' : '↓'} {coin.change}
+                    </span>
+                  </div>
+                  <div className="w-full h-9">
+                    <MiniChart positive={coin.positive} />
+                  </div>
                 </div>
-                <div className="flex items-center gap-1.5 mb-2">
-                  <span className={`text-xs font-medium ${coin.positive ? 'text-green-600' : 'text-red-600'}`}>
-                    {coin.positive ? '↑' : '↓'} {coin.change}
-                  </span>
-                </div>
-                <div className="w-full h-9">
-                  <MiniChart positive={coin.positive} />
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
           {activeTab === 'favorites' && filteredCoins.length === 0 ? (

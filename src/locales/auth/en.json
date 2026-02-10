@@ -1,0 +1,17 @@
+{
+  "loginOrSignup": "Log in or Sign up",
+  "beYourOwnBank": "Be Your Own Bank®",
+  "emailOrWalletId": "Email or Wallet ID",
+  "emailOrWalletIdPlaceholder": "Enter your email or wallet ID",
+  "continue": "Continue",
+  "orContinueWith": "or continue with",
+  "google": "Google",
+  "importWallet": "Import Wallet",
+  "termsAndPrivacy": "By proceeding you agree to the Blockchain.com .",
+  "termsOfService": "Terms of Service",
+  "privacyPolicy": "Privacy Policy",
+  "copyright": "© Blockchain.com. All rights reserved.",
+  "version": "Version",
+  "loading": "Loading...",
+  "error": "An error occurred. Please try again."
+}

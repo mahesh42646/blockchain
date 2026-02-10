@@ -1,0 +1,17 @@
+{
+  "loginOrSignup": "Iniciar sesión o Registrarse",
+  "beYourOwnBank": "Sé Tu Propio Banco®",
+  "emailOrWalletId": "Correo electrónico o ID de Billetera",
+  "emailOrWalletIdPlaceholder": "Ingresa tu correo electrónico o ID de billetera",
+  "continue": "Continuar",
+  "orContinueWith": "o continúa con",
+  "google": "Google",
+  "importWallet": "Importar Billetera",
+  "termsAndPrivacy": "Al continuar, aceptas los Términos de Servicio y la Política de Privacidad de Blockchain.com.",
+  "termsOfService": "Términos de Servicio",
+  "privacyPolicy": "Política de Privacidad",
+  "copyright": "© Blockchain.com. Todos los derechos reservados.",
+  "version": "Versión",
+  "loading": "Cargando...",
+  "error": "Ocurrió un error. Por favor, inténtalo de nuevo."
+}
