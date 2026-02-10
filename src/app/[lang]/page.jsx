@@ -13,14 +13,14 @@ export default function Page() {
           backgroundImage: "url('/images/home/home-hero-gradient.svg')",
         }}
       >
-        <div className="container max-w-7xl mx-auto px-6 sm:px-8 md:px-12 lg:px-16">
-          <div className="min-h-[70vh] flex items-center">
+        <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="min-h-[70vh] flex items-center py-12 sm:py-16 md:py-20">
             <div className="max-w-3xl text-white">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 sm:mb-4">
                 {t("home.heroTitle")}
               </h1>
 
-              <p className="text-lg sm:text-xl md:text-2xl font-sans text-white/90 mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg md:text-xl font-sans text-white/90 mb-5 sm:mb-6">
                 {t("home.heroSubtitle")}
               </p>
 

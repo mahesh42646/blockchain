@@ -601,6 +601,232 @@ export default function PayPage() {
           </div>
         </div>
       </section>
+
+      {/* Case Studies Section */}
+      <section className="relative w-full overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 bg-[#f7f4ff]">
+        {/* Background Pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage: "url('/images/pay/banner-bg.svg')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
+        />
+
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 relative z-10">
+          {/* Section Title */}
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-gray-900 text-center mb-8 sm:mb-10 lg:mb-12">
+            {t("pay.caseStudiesSection.title")}
+          </h2>
+
+          {/* Case Study Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {/* TRON Card */}
+            <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+              {/* Logo */}
+              <div className="mb-4 sm:mb-6 flex justify-center">
+                <img
+                  src="/images/pay/tron-logo-vertical.png"
+                  alt="TRON"
+                  className="h-12 sm:h-16 md:h-20 object-contain"
+                />
+              </div>
+
+              {/* Quote */}
+              <p className="text-md md:text-md text-gray-700 mb-4 sm:mb-6 leading-relaxed flex-grow text-left font-semibold">
+                {t("pay.caseStudiesSection.tron.quote")}
+              </p>
+
+              {/* Attribution */}
+              <p className="text-sm sm:text-base font-semibold text-gray-900 mb-4 sm:mb-6 text-center">
+                {t("pay.caseStudiesSection.tron.attribution")}
+              </p>
+
+              {/* Load More Button */}
+              <button className="w-full text-blue-600 border border-blue-100 rounded-md py-2 px-4 hover:bg-blue-50 hover:text-blue-700 font-semibold text-sm sm:text-base transition-colors text-center">
+                {t("pay.caseStudiesSection.loadMore")}
+              </button>
+            </div>
+
+            {/* SWAP SPACE Card */}
+            <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+              {/* Logo */}
+              <div className="mb-4 sm:mb-6 flex justify-center">
+                <img
+                  src="/images/pay/swap-space-logo.webp"
+                  alt="SWAP SPACE"
+                  className="h-12 sm:h-16 md:h-20 object-contain"
+                />
+              </div>
+
+              {/* Quote */}
+              <p className="text-md md:text-md text-gray-700 mb-4 sm:mb-6 leading-relaxed flex-grow text-left font-semibold">
+                {t("pay.caseStudiesSection.swapSpace.quote")}
+              </p>
+
+              {/* Attribution */}
+              <p className="text-sm sm:text-base font-semibold text-gray-900 mb-4 sm:mb-6 text-center">
+                {t("pay.caseStudiesSection.swapSpace.attribution")}
+              </p>
+
+              {/* Load More Button */}
+              <button className="w-full text-blue-600 border border-blue-100 rounded-md py-2 px-4 hover:bg-blue-50 hover:text-blue-700 font-semibold text-sm sm:text-base transition-colors text-center">
+                {t("pay.caseStudiesSection.loadMore")}
+              </button>
+            </div>
+
+            {/* OPENC CRYPTO Card */}
+            <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+              {/* Logo */}
+              <div className="mb-4 sm:mb-6 flex justify-center">
+                <img
+                  src="/images/pay/openc-crypto-logo.webp"
+                  alt="OPENC CRYPTO"
+                  className="h-12 sm:h-16 md:h-20 object-contain"
+                />
+              </div>
+
+              {/* Quote */}
+              <p className="text-base md:text-md text-gray-700 mb-4 sm:mb-6 leading-relaxed flex-grow text-left font-semibold">
+                {t("pay.caseStudiesSection.openCrypto.quote")}
+              </p>
+
+              {/* Attribution */}
+              <p className="text-sm sm:text-base font-semibold text-gray-900 mb-4 sm:mb-6 text-center">
+                {t("pay.caseStudiesSection.openCrypto.attribution")}
+              </p>
+
+              {/* Load More Button */}
+              <button className="w-full text-blue-600 border border-blue-100 rounded-md py-2 px-4 hover:bg-blue-50 hover:text-blue-700 font-semibold text-sm sm:text-base transition-colors text-center">
+                {t("pay.caseStudiesSection.loadMore")}
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner Section */}
+      <section className="relative w-full overflow-hidden bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-center">
+            {/* LEFT - Text Content */}
+            <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
+              {/* Icon Badge */}
+              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-purple-100 mb-4 sm:mb-6">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+
+              {/* Heading */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[40px] font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
+                {t("pay.partnerSection.title")}
+              </h2>
+
+              {/* Description */}
+              <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 leading-relaxed">
+                {t("pay.partnerSection.description")}
+              </p>
+
+              {/* CTA Button */}
+              <button className="rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors text-base sm:text-lg shadow-lg hover:shadow-xl">
+                {t("pay.partnerSection.contactUs")}
+              </button>
+            </div>
+
+            {/* RIGHT - Certification Badges */}
+            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-6 sm:gap-8 justify-center lg:justify-end items-center">
+              {/* ISO 27001 Badge */}
+              <div className="flex-shrink-0">
+                <img
+                  src="/images/pay/iso27001@2x.png"
+                  alt="ISO 27001 Certified"
+                  className="w-full max-w-[200px] sm:max-w-[240px] md:max-w-[180px] object-contain"
+                />
+              </div>
+
+              {/* SOC 2 Type 2 Badge */}
+              <div className="flex-shrink-0">
+                <img
+                  src="/images/pay/soc2type2@2x.png"
+                  alt="SOC 2 Type 2 Certified"
+                  className="w-full max-w-[200px] sm:max-w-[240px] md:max-w-[200px] object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="relative w-full overflow-hidden bg-[#f7f4ff] py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 shadow-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              {/* Verified Users */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4 sm:mb-6">
+                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div className="text-3xl sm:text-4xl md:text-4xl font-bold text-gray-900 mb-2">
+                  {t("pay.statsSection.verifiedUsers.value")}
+                </div>
+                <div className="text-sm sm:text-base text-gray-700">
+                  {t("pay.statsSection.verifiedUsers.label")}
+                </div>
+              </div>
+
+              {/* Countries */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4 sm:mb-6">
+                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div className="text-3xl sm:text-4xl md:text-4xl font-bold text-gray-900 mb-2">
+                  {t("pay.statsSection.countries.value")}
+                </div>
+                <div className="text-sm sm:text-base text-gray-700">
+                  {t("pay.statsSection.countries.label")}
+                </div>
+              </div>
+
+              {/* Transactions */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4 sm:mb-6">
+                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <div className="text-3xl sm:text-4xl md:text-4xl font-bold text-gray-900 mb-2">
+                  {t("pay.statsSection.transactions.value")}
+                </div>
+                <div className="text-sm sm:text-base text-gray-700">
+                  {t("pay.statsSection.transactions.label")}
+                </div>
+              </div>
+
+              {/* Institutional Clients */}
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-purple-100 flex items-center justify-center mb-4 sm:mb-6">
+                  <svg className="w-7 h-7 sm:w-8 sm:h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div className="text-3xl sm:text-4xl md:text-4xl font-bold text-gray-900 mb-2">
+                  {t("pay.statsSection.institutionalClients.value")}
+                </div>
+                <div className="text-sm sm:text-base text-gray-700">
+                  {t("pay.statsSection.institutionalClients.label")}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

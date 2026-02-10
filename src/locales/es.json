@@ -104,7 +104,7 @@
     },
     "banner": {
       "title": "Déjanos llevarte de cero a cripto",
-      "getStarted": "Comenzar"
+    "getStarted": "Comenzar"
     }
   },
   "exchange": {
@@ -117,7 +117,82 @@
   },
   "institutional": {
     "title": "Servicios Institucionales",
-    "description": "Soluciones cripto de nivel empresarial para instituciones."
+    "description": "Soluciones cripto de nivel empresarial para instituciones.",
+    "hero": {
+      "title": "Mercados Institucionales",
+      "stats": {
+        "transacted": {
+          "value": "$1T+",
+          "label": "Transaccionado"
+        },
+        "tokens": {
+          "value": "600+",
+          "label": "Tokens Disponibles"
+        },
+        "equity": {
+          "value": "$537M",
+          "label": "Capital de Equidad Recaudado"
+        }
+      },
+      "principalTrading": {
+        "title": "Socio Comercial Principal",
+        "description": "Desde 2017, Blockchain.com Institutional Markets ha sido el socio de capital estratégico líder para las empresas de trading, inversión y minería más grandes en el espacio cripto. Los mejores precios y soluciones personalizadas son posibles gracias a un balance grande y experiencia en el mercado."
+      },
+      "contactUs": "Contáctanos"
+    },
+    "reviewSection": {
+      "title": "2024 en Revisión",
+      "description": "A medida que avanzamos en 2024, desentrañamos los últimos avances, tendencias de la industria y eventos notables que influyeron en la trayectoria de la tecnología blockchain.",
+      "readMore": "Leer Más",
+      "bespokeCapital": "Soluciones de Capital Personalizadas"
+    },
+    "investors": {
+      "title": "Inversores Institucionales"
+    },
+    "about": {
+      "title": "Acerca de Blockchain.com",
+      "description": "Fundada en 2011, Blockchain.com ha construido una de las marcas líderes en la industria cripto ofreciendo servicios seguros y confiables a clientes en más de 100+ países. Respaldada por capital de riesgo desde 2014, Blockchain.com ha recaudado $537M de capital, valorada en $5.2B. Tanto los negocios de Consumo como Institucionales son altamente rentables con $1T+ transaccionados."
+    },
+    "bespokeCapital": {
+      "title": "Soluciones de Capital Personalizadas",
+      "cards": [
+        {
+          "title": "Productos Estructurados",
+          "subtitle": "Contratos personalizados",
+          "description": "Ofrecemos contratos de opciones personalizados para BTC y principales altcoins, incluyendo puts, collars de costo cero y estrategias gestionadas para mejora de rendimiento."
+        },
+        {
+          "title": "Distribución Minorista",
+          "subtitle": "Accede a la vasta base de usuarios de Blockchain.com",
+          "description": "Lista e integra con la billetera, exchange, explorador y sistemas de pagos de Blockchain.com para llegar a nuestros 39M usuarios verificados."
+        },
+        {
+          "title": "OTC Spot",
+          "subtitle": "Opera spot y opciones en más de 600 tokens",
+          "description": "Ejecuta órdenes grandes a través de nuestras ofertas principales o de agencia. Ofrecemos spreads competitivos con impacto mínimo en el precio y soporte 24/7 de una contraparte regulada. Los mercados OTC (Over the Counter) ofrecen mayor liquidez."
+        },
+        {
+          "title": "Custodia y Staking",
+          "subtitle": "Solución de custodia segregada",
+          "description": "Custodia de grado institucional en el almacenamiento en frío propietario de Blockchain.com con soluciones de generación de rendimiento desde custodia segura."
+        },
+        {
+          "title": "Provisión de Liquidez",
+          "subtitle": "Creación de mercado para nuevas listas de tokens",
+          "description": "La provisión de liquidez de blockchain asegura mercados eficientes y descentralizados en DeFi, apoyando la estabilidad de precios, profundidad y experiencia del usuario, vital para trading, cobertura e inversión sin problemas."
+        },
+        {
+          "title": "Productos Estructurados",
+          "subtitle": "Contratos personalizados",
+          "description": "Ofrecemos contratos de opciones personalizados para BTC y principales altcoins, incluyendo puts, collars de costo cero y estrategias gestionadas para mejora de rendimiento."
+        },
+        {
+          "title": "Distribución Minorista",
+          "subtitle": "Accede a la vasta base de usuarios de Blockchain.com",
+          "description": "Lista e integra con la billetera, exchange, explorador y sistemas de pagos de Blockchain.com para llegar a nuestros 39M usuarios verificados."
+        }
+      ]
+    }
   },
   "pay": {
     "title": "Pagar",
@@ -149,6 +224,45 @@
       "description": "Agrega pagos en fiat con métodos de pago principales en más de 100 países, con solo unas pocas líneas de código.",
       "getInTouch": "Ponerse en contacto",
       "readDocumentation": "Leer documentación"
+    },
+    "caseStudiesSection": {
+      "title": "Casos de estudio",
+      "tron": {
+        "quote": "Colaborar con Blockchain.com fue un testimonio de su experiencia. El proceso de integración fue notablemente rápido y fácil, un reflejo del trabajo en equipo excepcional y el apoyo de ambos lados.",
+        "attribution": "Feroz Lakhani, Enterprise Lead en TRON DAO"
+      },
+      "swapSpace": {
+        "quote": "La dedicación y experiencia del equipo hizo que el proceso de integración fuera una experiencia fluida. Su compromiso con la excelencia realmente los distingue.",
+        "attribution": "Andrew Wind, CPO en SwapSpace"
+      },
+      "openCrypto": {
+        "quote": "La integración con Blockchain.com Pay nos ha permitido mejorar la eficiencia de nuestra plataforma. Estamos encantados con los resultados y esperamos continuar colaborando con Blockchain.com.",
+        "attribution": "Kenneth Leung CEO en OpenCrypto"
+      },
+      "loadMore": "Cargar más"
+    },
+    "partnerSection": {
+      "title": "Asóciate con una marca líder en cripto",
+      "description": "Desde 2011, Blockchain.com ha sido confiado por 94M billeteras y 39M usuarios verificados para transaccionar más de $1T+ en cripto. Estamos completamente licenciados en todas las jurisdicciones globales aplicables.",
+      "contactUs": "Contáctanos"
+    },
+    "statsSection": {
+      "verifiedUsers": {
+        "value": "39M",
+        "label": "Usuarios verificados"
+    },
+      "countries": {
+        "value": "100+",
+        "label": "Países"
+      },
+      "transactions": {
+        "value": "$1T+",
+        "label": "Transacciones procesadas"
+    },
+      "institutionalClients": {
+        "value": "1500+",
+        "label": "Clientes Institucionales Comprometidos"
+      }
     }
   },
   
@@ -293,6 +407,14 @@
       "noResults": "No se encontraron meme coins"
     },
     "earn": {
+      "hero": {
+        "title": "Gana hasta 10% anual",
+        "subtitle": "Obtén recompensas diarias o mensuales en tu cripto.",
+        "cta": "Comenzar a Ganar",
+        "disclaimerPrefix": "*Las recompensas no están garantizadas y dependen de las condiciones del mercado. Antes de participar, revisa el resumen del producto y los riesgos asociados disponibles en tu panel.",
+        "disclaimerLink": "Ver Términos del Programa de Ganancias",
+        "phoneAlt": "Vista previa de la aplicación móvil de ganancias"
+      },
       "title": "Ganar",
       "description": "Gana recompensas en tus tenencias de cripto.",
       "subtitle": "Obtén recompensas por tu cripto.",
@@ -319,6 +441,162 @@
       },
       "type": { "active": "00 Activo", "staking": "A Staking", "passive": "% Pasivo" },
       "table": { "assets": "Activos", "type": "Tipo", "maxRate": "Tasa anual máx.", "action": "Acción", "start": "Comenzar" },
+      "comparison": {
+        "title": "Diferentes formas de ganar",
+        "for": "Para",
+        "assets": "Activos",
+        "useCase": "Caso de Uso",
+        "rate": "Tasa",
+        "earned": "Ganado",
+        "paid": "Pagado",
+        "withdraw": "Retirar",
+        "cta": "Comienza con solo $1",
+        "passive": {
+          "title": "Recompensas Pasivas",
+          "description": "Gana recompensas simplemente manteniendo.",
+          "for": "Todos los Usuarios Elegibles",
+          "assets": "Todos",
+          "useCase": "Quieres mantener un activo por un período de tiempo más largo",
+          "rate": "Hasta 10% anual, actualizado mensualmente",
+          "earned": "Diario",
+          "paid": "Mensual",
+          "withdraw": "Después de 7 días"
+        },
+        "staking": {
+          "title": "Recompensas de Staking",
+          "description": "Gana recompensas asegurando redes.",
+          "for": "Usuarios Intermedios",
+          "assets": "Ethereum",
+          "useCase": "Quieres mantener un activo y asegurar la red",
+          "rate": "Hasta 2% anual, variable por red",
+          "earned": "Diario",
+          "paid": "Diario",
+          "withdraw": "Depende de la red"
+        },
+        "active": {
+          "title": "Recompensas Activas",
+          "description": "Gana recompensas pronosticando el mercado.",
+          "for": "Usuarios Avanzados",
+          "assets": "Bitcoin",
+          "useCase": "Quieres mantener un activo y no crees que se apreciará significativamente en la próxima semana",
+          "rate": "Hasta 8% anual, variable semanalmente",
+          "earned": "Semanal",
+          "paid": "Semanal",
+          "withdraw": "Semanal"
+        }
+      },
+      "portfolio": {
+        "title": "Gana en cada activo de tu cartera",
+        "tabs": {
+          "all": "Todos los Tipos",
+          "passive": "Recompensas Pasivas",
+          "staking": "Recompensas de Staking",
+          "active": "Recompensas Activas"
+        },
+        "searchPlaceholder": "Buscar activo",
+        "sort": {
+          "assetsAsc": "Ordenar por activos o tasa",
+          "assetsDesc": "Activos: Descendente",
+          "rateLow": "Tasa: Baja a alta",
+          "rateHigh": "Tasa: Alta a baja"
+        },
+        "table": {
+          "assets": "Activos",
+          "rate": "Tasa",
+          "type": "Tipo"
+        },
+        "prev": "Anterior",
+        "next": "Siguiente",
+        "page": "Página",
+        "of": "de"
+      },
+      "getStarted": {
+        "title": "Cómo empezar",
+        "buy": {
+          "title": "Comprar",
+          "description": "Elige entre los principales activos cripto."
+        },
+        "transfer": {
+          "title": "Transferir",
+          "description": "Mueve tan poco como $1 a una Cuenta de Recompensas Pasivas, Staking o Activas."
+        },
+        "earn": {
+          "title": "Ganar",
+          "description": "Recibe recompensas directamente en tu cuenta."
+        }
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes",
+        "tabs": {
+          "passive": "Recompensas Pasivas",
+          "staking": "Recompensas de Staking",
+          "active": "Recompensas Activas"
+        },
+        "passive": {
+          "questions": {
+            "0": "¿Qué es una Cuenta de Recompensas Pasivas y cómo funciona?",
+            "1": "¿Quién es elegible para una Cuenta de Recompensas Pasivas con Blockchain.com?",
+            "2": "¿Cuál es la cantidad mínima requerida para una Cuenta de Recompensas Pasivas?",
+            "3": "¿Con qué frecuencia gano Recompensas Pasivas?",
+            "4": "¿Cuándo puedo retirar mi cripto de mi Cuenta de Recompensas Pasivas?"
+          },
+          "answers": {
+            "0": "Una Cuenta de Recompensas Pasivas es una instalación de almacenamiento de cripto que gana recompensas en el cripto que mantienes en ella.",
+            "1": "Se requiere verificación de acceso completo para una Cuenta de Recompensas Pasivas. También debes estar en un país compatible. Obtén más información sobre la elegibilidad de la Cuenta de Recompensas Pasivas here.",
+            "2": "Puedes transferir tan poco como $1 a una Cuenta de Recompensas Pasivas para comenzar a ganar recompensas.",
+            "3": "Las Recompensas Pasivas se ganan diariamente y se pagan mensualmente directamente en tu Cuenta de Recompensas Pasivas.",
+            "4": "Puedes retirar tu cripto en cualquier momento después de la retención inicial de retiro de 7 días."
+          }
+        },
+        "staking": {
+          "questions": {
+            "0": "¿Qué es el staking y cómo funciona?",
+            "1": "¿Quién es elegible para staking con Blockchain.com?",
+            "2": "¿Cuál es la cantidad mínima requerida para staking?",
+            "3": "¿Con qué frecuencia gano Recompensas de Staking?",
+            "4": "¿Cuándo puedo retirar mi cripto de mi Cuenta de Recompensas de Staking?"
+          },
+          "answers": {
+            "0": "El staking es el proceso utilizado por las blockchains de Proof-of-Stake (PoS) para verificar y asegurar transacciones en sus redes. Los participantes ponen o \"stakean\" su cripto para tener la oportunidad de validar transacciones y ganar recompensas.",
+            "1": "Se requiere verificación de Acceso Completo para staking. También debes estar en un país compatible. Obtén más información sobre la elegibilidad de staking here.",
+            "2": "Puedes transferir tan poco como $1 a una Cuenta de Recompensas de Staking para comenzar a ganar recompensas.",
+            "3": "Dependiendo del protocolo, tu cripto puede estar sujeto a un período de vinculación antes de generar recompensas. Una vez vinculado, las recompensas se ganan y se pagan diariamente directamente en tu Cuenta de Recompensas de Staking.",
+            "4": "La disponibilidad de retiro y los períodos de desvinculación están determinados por el protocolo. Puedes retirar tu cripto una vez que los retiros estén disponibles y haya pasado el período de desvinculación."
+          }
+        },
+        "active": {
+          "questions": {
+            "0": "¿Qué son las Recompensas Activas?",
+            "1": "¿Quién es elegible para Recompensas Activas?",
+            "2": "¿Cuál es la cantidad mínima requerida para Recompensas Activas?",
+            "3": "¿Con qué frecuencia gano Recompensas Activas?",
+            "4": "¿Cuándo puedo retirar mi cripto de mi Cuenta de Recompensas Activas?"
+          },
+          "answers": {
+            "0": "Las Recompensas Activas te permiten ganar recompensas pronosticando el precio del cripto.",
+            "1": "Se requiere verificación de Acceso Completo para Recompensas Activas. También debes estar en un país compatible. Obtén más información sobre la elegibilidad de Recompensas Activas here.",
+            "2": "Puedes transferir tan poco como $1 a una Cuenta de Recompensas Activas para comenzar a ganar recompensas.",
+            "3": "Todos los viernes a las 8 a.m. UTC, tu pago semanal de recompensas se transfiere a tu Cuenta de Recompensas Activas.",
+            "4": "Puedes solicitar un retiro completo de tus fondos en cualquier momento. Tus fondos se transferirán a tu Cuenta de Trading una vez que termine la estrategia activa y se realicen los pagos de recompensas."
+          }
+        },
+        "support": {
+          "text": "Visita nuestro",
+          "link": "Centro de Soporte",
+          "suffix": "para más información."
+        }
+      },
+      "cta": {
+        "title": "¿Quieres empezar a ganar?",
+        "subtitle": "Transfiere cripto para empezar a ganar hoy",
+        "button": "Empezar a Ganar"
+      },
+      "legal": {
+        "copyright": "© 2022 Blockchain.com Group Holdings, Inc.",
+        "agreement": "Este acuerdo se celebra entre usted y Blockchain Access UK Ltd., Blockchain Access (Ireland) Limited, Blockchain.com (UK) Limited, Blockchain.com (Jersey) Limited, Blockchain.com (SG) Pte. Ltd., y Blockchain.com (US), Inc. (colectivamente, \"Blockchain.com\") y rige su uso de los servicios de Blockchain.com. Al usar nuestros servicios, acepta estar sujeto a nuestro Acuerdo de Usuario, Política de Privacidad, Política de Cookies, Acuerdo de API y Principios de Trading. Para más información, visite www.exchange.blockchain.com/legal.",
+        "risk": "Divulgación de Riesgos: La compra de cripto implica un riesgo sustancial de pérdida. El valor de la cripto puede ser volátil y puede disminuir significativamente. Puede perder parte o la totalidad de su capital. El rendimiento pasado no es indicativo de resultados futuros.",
+        "disclaimer": "Descargo de Responsabilidad de Moneda Digital: Las monedas digitales no son depósitos bancarios, no son moneda de curso legal y no están respaldadas por ningún gobierno. Los productos de Blockchain.com no están sujetos a esquemas de protección de depósitos gubernamentales. Los cambios regulatorios pueden afectar el valor de las monedas digitales."
+      },
       "products": {
         "staking": "Staking",
         "stakingDesc": "Bloquea tu cripto para asegurar la red y ganar recompensas.",
@@ -367,5 +645,178 @@
   "userwallet": {
     "title": "Bienvenido a la Página de Billetera",
     "description": "Esta es la página de billetera"
+  },
+  "about": {
+    "hero": {
+      "title": "Construyendo incansablemente el futuro de las finanzas desde 2011",
+      "description": "La casa financiera cripto líder en el mundo que sirve a personas, proyectos, protocolos e instituciones desde 2011."
+    },
+    "team": {
+      "title": "Conoce al equipo",
+      "description": "Equipo de gestión global con más de 200 años de experiencia combinada en algunas de las instituciones financieras, empresas tecnológicas y startups más reputadas.",
+      "tabs": {
+        "board": "Junta Directiva",
+        "management": "Gestión"
+      },
+      "board": {
+        "0": { "name": "Peter Smith", "role": "CEO, Fundador y Presidente Ejecutivo", "image": "/images/about/Peter@2x.png" },
+        "1": { "name": "Nic Cary", "role": "Co-Fundador, Miembro de la Junta", "image": "/images/about/Nic@2x.png" },
+        "2": { "name": "Tom Horton", "role": "Director Independiente Principal", "image": "/images/about/Jim@2x.png" },
+        "3": { "name": "Jim Messina", "role": "Director", "image": "/images/about/Jim@2x.png" },
+        "4": { "name": "Joseph Otting", "role": "Director", "image": "/images/about/Joseph@2x.png" },
+        "5": { "name": "Manuel Stotz", "role": "Director", "image": "/images/about/ManuelStotz@2x.png" },
+        "6": { "name": "Timothy Flynn", "role": "Director", "image": "/images/about/Timothy_Flynn@2x.png" },
+        "7": { "name": "Nicolas Brand", "role": "Director", "image": "/images/about/NicolasBrand@2x.png" },
+        "8": { "name": "Joseph Otting", "role": "Director", "image": "/images/about/Joseph1@2x.png" }
+      },
+      "management": {
+        "0": { "name": "Peter Smith", "role": "CEO, Fundador y Presidente Ejecutivo", "image": "/images/about/Peter@2x.png" },
+        "1": { "name": "Nic Cary", "role": "Co-Fundador, Vicepresidente", "image": "/images/about/Nic@2x.png" },
+        "2": { "name": "Lane Kasselman", "role": "Co-CEO y Presidente", "image": "/images/about/Peter@2x.png" },
+        "3": { "name": "Matt Tuzzolo", "role": "Director de Tecnología", "image": "/images/about/Nic@2x.png" },
+        "4": { "name": "Mike Wilcox", "role": "Director Financiero", "image": "/images/about/Jim@2x.png" },
+        "5": { "name": "Tim Lubans", "role": "Director Legal y Director de Cumplimiento Interino", "image": "/images/about/Timothy_Flynn@2x.png" },
+        "6": { "name": "Nicolas Brand", "role": "Director de Operaciones", "image": "/images/about/NicolasBrand@2x.png" }
+      }
+    },
+    "company": {
+      "title": "Acerca de Blockchain.com",
+      "description": "Creemos que en una década el sistema financiero de internet — es decir, el comercio que ocurre en internet — será el sistema financiero más grande del mundo. Y será impulsado por cripto.",
+      "stats": {
+        "wallets": { "value": "100M", "label": "Billeteras Creadas" },
+        "transacted": { "value": "$1T+", "label": "Transacciones" },
+        "clients": { "value": "1500+", "label": "Clientes Institucionales Comprometidos" },
+        "users": { "value": "39M", "label": "Usuarios Minoristas Verificados" },
+        "countries": { "value": "100+", "label": "Países" },
+        "founded": { "value": "2011", "label": "Fecha de Fundación" }
+      },
+      "paragraph1": "Blockchain.com comenzó como un pionero temprano de infraestructura clave para la comunidad de bitcoin. Primero, con un Blockchain Explorer que permitía a cualquiera no solo examinar transacciones y estudiar el blockchain, sino una API que permitía a las empresas construir sobre Bitcoin. También hemos proporcionado la billetera cripto más popular y ampliamente utilizada que permite a cualquiera en cualquier lugar controlar su propio dinero.",
+      "paragraph2": "Nuestro equipo se extiende por todo el mundo y ha trabajado incansablemente para acelerar la adopción de cripto y dar paso al futuro de las finanzas. Somos apasionados, implacables y emocionados -- y creemos que un equipo delgado de visionarios de clase mundial puede enviar productos que empoderen a nuestros clientes e impulsen el negocio a nuevas alturas."
+    },
+    "investors": {
+      "title": "Inversores",
+      "subtitle": "Respaldado por reconocidos inversores de Silicon Valley, Wall Street y Londres."
+    },
+    "awards": {
+      "title": "Premios y reconocimientos"
+    }
+  },
+  "careers": {
+    "hero": {
+      "title": "Trabajar en Blockchain.com",
+      "description": "Nos tomamos nuestro trabajo en serio, perseguimos incansablemente la excelencia y nos divertimos haciendo cosas difíciles juntos.",
+      "cta": "Posiciones abiertas"
+    },
+    "values": {
+      "title": "Valores Fundamentales Blockstar",
+      "description": "Los valores fundamentales de Blockchain.com son la resolución implacable de problemas, construir como propietario, ser un jugador de equipo, comunicarse con candor y abrazar una mentalidad infinita.",
+      "items": {
+        "0": { "title": "Sé implacable", "description": "Un viaje a territorio desconocido no viene sin desafíos. No te rindas. Mantente en la lucha. Encuentra una manera." },
+        "1": { "title": "Construye como propietario", "description": "Recuerda: somos una startup, primero y último. Ten un sesgo hacia la acción. Enorgullécete de lo que envías. Eleva el listón." },
+        "2": { "title": "Sé un jugador de equipo", "description": "Pon el trabajo en equipo y la misión por encima de tu ego. Esté dispuesto a echar una mano. Pide ayuda cuando la necesites." },
+        "3": { "title": "Comunícate con candor", "description": "Date cuenta de que las mejores ideas se forjan con fuego. Desafía las ideas respetuosamente cuando no estés de acuerdo. Ve dar y recibir retroalimentación como un regalo." },
+        "4": { "title": "Abraza una mentalidad infinita", "description": "Sabe que construir el sistema financiero del futuro tomará décadas. Apunta al impacto a largo plazo sobre las ganancias a corto plazo. Establece objetivos audaces. No tengas miedo de tomar riesgos." }
+      }
+    }
+  },
+  "press": {
+    "hero": {
+      "title": "Prensa y Medios",
+      "description": "Blockchain.com es la plataforma más confiable del mundo para realizar transacciones en cripto. Ya sea comercio, ganar recompensas, verificar el estado de pago o prestar cripto, Blockchain.com ofrece la forma más establecida y ampliamente utilizada de invertir en criptomonedas para decenas de millones de clientes en casi 100+ países.",
+      "imageAlt": "Prensa y medios decorativos",
+      "imageAltMobile": "Prensa y medios",
+      "socialText": "Para escuchar nuestras últimas noticias, sigue",
+      "andCeo": "y nuestro CEO, Peter Smith,",
+      "supportText": "Para soporte, consulta",
+      "forLinks": "para enlaces",
+      "pressInquiries": "Para consultas de prensa, contacta",
+      "contactButton": "Contáctanos"
+    },
+    "assets": {
+      "title": "Lista de Activos",
+      "filterLabel": "Filtrar por tipo",
+      "allFileTypes": "Todos los tipos de archivo",
+      "bioKit": "Kit de Biografía",
+      "video": "Video",
+      "imageKit": "Kit de Imagen",
+      "brandKit": "Kit de Marca",
+      "brandAssets": "Activos de Marca Blockchain.com",
+      "fileSize": "170kb",
+      "download": "Descargar",
+      "table": {
+        "fileType": "Tipo de archivo",
+        "fileName": "Nombre de archivo",
+        "size": "Tamaño"
+      }
+    },
+    "releases": {
+      "title": "Prensa",
+      "ariaLabel": "Comunicados de prensa",
+      "items": {
+        "0": {
+          "date": "17 de noviembre de 2025",
+          "headline": "Blockchain.com nombra co-CEO mientras abre una nueva sede en Dallas, EE. UU.",
+          "summary": "Blockchain.com anunció que Lane Kasselman ahora se desempeñará como Co-CEO junto con Peter Smith, quien continuará sirviendo como CEO, Fundador y Presidente Ejecutivo de la empresa.",
+          "publicationAlt": "THE BLOCK"
+        },
+        "1": {
+          "date": "23 de octubre de 2025",
+          "headline": "Blockchain.com obtiene licencia MICA, contrata a experto de Malta para dirigir expansión en la UE",
+          "summary": "Con la licencia, Blockchain.com puede proporcionar servicios de custodia y billetera en 27 países del EEE y planea implementar servicios institucionales.",
+          "publicationAlt": "Cointelegraph"
+        },
+        "2": {
+          "date": "15 de septiembre de 2025",
+          "headline": "Blockchain.com expande ofertas institucionales ante claridad regulatoria",
+          "summary": "Blockchain.com continúa expandiendo su suite de productos institucionales, ofreciendo soluciones de custodia y comercio a entidades reguladas en todo el mundo.",
+          "publicationAlt": "Business Day"
+        },
+        "3": {
+          "date": "8 de agosto de 2025",
+          "headline": "Blockchain.com reporta crecimiento récord de usuarios y volumen de intercambio",
+          "summary": "La plataforma anunció hitos significativos en usuarios activos mensuales y volumen de comercio, reforzando su posición como una empresa líder en cripto.",
+          "publicationAlt": "The Street"
+        }
+      }
+    }
+  },
+  "ventures": {
+    "hero": {
+      "title": "Ventures",
+      "description": "Blockchain Ventures es un fondo de capital de riesgo y una subsidiaria de Blockchain."
+    },
+    "story": {
+      "title": "Nuestra Historia",
+      "description": "Blockchain Ventures es un fondo de capital de riesgo y una subsidiaria de Blockchain. Creamos Blockchain Ventures para apoyar e invertir en proyectos de tecnología de libro mayor distribuido (DLT) que impulsan la industria y proporcionan un impacto social positivo. Con el apoyo de su empresa matriz, Blockchain Ventures tiene como objetivo contribuir a la creación de un sistema financiero abierto, justo y accesible y promover casos de uso de DLT que son revolucionarios más allá de las finanzas.",
+      "imageAlt": "Ventures decorativo",
+      "imageAltMobile": "Ventures"
+    },
+    "valueAdd": {
+      "title": "Nuestro Valor Agregado",
+      "description": "Con más de 100M billeteras creadas en la plataforma, Blockchain es una de las marcas más confiables en cripto. Invertimos en proyectos de capital y tokens y les proporcionamos apoyo legal, de seguridad, técnico y financiero de nuestro talentoso equipo de empleados, socios y asesores.",
+      "button": "Solicitar Financiamiento"
+    },
+    "portfolio": {
+      "origin": "Origin",
+      "securitize": "Securitize",
+      "theta": "Theta",
+      "deversifi": "Deversifi",
+      "index": "Index",
+      "messari": "Messari"
+    },
+    "team": {
+      "title": "Equipo de Gestión de Fondos",
+      "members": {
+        "0": {
+          "name": "Samuel Harrison"
+        },
+        "1": {
+          "name": "Peter Smith"
+        },
+        "2": {
+          "name": "Peter Smith"
+        }
+      }
+    }
   }
 }

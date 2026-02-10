@@ -7,8 +7,8 @@ export async function generateStaticParams() {
 
 export default function LangLayout({ children }) {
   return (
-    <ConditionalLayout>
-      {children}
-    </ConditionalLayout>
+        <ConditionalLayout>
+          {children}
+        </ConditionalLayout>
   );
 }

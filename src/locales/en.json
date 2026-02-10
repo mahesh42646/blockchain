@@ -97,14 +97,9 @@
       "buy": "Buy",
       "trade": "Trade"
     },
-    "securitySection": {
-      "title": "Get peace of mind with best-in-class security",
-      "description": "When it comes to ensuring your crypto is secure, we think about every last detail so you don't have to.",
-      "learnMore": "Learn more"
-    },
     "banner": {
       "title": "Let us take you from zero to crypto",
-      "getStarted": "Get started"
+    "getStarted": "Get started"
     }
   },
   "exchange": {
@@ -115,12 +110,384 @@
     "title": "Blockchain Explorer",
     "description": "Explore blockchain data, transactions, and market insights."
   },
+  "earn": {
+    "hero": {
+      "title": "Earn up to 10% annually",
+      "subtitle": "Get daily or monthly rewards on your crypto.",
+      "cta": "Start Earning",
+      "disclaimerPrefix": "*Rewards are not guaranteed and depend on market conditions. Before participating, review the product summary and associated risks available in your dashboard.",
+      "disclaimerLink": "View Earn Program Terms",
+      "phoneAlt": "Earn mobile app preview",
+      "assetCards": {
+        "bitcoin": {
+          "name": "Bitcoin",
+          "symbol": "BTC"
+        },
+        "ethereum": {
+          "name": "Ethereum",
+          "symbol": "ETH"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Different ways to earn",
+      "for": "For",
+      "assets": "Assets",
+      "useCase": "Use Case",
+      "rate": "Rate",
+      "earned": "Earned",
+      "paid": "Paid",
+      "withdraw": "Withdraw",
+      "cta": "Get started with just $1",
+      "passive": {
+        "title": "Passive Rewards",
+        "description": "Earn rewards by simply holding.",
+        "for": "All Eligible Users",
+        "assets": "All",
+        "useCase": "You want to hold an asset for a longer period of time",
+        "rate": "Up to 10% annually, updated monthly",
+        "earned": "Daily",
+        "paid": "Monthly",
+        "withdraw": "After 7 days"
+      },
+      "staking": {
+        "title": "Staking Rewards",
+        "description": "Earn rewards by securing networks.",
+        "for": "Intermediate Users",
+        "assets": "Ethereum",
+        "useCase": "You want to hold an asset and secure the network",
+        "rate": "Up to 2% annually, variable by network",
+        "earned": "Daily",
+        "paid": "Daily",
+        "withdraw": "Network dependent"
+      },
+      "active": {
+        "title": "Active Rewards",
+        "description": "Earn rewards by forecasting the market.",
+        "for": "Advanced Users",
+        "assets": "Bitcoin",
+        "useCase": "You want to hold an asset and don't think it will appreciate significantly in the next week",
+        "rate": "Up to 8% annually, variable weekly",
+        "earned": "Weekly",
+        "paid": "Weekly",
+        "withdraw": "Weekly"
+      }
+    },
+    "portfolio": {
+      "title": "Earn on every asset in your portfolio",
+      "tabs": {
+        "all": "All Types",
+        "passive": "Passive Rewards",
+        "staking": "Staking Rewards",
+        "active": "Active Rewards"
+      },
+      "searchPlaceholder": "Search asset",
+      "sort": {
+        "assetsAsc": "Sort by assets or rate",
+        "assetsDesc": "Assets: Descending",
+        "rateLow": "Rate: Low to high",
+        "rateHigh": "Rate: High to low"
+      },
+      "table": {
+        "assets": "Assets",
+        "rate": "Rate",
+        "type": "Type"
+      },
+      "prev": "Prev",
+      "next": "Next",
+      "page": "Page",
+      "of": "of",
+      "assets": [
+        {
+          "name": "Bitcoin",
+          "symbol": "BTC",
+          "rate": "8%",
+          "type": "active",
+          "icon": "/images/earn/coin-logo-btc.svg",
+          "iconBg": "bg-orange-500"
+        },
+        {
+          "name": "Ethereum",
+          "symbol": "ETH",
+          "rate": "8%",
+          "type": "active",
+          "icon": "/images/earn/coin-logo-eth.svg",
+          "iconBg": "bg-purple-600"
+        },
+        {
+          "name": "Ethereum",
+          "symbol": "ETH",
+          "rate": "2%",
+          "type": "staking",
+          "icon": "/images/earn/coin-logo-eth.svg",
+          "iconBg": "bg-purple-600"
+        },
+        {
+          "name": "Solana",
+          "symbol": "SOL",
+          "rate": "4%",
+          "type": "staking",
+          "iconBg": "bg-black"
+        },
+        {
+          "name": "Bitcoin",
+          "symbol": "BTC",
+          "rate": "0.65%",
+          "type": "passive",
+          "icon": "/images/earn/coin-logo-btc.svg",
+          "iconBg": "bg-orange-500"
+        },
+        {
+          "name": "Ethereum",
+          "symbol": "ETH",
+          "rate": "3%",
+          "type": "passive",
+          "icon": "/images/earn/coin-logo-eth.svg",
+          "iconBg": "bg-purple-600"
+        },
+        {
+          "name": "Ethena",
+          "symbol": "ENA",
+          "rate": "10%",
+          "type": "passive",
+          "iconBg": "bg-black",
+          "iconText": "E"
+        },
+        {
+          "name": "USDC",
+          "symbol": "USDC",
+          "rate": "9.5%",
+          "type": "passive",
+          "iconBg": "bg-blue-500",
+          "iconText": "$"
+        },
+        {
+          "name": "USDT",
+          "symbol": "USDT",
+          "rate": "9.5%",
+          "type": "passive",
+          "iconBg": "bg-green-500",
+          "iconText": "T"
+        },
+        {
+          "name": "Pax Dollar",
+          "symbol": "USDP",
+          "rate": "9.5%",
+          "type": "passive",
+          "iconBg": "bg-green-500",
+          "iconText": "$"
+        },
+        {
+          "name": "Synthetix",
+          "symbol": "SNX",
+          "rate": "7%",
+          "type": "passive",
+          "iconBg": "bg-purple-600",
+          "iconText": "X"
+        },
+        {
+          "name": "TRON",
+          "symbol": "TRX",
+          "rate": "6%",
+          "type": "passive",
+          "iconBg": "bg-red-500",
+          "iconText": "T"
+        },
+        {
+          "name": "ZetaChain",
+          "symbol": "ZETA",
+          "rate": "5%",
+          "type": "passive",
+          "iconBg": "bg-green-600",
+          "iconText": "Z"
+        },
+        {
+          "name": "Polkadot",
+          "symbol": "DOT",
+          "rate": "5%",
+          "type": "passive",
+          "iconBg": "bg-pink-500",
+          "iconText": "D"
+        },
+        {
+          "name": "NEAR Protocol",
+          "symbol": "NEAR",
+          "rate": "5%",
+          "type": "passive",
+          "iconBg": "bg-black",
+          "iconText": "N"
+        }
+      ]
+    },
+    "getStarted": {
+      "title": "How to get started",
+      "buy": {
+        "title": "Buy",
+        "description": "Choose from leading crypto assets."
+      },
+      "transfer": {
+        "title": "Transfer",
+        "description": "Move as little as $1 to a Passive, Staking, or Active Rewards Account."
+      },
+      "earn": {
+        "title": "Earn",
+        "description": "Receive rewards directly in your account."
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "tabs": {
+        "passive": "Passive Rewards",
+        "staking": "Staking Rewards",
+        "active": "Active Rewards"
+      },
+      "passive": {
+        "questions": {
+          "0": "What is a Passive Rewards Account and how does it work?",
+          "1": "Who is eligible for a Passive Rewards Account with Blockchain.com?",
+          "2": "What is the minimum amount required for a Passive Rewards Account?",
+          "3": "How frequently do I earn Passive Rewards?",
+          "4": "When can I withdraw my crypto from my Passive Rewards Account?"
+        },
+        "answers": {
+          "0": "A Passive Rewards Account is a crypto storage facility that earns rewards on the crypto you hold in it.",
+          "1": "Full access verification is required for a Passive Rewards Account. You must also be in a supported country. Learn more about Passive Rewards Account eligibility here.",
+          "2": "You can transfer as little as $1 to a Passive Rewards Account to start earning rewards.",
+          "3": "Passive Rewards are earned daily and paid monthly directly into your Passive Rewards Account.",
+          "4": "You can withdraw your crypto at any time after the initial 7-day withdrawal hold."
+        }
+      },
+      "staking": {
+        "questions": {
+          "0": "What is staking and how does it work?",
+          "1": "Who is eligible for staking with Blockchain.com?",
+          "2": "What is the minimum amount required for staking?",
+          "3": "How frequently do I earn Staking Rewards?",
+          "4": "When can I withdraw my crypto from my Staking Rewards Account?"
+        },
+        "answers": {
+          "0": "Staking is the process used by Proof-of-Stake (PoS) blockchains to verify and secure transactions on their networks. Participants put up or \"stake\" their crypto for a chance to validate transactions and earn rewards.",
+          "1": "Full Access verification is required for staking. You must also be in a supported country. Learn more about staking eligibility here.",
+          "2": "You can transfer as little as $1 to a Staking Rewards Account to start earning rewards.",
+          "3": "Depending on the protocol, your crypto may be subject to a bonding period before generating rewards. Once bonded, rewards are earned and paid daily directly into your Staking Rewards Account.",
+          "4": "Withdrawal availability and unbonding periods are determined by the protocol. You can withdraw your crypto once withdrawals are available and the unbonding period has passed."
+        }
+      },
+      "active": {
+        "questions": {
+          "0": "What is Active Rewards?",
+          "1": "Who is eligible for Active Rewards?",
+          "2": "What is the minimum amount required for Active Rewards?",
+          "3": "How frequently do I earn Active Rewards?",
+          "4": "When can I withdraw my crypto from my Active Rewards Account?"
+        },
+        "answers": {
+          "0": "Active Rewards lets you earn rewards by forecasting the price of crypto.",
+          "1": "Full Access verification is required for Active Rewards. You must also be in a supported country. Learn more about Active Rewards eligibility here.",
+          "2": "You can transfer as little as $1 to an Active Rewards Account to start earning rewards.",
+          "3": "Every Friday at 8am UTC, your weekly rewards payout is transferred to your Active Rewards Account.",
+          "4": "You can request a full withdrawal of your funds at any time. Your funds will be transferred to your Trading Account once the active strategy ends and rewards payouts are made."
+        }
+      },
+      "support": {
+        "text": "Visit our",
+        "link": "Support Center",
+        "suffix": "for more information."
+      }
+    },
+    "cta": {
+      "title": "Want to start earning?",
+      "subtitle": "Transfer crypto to start earning today",
+      "button": "Start Earning"
+    },
+    "legal": {
+      "copyright": "© 2022 Blockchain.com Group Holdings, Inc.",
+      "agreement": "This agreement is entered into between you and Blockchain Access UK Ltd., Blockchain Access (Ireland) Limited, Blockchain.com (UK) Limited, Blockchain.com (Jersey) Limited, Blockchain.com (SG) Pte. Ltd., and Blockchain.com (US), Inc. (collectively, \"Blockchain.com\") and governs your use of Blockchain.com's services. By using our services, you agree to be bound by our User Agreement, Privacy Policy, Cookie Policy, API Agreement, and Trading Principles. For more information, visit www.exchange.blockchain.com/legal.",
+      "risk": "Risk Disclosure: Purchasing crypto involves substantial risk of loss. The value of crypto can be volatile and may decrease significantly. You may lose some or all of your capital. Past performance is not indicative of future results.",
+      "disclaimer": "Digital Currency Disclaimer: Digital currencies are not bank deposits, are not legal tender, and are not backed by any government. Blockchain.com's products are not subject to governmental deposit protection schemes. Regulatory changes may affect the value of digital currencies."
+    }
+  },
   "institutional": {
     "title": "Institutional Services",
-    "description": "Enterprise-grade crypto solutions for institutions."
+    "description": "Enterprise-grade crypto solutions for institutions.",
+    "hero": {
+      "title": "Institutional Markets",
+      "stats": {
+        "transacted": {
+          "value": "$1T+",
+          "label": "Transacted"
+        },
+        "tokens": {
+          "value": "600+",
+          "label": "Tokens Available"
+        },
+        "equity": {
+          "value": "$537M",
+          "label": "Equity Capital Raised"
+        }
+      },
+      "principalTrading": {
+        "title": "Principal Trading Partner",
+        "description": "Since 2017, Blockchain.com Institutional Markets has been the leading strategic capital partner for the largest trading, investment, and mining companies in the crypto space. Best-in-class pricing and bespoke solutions are made possible by a large balance sheet and market expertise."
+      },
+      "contactUs": "Contact Us"
+    },
+    "reviewSection": {
+      "title": "2024 in Review",
+      "description": "As we moved through 2024, we unpacked the latest developments, industry trends, and notable events that influenced the trajectory of blockchain technology.",
+      "readMore": "Read More"
+    },
+    "investors": {
+      "title": "Institutional Investors"
+    },
+    "about": {
+      "title": "About Blockchain.com",
+      "description": "Founded in 2011, Blockchain.com has built one of the leading brands in the crypto industry by offering secure, reliable services to customers in over 100+ countries. Venture backed since 2014, Blockchain.com has raised $537M of equity, valued at $5.2B. Both the Consumer and Institutional businesses are highly profitable with $1T+ transacted."
+    },
+    "bespokeCapital": {
+      "title": "Bespoke Capital Solutions",
+      "cards": [
+        {
+          "title": "Structured Products",
+          "subtitle": "Bespoke contracts",
+          "description": "We offer customized options contracts for BTC and major alts, including puts, zero-cost collars, and managed strategies for yield enhancement."
+        },
+        {
+          "title": "Retail Distribution",
+          "subtitle": "Access Blockchain.com's vast user base",
+          "description": "List and integrate with Blockchain.com's wallet, exchange, explorer, and payment rails to reach our 39M verified users."
+        },
+        {
+          "title": "OTC Spot",
+          "subtitle": "Trade spot and options on 600+ tokens",
+          "description": "Execute large orders through either our principal or agency offerings. We provide competitive spreads with minimal price impact and 24/7 support from a regulated counterparty. OTC (Over the Counter) marketplaces provide enhanced liquidity."
+        },
+        {
+          "title": "Custody and Staking",
+          "subtitle": "Segregated custody solution",
+          "description": "Institutional-grade custody in Blockchain.com's proprietary cold storage with yield generation solutions from secure custody."
+        },
+        {
+          "title": "Liquidity Provision",
+          "subtitle": "Market Making for new token listings",
+          "description": "Blockchain liquidity provision ensures efficient, decentralized markets in DeFi, supporting price stability, depth, and user experience, vital for seamless trading, hedging, and investment."
+        },
+        {
+          "title": "Structured Products",
+          "subtitle": "Bespoke contracts",
+          "description": "We offer customized options contracts for BTC and major alts, including puts, zero-cost collars, and managed strategies for yield enhancement."
+        },
+        {
+          "title": "Retail Distribution",
+          "subtitle": "Access Blockchain.com's vast user base",
+          "description": "List and integrate with Blockchain.com's wallet, exchange, explorer, and payment rails to reach our 39M verified users."
+        }
+      ]
+    }
   },
   "pay": {
     "title": "Pay",
+    "description": "Send and receive payments with crypto.",
     "heroTitle": "Empower your users to buy and sell crypto",
     "heroDescription": "Let users buy or sell crypto in your app using Blockchain.com's infrastructure, underpinned by our proprietary in-house systems.",
     "getInTouch": "Get in touch",
@@ -129,77 +496,67 @@
       "amount": "Amount",
       "asset": "Asset",
       "summary": "Summary",
-      "requoting": "Re-quoting",
-      "previewBuy": "Preview buy",
+      "requoting": "Requoting",
+      "previewBuy": "Preview Buy",
       "copyright": "© Blockchain.com. All rights reserved."
-    },
+  },
     "conversionSection": {
-      "title": "Drive conversion with our in-house proprietary systems",
-      "description": "We have built industry leading crypto liquidity, payment and anti-fraud systems, which means better stability, flexibility, and pricing.",
+      "title": "Boost conversion with our in-house proprietary systems",
+      "description": "We've built industry-leading crypto liquidity, payment, and anti-fraud systems, which means better stability, flexibility, and pricing.",
       "highlightText": "crypto liquidity",
       "getInTouch": "Get in touch"
     },
     "kycSection": {
       "title": "1-click crypto for our millions of KYC'd users",
-      "description": "With over 94M Blockchain.com Wallets, it's a seamless 1-click experience to buy and sell for users who have already KYC'd at Blockchain.com.",
+      "description": "With 94M+ Blockchain.com Wallets, it's a seamless 1-click experience to buy and sell for users who are already KYC'd on Blockchain.com.",
       "contactUs": "Contact Us"
     },
     "integrationSection": {
-      "title": "Easily integrate with a few lines of code",
-      "description": "Add fiat payments with major payment methods across 100+ countries, with just a few lines of code.",
+      "title": "Integrate easily with just a few lines of code",
+      "description": "Add fiat payments with leading payment methods in 100+ countries, with just a few lines of code.",
       "getInTouch": "Get in touch",
       "readDocumentation": "Read Documentation"
+    },
+    "caseStudiesSection": {
+      "title": "Case Studies",
+      "tron": {
+        "quote": "Collaborating with Blockchain.com was a testament to their expertise. The integration process was remarkably quick and easy, a reflection of exceptional teamwork and support from both sides.",
+        "attribution": "Feroz Lakhani, Enterprise Lead at TRON DAO"
+      },
+      "swapSpace": {
+        "quote": "The team's dedication and expertise made the integration process a seamless experience. Their commitment to excellence truly sets them apart.",
+        "attribution": "Andrew Wind, CPO at SwapSpace"
+      },
+      "openCrypto": {
+        "quote": "Integrating with Blockchain.com Pay has allowed us to enhance our platform's efficiency. We're thrilled with the results and look forward to continuing our collaboration with Blockchain.com.",
+        "attribution": "Kenneth Leung, CEO at OpenCrypto"
+      },
+      "loadMore": "Load More"
+    },
+    "partnerSection": {
+      "title": "Partner with a leading crypto brand",
+      "description": "Since 2011, Blockchain.com has been trusted by 94M wallets and 39M verified users to transact more than $1T+ in crypto. We're fully licensed in all applicable global jurisdictions.",
+      "contactUs": "Contact Us"
+    },
+    "statsSection": {
+      "verifiedUsers": {
+        "value": "39M",
+        "label": "Verified Users"
+      },
+      "countries": {
+        "value": "100+",
+        "label": "Countries"
+      },
+      "transactions": {
+        "value": "$1T+",
+        "label": "Transactions Processed"
+      },
+      "institutionalClients": {
+        "value": "1500+",
+        "label": "Engaged Institutional Clients"
+      }
     }
   },
-  
-  "user": {
-    "dashboard": "Dashboard",
-    "profile": "Profile",
-    "settings": "Settings"
-  },
-  "auth": {
-    "login": "Login",
-    "signup": "Sign Up",
-    "forgotPassword": "Forgot Password",
-    "resetPassword": "Reset Password"
-  },
-  "admin": {
-    "dashboard": "Admin Dashboard",
-    "users": "Users",
-    "settings": "Settings"
-  },
-  "footer": {
-    "scanToDownload": "Scan to Download",
-    "products": "Products",
-    "resources": "Resources",
-    "company": "Company",
-    "learn": "Learn",
-    "buyingGuides": "Buying Guides",
-    "careersHiring": "Hiring",
-    "copyright": "© Blockchain.com",
-    "language": "English"
-  },
-  
-  "userwallet": {
-    "title": "Welcome to Wallet Page",
-    "description": "This is the wallet page"
-  },
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
   "userDashboard": {
     "sidebar": {
       "home": "Home",
@@ -226,8 +583,7 @@
       "send": "Send",
       "addCash": "Add cash",
       "cashOut": "Cash out",
-      "completeProfile": "Complete Your Profile.",
-      "buyCryptoToday": "Buy Crypto Today.",
+      "completeProfile": "Complete Your Profile. Buy Crypto Today.",
       "completeProfileDesc": "Finish setting up your trading account and start buying crypto today.",
       "verificationSteps": "Verification Steps",
       "verifyEmail": "Verify your email",
@@ -237,216 +593,790 @@
       "assets": "Assets",
       "seeAll": "See all",
       "cashAndStablecoins": "Cash and Stablecoins",
-      "topMovers": "Top Movers",
-      "recurringBuys": "Recurring Buys",
-      "automateYourBuys": "Automate your buys",
-      "recurringBuysDesc": "Buy crypto daily, weekly, or monthly",
-      "go": "Go",
-      "news": "News",
-      "contactSupport": "Contact support",
-      "viewSupportCenter": "View support center",
-      "needHelp": "Need help?"
+      "topMovers": "Top Movers"
     },
     "assets": {
       "title": "Assets",
-      "description": "View and manage your assets here.",
-      "totalBalance": "Total Balance",
-      "cash": "Cash",
-      "getStartedTitle": "To get started, buy or deposit crypto",
-      "searchPlaceholder": "Search assets",
-      "filter": { "all": "All", "crypto": "Crypto", "cash": "Cash" },
-      "asset": "Asset",
-      "balance": "Balance",
-      "value": "Value",
-      "trade": "Trade",
-      "noAssets": "No assets found"
+      "description": "View and manage your assets here."
     },
     "discover": {
       "title": "Discover",
-      "description": "Discover new cryptocurrencies and trading opportunities.",
-      "searchPlaceholder": "Search by name or symbol",
-      "searchCoins": "Search Coins",
-      "explore": "Explore",
-      "tabs": { "tradable": "Tradable", "gainers": "Gainers", "losers": "Losers", "favorites": "Favorites" },
-      "sections": { "meme": "Meme", "other": "Other", "popular": "Popular" },
-      "category": { "all": "All", "gainers": "Gainers", "losers": "Losers" },
-      "asset": "Asset",
-      "price": "Price",
-      "change24h": "24h Change",
-      "chart": "Chart",
-      "trade": "Trade",
-      "noResults": "No results found"
+      "description": "Discover new cryptocurrencies and trading opportunities."
     },
     "memezone": {
       "title": "Memezone",
-      "description": "Explore meme coins and trending tokens.",
-      "searchPlaceholder": "Search meme coins",
-      "trending": "Trending meme coins",
-      "marketCap": "Market cap",
-      "rank": "Rank",
-      "trade": "Trade",
-      "noResults": "No meme coins found"
+      "description": "Explore meme coins and trending tokens."
     },
     "earn": {
       "title": "Earn",
-      "description": "Earn rewards on your crypto holdings.",
-      "subtitle": "Get rewards on your crypto.",
-      "legalDisclaimer": "Legal Disclaimer",
-      "secureEarn": "Earn securely",
-      "secureEarnDesc": "Your crypto is held with institutional-grade security while you earn.",
-      "apy": "APY",
-      "myAssets": "My Assets",
-      "searchCoins": "Search Coins",
-      "howItWorks": "How it works",
-      "step1Title": "Choose a product",
-      "step1Desc": "Select staking, flexible, or locked rewards based on your goals.",
-      "step2Title": "Deposit crypto",
-      "step2Desc": "Transfer your crypto to start earning rewards.",
-      "step3Title": "Earn rewards",
-      "step3Desc": "Rewards are paid out automatically to your account.",
-      "period": { "monthly": "Monthly", "daily": "Daily", "weekly": "Weekly", "compare": "Compare" },
-      "cards": {
-        "passiveRewards": "Passive Rewards",
-        "stakingRewards": "Staking Rewards",
-        "activeRewards": "Active Rewards",
-        "compareProducts": "Compare Products",
-        "compareSub": "See what suits you best"
-      },
-      "type": { "active": "00 Active", "staking": "A Staking", "passive": "% Passive" },
-      "table": { "assets": "Assets", "type": "Type", "maxRate": "Max Annual Rate", "action": "Action", "start": "Start" },
-      "products": {
-        "staking": "Staking",
-        "stakingDesc": "Lock your crypto to secure the network and earn rewards.",
-        "rewards": "Rewards",
-        "rewardsDesc": "Earn up to 5% on supported assets with no lock-up.",
-        "flexible": "Flexible",
-        "flexibleDesc": "Earn with the flexibility to withdraw anytime.",
-        "startEarning": "Start earning",
-        "learnMore": "Learn more",
-        "getStarted": "Get started"
-      }
+      "description": "Earn rewards on your crypto holdings."
     },
     "activity": {
       "title": "Activity",
-      "description": "View your transaction history and activity.",
-      "noActivityTitle": "No activity",
-      "noActivitySubtitle": "To get started, buy or deposit crypto",
-      "searchPlaceholder": "Search transactions",
-      "filter": { "all": "All", "deposit": "Deposit", "buy": "Buy", "sell": "Sell", "convert": "Convert", "withdrawal": "Withdrawal" },
-      "type": "Type",
-      "amount": "Amount",
-      "date": "Date",
-      "status": "Status",
-      "types": { "deposit": "Deposit", "buy": "Buy", "sell": "Sell", "convert": "Convert", "withdrawal": "Withdrawal" },
-      "statuses": { "completed": "Completed", "pending": "Pending", "failed": "Failed" },
-      "details": "Details",
-      "noActivity": "No activity found"
+      "description": "View your transaction history and activity."
     },
     "wallet": {
       "title": "Wallet",
       "description": "Manage your wallet and view your balances."
     }
   },
-
-  "defi": {
-    "sidebar": {
-      "home": "Home",
-      "assets": "Assets",
-      "discover": "Discover",
-      "stocks": "Stocks",
-      "dex": "DEX",
-      "activity": "Activity"
+  "user": {
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "auth": {
+    "login": "Login",
+    "signup": "Sign Up",
+    "forgotPassword": "Forgot Password",
+    "resetPassword": "Reset Password"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "users": "Users",
+    "settings": "Settings"
+  },
+  "about": {
+    "hero": {
+      "title": "Relentlessly building the future of finance since 2011",
+      "description": "The world's leading crypto finance house serving people, projects, protocols and institutions since 2011."
     },
-    "right": {
-      "secureTitle": "Secure your wallet",
-      "secureDesc": "Backup your Recovery Phrase to keep your DeFi Wallet safe",
-      "stocksLive": "Stocks are now live"
+    "team": {
+      "title": "Meet the team",
+      "description": "Global management team with over 200 years of combined experience at some of the most reputable financial institutions, technology companies, and startups.",
+      "tabs": {
+        "board": "Board of Directors",
+        "management": "Management"
+      },
+      "board": {
+        "0": {
+          "name": "Peter Smith",
+          "role": "CEO, Founder & Executive Chairman",
+          "image": "/images/about/Peter@2x.png"
+        },
+        "1": {
+          "name": "Nic Cary",
+          "role": "Co-Founder, Board Member",
+          "image": "/images/about/Nic@2x.png"
+        },
+        "2": {
+          "name": "Tom Horton",
+          "role": "Lead Independent Director",
+          "image": "/images/about/Jim@2x.png"
+        },
+        "3": {
+          "name": "Jim Messina",
+          "role": "Director",
+          "image": "/images/about/Jim@2x.png"
+        },
+        "4": {
+          "name": "Joseph Otting",
+          "role": "Director",
+          "image": "/images/about/Joseph@2x.png"
+        },
+        "5": {
+          "name": "Manuel Stotz",
+          "role": "Director",
+          "image": "/images/about/ManuelStotz@2x.png"
+        },
+        "6": {
+          "name": "Timothy Flynn",
+          "role": "Director",
+          "image": "/images/about/Timothy_Flynn@2x.png"
+        },
+        "7": {
+          "name": "Nicolas Brand",
+          "role": "Director",
+          "image": "/images/about/NicolasBrand@2x.png"
+        },
+        "8": {
+          "name": "Joseph Otting",
+          "role": "Director",
+          "image": "/images/about/Joseph1@2x.png"
+        }
+      },
+      "management": {
+        "0": {
+          "name": "Peter Smith",
+          "role": "CEO, Founder & Executive Chairman",
+          "image": "/images/about/Peter@2x.png"
+        },
+        "1": {
+          "name": "Nic Cary",
+          "role": "Co-Founder, Vice Chairman",
+          "image": "/images/about/Nic@2x.png"
+        },
+        "2": {
+          "name": "Lane Kasselman",
+          "role": "Co-CEO & President",
+          "image": "/images/about/Peter@2x.png"
+        },
+        "3": {
+          "name": "Matt Tuzzolo",
+          "role": "Chief Technology Officer",
+          "image": "/images/about/Nic@2x.png"
+        },
+        "4": {
+          "name": "Mike Wilcox",
+          "role": "Chief Financial Officer",
+          "image": "/images/about/Jim@2x.png"
+        },
+        "5": {
+          "name": "Tim Lubans",
+          "role": "Chief Legal Officer & Interim Chief Compliance Officer",
+          "image": "/images/about/Timothy_Flynn@2x.png"
+        },
+        "6": {
+          "name": "Nicolas Brand",
+          "role": "Chief Operating Officer",
+          "image": "/images/about/NicolasBrand@2x.png"
+        }
+      }
     },
-    "home": {
-      "balanceTitle": "DeFi Wallet Balance",
-      "sell": "Sell",
-      "swap": "Swap",
-      "deposit": "Deposit",
-      "send": "Send",
-      "topMovers": "Top Movers",
-      "seeAll": "See all",
-      "news": "News",
-      "needHelp": "Need help?",
-      "contactSupport": "Contact support",
-      "viewSupportCenter": "View support center",
-      "publishedBy": "Published By"
+    "company": {
+      "title": "About Blockchain.com",
+      "description": "We believe that in a decade the financial system of the internet — that is, commerce that happens on the internet — will be the largest financial system in the world. And it will be powered by crypto.",
+      "stats": {
+        "wallets": {
+          "value": "100M",
+          "label": "Wallets Created"
+        },
+        "transacted": {
+          "value": "$1T+",
+          "label": "Transacted"
+        },
+        "clients": {
+          "value": "1500+",
+          "label": "Engaged Institutional Clients"
+        },
+        "users": {
+          "value": "39M",
+          "label": "Verified Retail Users"
+        },
+        "countries": {
+          "value": "100+",
+          "label": "Countries"
+        },
+        "founded": {
+          "value": "2011",
+          "label": "Date Founded"
+        }
+      },
+      "paragraph1": "Blockchain.com got its start as an early pioneer of key infrastructure for the bitcoin community. First, with a Blockchain Explorer that enabled anyone to not only examine transactions and study the blockchain, but an API that enabled companies to build on Bitcoin. We also have provided the most popular and widely used crypto wallet that enables anyone anywhere to control their own money.",
+      "paragraph2": "Our team spans the globe and has worked tirelessly to accelerate the adoption of crypto and usher in the future of finance. We are passionate, relentless, and stoked -- and believe that a lean team of world-class visionaries can ship products that empower our customers and drive the business to new heights."
+    },
+    "investors": {
+      "title": "Investors",
+      "subtitle": "Backed by renowned investors from Silicon Valley, Wall Street, and London."
+    },
+    "awards": {
+      "title": "Awards and recognition"
+    }
+  },
+  "careers": {
+    "hero": {
+      "title": "Working at Blockchain.com",
+      "description": "We take our work seriously, relentlessly pursue excellence, and have fun doing hard things together.",
+      "cta": "Open positions"
+    },
+    "values": {
+      "title": "Blockstar Core Values",
+      "description": "The core values of Blockchain.com are relentless problem solving, building like an owner, being a team player, communicating with candor, and embracing an infinite mindset.",
+      "items": {
+        "0": {
+          "title": "Be relentless",
+          "description": "A journey into uncharted territory doesn't come without challenges. Don't give up. Stay in the fight. Find a way."
+        },
+        "1": {
+          "title": "Build like an owner",
+          "description": "Remember: we're a startup, first and last. Have a bias for action. Take pride in what you ship. Raise the bar."
+        },
+        "2": {
+          "title": "Be a team player",
+          "description": "Put teamwork and the mission above your ego. Be willing to lend a hand. Ask for help when you need it."
+        },
+        "3": {
+          "title": "Communicate with candor",
+          "description": "Realize the best ideas are forged by fire. Challenge ideas respectfully when you disagree. See giving and getting feedback as a gift."
+        },
+        "4": {
+          "title": "Embrace an infinite mindset",
+          "description": "Know that building the financial system of the future will take decades. Aim for long term impact over short term gains. Set audacious goals. Don't be afraid to take risks."
+        }
+      }
+    },
+    "positions": {
+      "title": "Open Positions",
+      "filter": {
+        "allOffices": "All Offices",
+        "buenosAires": "Buenos Aires",
+        "ghana": "Ghana",
+        "london": "London",
+        "dallas": "Dallas",
+        "paris": "Paris",
+        "malta": "Malta",
+        "singapore": "Singapore",
+        "nigeria": "Nigeria"
+      },
+      "opening": "opening",
+      "openings": "openings",
+      "apply": "Apply Position",
+      "categories": {
+        "0": {
+          "name": "Business Intelligence",
+          "openings": "1",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "Data Analyst",
+              "location": "Buenos Aires",
+              "link": "#"
+            }
+          }
+        },
+        "1": {
+          "name": "Business Strategy",
+          "openings": "3",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "Business and Customer Operations Lead",
+              "location": "Ghana",
+              "link": "#"
+            },
+            "1": {
+              "title": "UK Market Lead",
+              "location": "London",
+              "link": "#"
+            },
+            "2": {
+              "title": "US Market Lead",
+              "location": "Dallas",
+              "link": "#"
+            }
+          }
+        },
+        "2": {
+          "name": "Compliance",
+          "openings": "5",
+          "icon": "document",
+          "jobs": {
+            "0": {
+              "title": "Compliance Operations Manager",
+              "location": "Paris",
+              "link": "#"
+            },
+            "1": {
+              "title": "Compliance Operations Manager",
+              "location": "London",
+              "link": "#"
+            },
+            "2": {
+              "title": "FIU Associate",
+              "location": "Paris",
+              "link": "#"
+            },
+            "3": {
+              "title": "Head of Custody",
+              "location": "Malta",
+              "link": "#"
+            },
+            "4": {
+              "title": "US Regulatory Compliance Manager",
+              "location": "Dallas",
+              "link": "#"
+            }
+          }
+        },
+        "3": {
+          "name": "Customer Success",
+          "openings": "1",
+          "icon": "ribbon",
+          "jobs": {
+            "0": {
+              "title": "Customer Success Manager",
+              "location": "London",
+              "link": "#"
+            }
+          }
+        },
+        "4": {
+          "name": "Early Careers",
+          "openings": "11",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "Engineering Intern, Web3/AI",
+              "location": "London",
+              "link": "#"
+            },
+            "1": {
+              "title": "Finance Summer Intern",
+              "location": "London",
+              "link": "#"
+            },
+            "2": {
+              "title": "Growth Marketing Intern",
+              "location": "London",
+              "link": "#"
+            },
+            "3": {
+              "title": "HR Summer Intern",
+              "location": "London",
+              "link": "#"
+            },
+            "4": {
+              "title": "Infrastructure Intern",
+              "location": "London",
+              "link": "#"
+            },
+            "5": {
+              "title": "IT Support Engineer Intern",
+              "location": "Dallas",
+              "link": "#"
+            },
+            "6": {
+              "title": "Marketing Researcher Intern",
+              "location": "London",
+              "link": "#"
+            },
+            "7": {
+              "title": "Software Engineering Intern, Activation",
+              "location": "Paris",
+              "link": "#"
+            },
+            "8": {
+              "title": "Software Engineering Intern, Institutional",
+              "location": "Paris",
+              "link": "#"
+            }
+          }
+        },
+        "5": {
+          "name": "Engineering",
+          "openings": "2",
+          "icon": "circuit",
+          "jobs": {
+            "0": {
+              "title": "Senior Software Engineer",
+              "location": "London",
+              "link": "#"
+            },
+            "1": {
+              "title": "Software Engineer",
+              "location": "Paris",
+              "link": "#"
+            }
+          }
+        },
+        "6": {
+          "name": "Engineering - Back End",
+          "openings": "9",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "Senior Backend Engineer",
+              "location": "London",
+              "link": "#"
+            },
+            "1": {
+              "title": "Backend Engineer",
+              "location": "Paris",
+              "link": "#"
+            },
+            "2": {
+              "title": "Backend Engineer, API",
+              "location": "London",
+              "link": "#"
+            },
+            "3": {
+              "title": "Backend Engineer, Infrastructure",
+              "location": "Dallas",
+              "link": "#"
+            },
+            "4": {
+              "title": "Backend Engineer, Payments",
+              "location": "Buenos Aires",
+              "link": "#"
+            },
+            "5": {
+              "title": "Backend Engineer, Security",
+              "location": "London",
+              "link": "#"
+            },
+            "6": {
+              "title": "Backend Engineer, Trading",
+              "location": "Paris",
+              "link": "#"
+            },
+            "7": {
+              "title": "Backend Engineer, Wallet",
+              "location": "London",
+              "link": "#"
+            },
+            "8": {
+              "title": "Backend Engineer, Data",
+              "location": "Singapore",
+              "link": "#"
+            }
+          }
+        },
+        "7": {
+          "name": "Engineering - Crypto",
+          "openings": "1",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "Crypto Engineer",
+              "location": "London",
+              "link": "#"
+            }
+          }
+        },
+        "8": {
+          "name": "Engineering - Front End",
+          "openings": "1",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "Frontend Engineer",
+              "location": "London",
+              "link": "#"
+            }
+          }
+        },
+        "9": {
+          "name": "Engineering - Quality & Automation",
+          "openings": "1",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "QA Engineer",
+              "location": "Paris",
+              "link": "#"
+            }
+          }
+        },
+        "10": {
+          "name": "Engineering - Security",
+          "openings": "2",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "Security Engineer",
+              "location": "London",
+              "link": "#"
+            },
+            "1": {
+              "title": "Security Engineer, Infrastructure",
+              "location": "Dallas",
+              "link": "#"
+            }
+          }
+        },
+        "11": {
+          "name": "Engineering - Site Reliability",
+          "openings": "1",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "Site Reliability Engineer",
+              "location": "London",
+              "link": "#"
+            }
+          }
+        },
+        "12": {
+          "name": "Finance",
+          "openings": "8",
+          "icon": "graph",
+          "jobs": {
+            "0": {
+              "title": "Finance Manager",
+              "location": "London",
+              "link": "#"
+            },
+            "1": {
+              "title": "Financial Analyst",
+              "location": "Buenos Aires",
+              "link": "#"
+            },
+            "2": {
+              "title": "Senior Financial Analyst",
+              "location": "Paris",
+              "link": "#"
+            },
+            "3": {
+              "title": "Accounting Manager",
+              "location": "London",
+              "link": "#"
+            },
+            "4": {
+              "title": "Treasury Analyst",
+              "location": "Dallas",
+              "link": "#"
+            },
+            "5": {
+              "title": "Financial Controller",
+              "location": "Malta",
+              "link": "#"
+            },
+            "6": {
+              "title": "Finance Operations Specialist",
+              "location": "Singapore",
+              "link": "#"
+            },
+            "7": {
+              "title": "Budget Analyst",
+              "location": "London",
+              "link": "#"
+            }
+          }
+        },
+        "13": {
+          "name": "Institutional",
+          "openings": "6",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "Institutional Sales Manager",
+              "location": "London",
+              "link": "#"
+            },
+            "1": {
+              "title": "Institutional Account Manager",
+              "location": "Paris",
+              "link": "#"
+            },
+            "2": {
+              "title": "Institutional Relationship Manager",
+              "location": "Singapore",
+              "link": "#"
+            },
+            "3": {
+              "title": "Institutional Product Manager",
+              "location": "Dallas",
+              "link": "#"
+            },
+            "4": {
+              "title": "Institutional Operations Specialist",
+              "location": "London",
+              "link": "#"
+            },
+            "5": {
+              "title": "Institutional Compliance Manager",
+              "location": "Malta",
+              "link": "#"
+            }
+          }
+        },
+        "14": {
+          "name": "Legal",
+          "openings": "3",
+          "icon": "briefcase",
+          "jobs": {
+            "0": {
+              "title": "Legal Counsel",
+              "location": "London",
+              "link": "#"
+            },
+            "1": {
+              "title": "Senior Legal Counsel",
+              "location": "Paris",
+              "link": "#"
+            },
+            "2": {
+              "title": "Legal Operations Manager",
+              "location": "Malta",
+              "link": "#"
+            }
+          }
+        },
+        "15": {
+          "name": "Marketing & Communications",
+          "openings": "1",
+          "icon": "communication",
+          "jobs": {
+            "0": {
+              "title": "Marketing Communications Manager",
+              "location": "London",
+              "link": "#"
+            }
+          }
+        },
+        "16": {
+          "name": "People Success",
+          "openings": "5",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "Executive Assistant",
+              "location": "Buenos Aires",
+              "link": "#"
+            },
+            "1": {
+              "title": "People Operations Specialist",
+              "location": "Buenos Aires",
+              "link": "#"
+            },
+            "2": {
+              "title": "Senior Talent Acquisition Partner",
+              "location": "Paris",
+              "link": "#"
+            },
+            "3": {
+              "title": "Talent Acquisition Coordinator",
+              "location": "Buenos Aires",
+              "link": "#"
+            },
+            "4": {
+              "title": "Talent Acquisition Specialist",
+              "location": "Buenos Aires",
+              "link": "#"
+            }
+          }
+        },
+        "17": {
+          "name": "Product",
+          "openings": "2",
+          "icon": "cube",
+          "jobs": {
+            "0": {
+              "title": "Product Manager",
+              "location": "London",
+              "link": "#"
+            },
+            "1": {
+              "title": "Senior Product Manager",
+              "location": "Paris",
+              "link": "#"
+            }
+          }
+        }
+      }
+    },
+    "benefits": {
+      "title": "Benefits of working with us",
+      "competitiveSalary": "Competitive Salary",
+      "healthcare": "HealthCare",
+      "unlimitedVacation": "Unlimited Vacation",
+      "meaningfulEquity": "Meaningful Equity",
+      "paidFamilyLeave": "Paid Family Leave",
+      "hybridWorking": "Hybrid Working",
+      "cryptoBonus": "Crypto Bonus",
+      "equipment": "Get the equipment you need",
+      "offsites": "Offsites"
+    }
+  },
+  "press": {
+    "hero": {
+      "title": "Press & Media",
+      "description": "Blockchain.com is the world's most trusted platform for transacting in crypto. Whether it's trading, earning rewards, checking payment status, or lending crypto, Blockchain.com offers the most established and widely-used way to invest in cryptocurrency for tens of millions of customers in nearly 100+ countries.",
+      "imageAlt": "Press and media decorative",
+      "imageAltMobile": "Press and media",
+      "socialText": "To hear our latest news, follow",
+      "andCeo": "and our CEO, Peter Smith,",
+      "supportText": "For support, see",
+      "forLinks": "for links",
+      "pressInquiries": "For press inquiries, contact",
+      "contactButton": "Contact us"
     },
     "assets": {
-      "tokens": "Tokens",
-      "collectibles": "Collectibles",
-      "allNetworks": "All networks",
-      "fundTitle": "Fund your wallet to start",
-      "fundDesc": "Transfer crypto from your account or another wallet",
-      "receive": "Receive",
-      "transferOrBuy": "Transfer from any wallet, or buy from a marketplace!"
+      "title": "Assets List",
+      "filterLabel": "Filter by type",
+      "allFileTypes": "All File types",
+      "bioKit": "Bio Kit",
+      "video": "Video",
+      "imageKit": "Image Kit",
+      "brandKit": "Brand Kit",
+      "brandAssets": "Blockchain.com Brand Assets",
+      "fileSize": "170kb",
+      "download": "Download",
+      "table": {
+        "fileType": "File type",
+        "fileName": "File name",
+        "size": "Size"
+      }
     },
-    "discover": {
-      "all": "All",
-      "trending": "Trending",
-      "stocks": "Stocks",
-      "favorites": "Favorites",
-      "searchCoins": "Search Coins",
-      "allNetworks": "All networks",
-      "topMovers": "Top Movers",
-      "name": "Name",
-      "price": "Price",
-      "change24h": "24h",
-      "marketCap": "Market cap",
-      "noFavorites": "No favorites added yet"
-    },
-    "stocks": {
-      "explore": "Explore",
-      "myStocks": "My Stocks",
-      "whatAreTokenizedStocks": "What are tokenized stocks?",
-      "searchCoins": "Search Coins",
-      "name": "Name",
-      "price": "Price",
-      "change24h": "24h",
-      "marketCap": "Market cap",
-      "addStocksToWallet": "Add stocks to your wallet",
-      "newToBlockchain": "New to Blockchain:",
-      "tokenizedStocks": "Tokenized Stocks",
-      "tokenizedStocksDesc": "These are blockchain-based tokens tracking the real-time prices of global equities and ETFs. Stocktastic.",
-      "keyAdvantages": "Key advantages",
-      "marketsNeverClose": "Markets never close",
-      "recordedOnBlockchain": "Every move is recorded on the blockchain",
-      "ownFraction": "Own a fraction of leading companies, starting small",
-      "gotIt": "Got it"
-    },
-    "dex": {
-      "swap": "Swap",
-      "youPay": "You Pay",
-      "youReceive": "You Receive",
-      "select": "Select",
-      "deposit": "Deposit",
-      "swapSettings": "Swap Settings",
-      "allowedSlippage": "Allowed Slippage",
-      "slippageDesc": "Slippage is the max price change you allow for a swap. If it exceeds that, the swap is canceled, and your assets are returned",
-      "crossChainOnly": "Cross-chain only",
-      "arrivalGas": "Arrival Gas",
-      "arrivalGasDesc": "Swap some of your tokens for gas on destination chain.",
-      "save": "Save",
-      "searchCoins": "Search Coins",
-      "network": "Network",
-      "yourXlmAddress": "Your XLM Address",
-      "useAddressOnly": "Use this address only to receive or deposit XLM on the Stellar network.",
-      "lostFundsWarning": "Lost funds cannot be recovered.",
-      "walletAddress": "Wallet Address",
-      "next": "Next",
-      "deFiWallet": "DeFi Wallet"
-    },
-    "activity": {
-      "searchCoins": "Search Coins",
-      "all": "All",
-      "noActivity": "No activity",
-      "noActivityDesc": "To get started, buy or deposit crypto",
-      "deposit": "Deposit"
+    "releases": {
+      "title": "Press",
+      "ariaLabel": "Press releases",
+      "items": {
+        "0": {
+          "date": "November 17, 2025",
+          "headline": "Blockchain.com names co-CEO as it opens a new US headquarters in Dallas",
+          "summary": "Blockchain.com announced Lane Kasselman will now serve as Co-CEO alongside Peter Smith will continue to serve as the company's CEO, Founder, and Executive Chairman.",
+          "publicationAlt": "THE BLOCK"
+        },
+        "1": {
+          "date": "October 23, 2025",
+          "headline": "Blockchain.com secures MICA license, hires Malta insider to head EU expansion",
+          "summary": "With the license, Blockchain.com is enabled to provide custody and wallet services in 27 EEA countries and plans to roll out institutional services.",
+          "publicationAlt": "Cointelegraph"
+        },
+        "2": {
+          "date": "September 15, 2025",
+          "headline": "Blockchain.com expands institutional offerings amid regulatory clarity",
+          "summary": "Blockchain.com continues to grow its institutional product suite, offering custody and trading solutions to regulated entities worldwide.",
+          "publicationAlt": "Business Day"
+        },
+        "3": {
+          "date": "August 8, 2025",
+          "headline": "Blockchain.com reports record user growth and exchange volume",
+          "summary": "The platform announced significant milestones in monthly active users and trading volume, reinforcing its position as a leading crypto company.",
+          "publicationAlt": "The Street"
+        }
+      }
     }
+  },
+  "ventures": {
+    "hero": {
+      "title": "Ventures",
+      "description": "Blockchain Ventures is a venture capital fund and a subsidiary of Blockchain."
+    },
+    "story": {
+      "title": "Our Story",
+      "description": "Blockchain Ventures is a venture capital fund and a subsidiary of Blockchain. We created Blockchain Ventures to support and invest in distributed ledger technology (DLT) projects that advance the industry and provide positive societal impact. With support from its parent company, Blockchain Ventures aims to contribute to the creation of an open, fair, and accessible financial system and promote DLT use-cases that are revolutionary beyond finance.",
+      "imageAlt": "Ventures decorative",
+      "imageAltMobile": "Ventures"
+    },
+    "valueAdd": {
+      "title": "Our Value Add",
+      "description": "With over 100M wallets created on the platform, Blockchain is one of the most trusted brands in crypto. We invest in equity and token projects and provide them with legal, security, technical, and financial support from our talented bench of employees, partners, and advisors.",
+      "button": "Apply for Funding"
+    },
+    "portfolio": {
+      "origin": "Origin",
+      "securitize": "Securitize",
+      "theta": "Theta",
+      "deversifi": "Deversifi",
+      "index": "Index",
+      "messari": "Messari"
+    },
+    "team": {
+      "title": "Fund Management Team",
+      "members": {
+        "0": {
+          "name": "Samuel Harrison"
+        },
+        "1": {
+          "name": "Peter Smith"
+        },
+        "2": {
+          "name": "Peter Smith"
+        }
+      }
+    }
+  },
+  "footer": {
+    "scanToDownload": "Scan to Download",
+    "products": "Products",
+    "resources": "Resources",
+    "company": "Company",
+    "learn": "Learn",
+    "buyingGuides": "Buying Guides",
+    "careersHiring": "Hiring",
+    "copyright": "© Blockchain.com",
+    "language": "English"
   }
-
 }

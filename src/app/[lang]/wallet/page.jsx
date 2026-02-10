@@ -38,7 +38,7 @@ export default function WalletPage() {
 
   return (
     <>
-      <nav className="w-full bg-[#0f1535] border-b border-white/20 sticky top-0 z-50">
+      <nav className="w-full bg-[#0f1535] border-b border-white/20 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex h-14 sm:h-16 items-center justify-between">
             {/* LEFT: Logo */}
@@ -268,7 +268,9 @@ export default function WalletPage() {
                 <span className="text-gray-300 italic text-xl sm:text-2xl">{t('wallet.memecoinSection.listedCoins')}</span>
 
                 <div className="flex -space-x-2 sm:-space-x-3">
-                  <img
+                  
+
+                  {/* //<img
                     src="/coins/coin1.png"
                     className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#0B0F2B]"
                     alt="Coin 1"
@@ -287,7 +289,22 @@ export default function WalletPage() {
                     src="/coins/coin4.png"
                     className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#0B0F2B]"
                     alt="Coin 4"
-                  />
+                  /> */}
+                  {[
+                    { label: "BTC", bg: "bg-orange-500" },
+                    { label: "ETH", bg: "bg-indigo-500" },
+                    { label: "SOL", bg: "bg-emerald-500" },
+                    { label: "DOGE", bg: "bg-amber-500" },
+                  ].map((c) => (
+                    <div
+                      key={c.label}
+                      className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-[#0B0F2B] ${c.bg} text-white flex items-center justify-center text-[10px] sm:text-xs font-bold tracking-wide`}
+                      aria-label={c.label}
+                      title={c.label}
+                    >
+                      {c.label}
+                    </div>
+                  ))}
                 </div>
 
                 <span className="text-gray-400 text-base sm:text-lg">+</span>
