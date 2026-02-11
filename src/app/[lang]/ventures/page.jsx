@@ -16,6 +16,7 @@ export default function VenturesPage() {
           backgroundImage: "url('/images/ventures/blue-gradient_hero-bg@2x.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
@@ -90,7 +91,7 @@ export default function VenturesPage() {
       {/* Portfolio Companies Section */}
       <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-0 border border-gray-200 rounded-lg overflow-hidden">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-0 border border-gray-200 rounded-lg overflow-hidden bg-white">
             {[
               { src: '/images/ventures/origin@2x.png', alt: t("ventures.portfolio.origin") },
               { src: '/images/ventures/securitize@2x.png', alt: t("ventures.portfolio.securitize") },
@@ -101,20 +102,24 @@ export default function VenturesPage() {
             ].map((item, index) => (
               <div
                 key={item.alt}
-                className={`flex min-h-[120px] sm:min-h-[140px] md:min-h-[160px] items-center justify-center border-gray-200 p-6 bg-white hover:bg-gray-50 transition-colors ${
+                className={`flex min-h-[120px] sm:min-h-[140px] md:min-h-[160px] items-center justify-center border-gray-200 p-4 sm:p-6 bg-white hover:bg-gray-50 transition-all duration-300 ${
                   index % 3 !== 2 ? 'md:border-r' : ''
                 } ${
                   index < 3 ? 'border-b md:border-b' : index < 6 ? 'md:border-b' : ''
                 }`}
               >
-                <Link href="/ventures/projects" className="flex items-center justify-center w-full h-full">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    width={140}
-                    height={56}
-                    className="max-h-12 sm:max-h-14 md:max-h-16 w-auto object-contain object-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all"
-                  />
+                <Link href="/ventures/projects" className="flex items-center justify-center w-full h-full group">
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      width={140}
+                      height={56}
+                      className="max-h-10 sm:max-h-12 md:max-h-14 lg:max-h-16 w-auto object-contain object-center grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
+                      unoptimized
+                      priority={index < 3}
+                    />
+                  </div>
                 </Link>
               </div>
             ))}
@@ -141,6 +146,7 @@ export default function VenturesPage() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 640px) 192px, (max-width: 768px) 224px, (max-width: 1024px) 256px, 288px"
+                    unoptimized
                   />
                 </div>
                 <p className="text-lg sm:text-xl md:text-xl font-medium text-gray-900">

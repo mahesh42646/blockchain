@@ -117,7 +117,81 @@
   },
   "institutional": {
     "title": "Institutional Services",
-    "description": "Enterprise-grade crypto solutions for institutions."
+    "description": "Enterprise-grade crypto solutions for institutions.",
+    "hero": {
+      "title": "High-touch crypto solutions for institutions",
+      "stats": {
+        "transacted": {
+          "value": "$1T+",
+          "label": "Transacted"
+        },
+        "tokens": {
+          "value": "600+",
+          "label": "Tokens Available"
+        },
+        "equity": {
+          "value": "$537M",
+          "label": "Equity Raised"
+        }
+      },
+      "principalTrading": {
+        "title": "Principal Trading",
+        "description": "Trade directly with Blockchain.com as principal counterparty"
+      },
+      "contactUs": "Contact Us"
+    },
+    "reviewSection": {
+      "title": "Client Review",
+      "description": "Blockchain.com provides institutional-grade services with exceptional reliability and security.",
+      "readMore": "Read More"
+    },
+    "bespokeCapital": {
+      "title": "Bespoke Capital Solutions",
+      "cards": {
+        "0": {
+          "title": "Spot OTC",
+          "subtitle": "Large volume trades",
+          "description": "Execute large volume trades with minimal market impact through our OTC desk."
+        },
+        "1": {
+          "title": "Derivatives",
+          "subtitle": "Futures & Options",
+          "description": "Access crypto derivatives including futures and options for sophisticated trading strategies."
+        },
+        "2": {
+          "title": "Structured Products",
+          "subtitle": "Custom solutions",
+          "description": "Tailored structured products designed to meet your specific investment needs."
+        },
+        "3": {
+          "title": "Margin Lending",
+          "subtitle": "Leverage your assets",
+          "description": "Borrow against your crypto holdings with competitive rates and flexible terms."
+        },
+        "4": {
+          "title": "Custody",
+          "subtitle": "Secure storage",
+          "description": "Institutional-grade custody solutions with multi-signature security and insurance coverage."
+        },
+        "5": {
+          "title": "Prime Services",
+          "subtitle": "Prime brokerage",
+          "description": "Comprehensive prime services including execution, custody, and financing solutions."
+        },
+        "6": {
+          "title": "Trading API",
+          "subtitle": "Programmatic access",
+          "description": "Robust API for programmatic trading with low latency and high throughput."
+        }
+      }
+    },
+    "investors": {
+      "title": "Investors"
+    },
+    "about": {
+      "title": "About Blockchain.com",
+      "description": "Founded in 2011, Blockchain.com has built one of the leading brands in the crypto industry by offering secure, reliable services to customers in over 100+ countries. Venture backed since 2014, Blockchain.com has raised $537M of equity, valued at $5.2B. Both the Consumer and Institutional businesses are highly profitable with $1T+ transacted."
+    }
   },
   "pay": {
     "title": "Pay",
@@ -149,6 +223,24 @@
       "description": "Add fiat payments with major payment methods across 100+ countries, with just a few lines of code.",
       "getInTouch": "Get in touch",
       "readDocumentation": "Read Documentation"
+    },
+    "statsSection": {
+      "verifiedUsers": {
+        "value": "94M+",
+        "label": "Verified Users"
+      },
+      "countries": {
+        "value": "100+",
+        "label": "Countries"
+      },
+      "transactions": {
+        "value": "$1T+",
+        "label": "Transactions"
+      },
+      "institutionalClients": {
+        "value": "500+",
+        "label": "Institutional Clients"
+      }
     }
   },
   "user": {
@@ -1575,6 +1667,288 @@
       "cryptoBonus": "Crypto Bonus",
       "equipment": "Get the equipment you need",
       "offsites": "Offsites"
+    }
+  },
+  "legalCenter": {
+    "hero": {
+      "title": "Legal Center",
+      "description": "As the world's leading crypto finance house serving tens of millions of customers, protecting the security and privacy of our users is our top priority.",
+      "imageAlt": "Legal Center"
+    },
+    "noticeBar": {
+      "text": "We are no longer able to provide custodial services in Canada. Unfortunately, due to developments in Canadian regulation impacting custody and exchanges, Blockchain.com is pausing the availability of custodial and exchange services to customers residing in Canada."
+    },
+    "sidebar": {
+      "wallet": "Wallet",
+      "blockchainEurope": "Blockchain Europe",
+      "exchange": "Exchange",
+      "bakkt": "Bakkt",
+      "userAgreement": "User Agreement",
+      "privacy": "Privacy",
+      "cookies": "Cookies",
+      "lawEnforcement": "Law Enforcement",
+      "apiTerms": "API Terms",
+      "licenses": "Licenses",
+      "promotionalRewards": "Promotional Rewards",
+      "biometricPrivacyPolicy": "Biometric Privacy Policy",
+      "blockchainBrasil": "Blockchain Brasil",
+      "margin": "Margin",
+      "tradingPrinciples": "Trading Principles",
+      "privacyPolicy": "Privacy Policy",
+      "authorization": "Authorization"
+    },
+    "document": {
+      "lastUpdated": "LAST UPDATED: FEBRUARY 1, 2026",
+      "privacyPolicyTitle": "Blockchain.com Privacy Policy",
+      "downloadPdf": "Download PDF",
+      "section1Title": "1. GENERAL PROVISIONS",
+      "section1_1": "1.1. We are committed to safeguarding your privacy. This privacy policy (\"Privacy Policy\") describes how we collect, use, and share your personal data when you use our Platform and related services.",
+      "section1_2": "1.2. This Privacy Policy applies to the processing of your personal data (\"Personal Data\") when you visit our websites (including https://www.blockchain.com/), use our applications (the \"Platform\"), visit our social networking sites (Instagram, Facebook, LinkedIn, Medium, X, YouTube – the \"Social Accounts\"), or contact us by email or telephone.",
+      "section1_3": "1.3. Our Platform and services are not directed at persons under 18 years of age or the age of majority in their jurisdiction. We do not knowingly collect Personal Data from such individuals. If you are under 18, please do not provide any Personal Data to us.",
+      "section1_4": "1.4. For more information, visit https://www.blockchain.com/",
+      "section1_5": "1.5. We process Personal Data in accordance with applicable data protection laws, including the EU General Data Protection Regulation (\"GDPR\"), the UK GDPR, and the California Consumer Privacy Act (\"CCPA\").",
+      "section1_6": "1.6. In this Privacy Policy, \"You\" and \"Your\" refer to the individual whose Personal Data we process.",
+      "section1_7": "1.7. We advise you to read this Privacy Policy carefully before disclosing any personal information or proceeding further.",
+      "section1_8": "1.8. This Privacy Policy is subject to change; therefore, we advise you to periodically visit the Platform to review the latest version of the Privacy Policy published.",
+      "section2Title": "2. WHO ARE WE?",
+      "section2_1Title": "2.1. Blockchain Account:**",
+      "section2_1_1": "2.1.1. For UK, EEA, Switzerland and rest of the world residents: Blue Cube (Malta) Ltd., company number C 112722, address 171 Triq L-Ifran, VLT 1455 Valletta, Malta.",
+      "section2_1_2": "2.1.2. For US residents: Blockchain.com, Inc., company number 5684251, 3500 Maple Avenue, STE 1550, Dallas, TX 75219, USA.",
+      "section2_1_3": "2.1.3. For Nigeria residents: BC Access (Nigeria) Limited, company number 7229704, Plot 9/10, Block 2, Oniru Chieftaincy Estate, P.O.Box 53197, Ikoyi-Lagos, Lagos, Nigeria.",
+      "section2_1_4": "2.1.4. For #IM residents: Blue Cube Access (Global) Limited, company number C-57354, Unit 5, Long Stone House, Main Street, Charlestown, Nevis.",
+      "section2_1_5": "2.1.5. Blockchain (LT), UAB, company number 305048386, address Upės str. 23, LT-08128, Vilnius, the Republic of Lithuania. Data about the company is collected and stored in the Register of Legal Entities of the Republic of Lithuania.",
+      "section2_2Title": "2.2. De-Fi Wallet:**",
+      "section2_2Text": "Blockchain.com (BVI) III Limited, company number 2088862, 2nd Floor Water's Edge Building, Wickhams Cay II, Road Town, Tortola VG1110, British Virgin Islands.",
+      "section2_3Title": "2.3. Staking Services:**",
+      "section2_3Text": "Blockchain.com (Cayman) Limited, company number 384076, P.O. Box 144, Suite 3119, 9 Forum Lane, Camana Bay, George Town, Grand Cayman, KY1-9006, Cayman Islands.",
+      "section2_4Title": "2.4. Passive Rewards and Active Rewards:**",
+      "section2_4Text": "Blockchain.com (BVI) Limited, company number 2086251, 2nd Floor Water's Edge Building, Wickhams Cay II, Road Town, Tortola VG1110, British Virgin Islands.",
+      "section2_5Title": "2.5. OTC Spot and Trade Execution Services**",
+      "section2_5Text": "Blockchain.com (Singapore) Pte. Ltd., code 201817211W, 65 Chulia Street, #41-08, OCBC Centre, Singapore 049513.",
+      "section2Footnote1": "* Based on your country of residence which you disclosed to us as part of your onboarding process and/or services used, and further defined in the Blockchain.com User Agreement available at www.blockchain.com.",
+      "section2Footnote2": "** To the extent the same is available to users based on their jurisdiction of residence from time to time.",
+      "section3Title": "3. HOW DO WE RECEIVE YOUR PERSONAL DATA?",
+      "section3_1": "3.1. We receive your Personal Data:",
+      "section3_1_1": "3.1.1. directly from You when You provide your Personal Data to us. For example, when You use the Platform and its services, make a payment, communicate with us by email or telephone, etc.;",
+      "section3_1_2": "3.1.2. when You use the Platform or Social Accounts. For example, We may record Your visit history on the Platform, purchases, IP address, service preferences, accessed URL links, etc.;",
+      "section3_1_3": "3.1.3. from other parties, such as your service providers, payment institutions regarding payments made, public databases, etc.",
+      "section3_2": "3.2. When You provide Personal Data about yourself or others (e.g., about your employees, agents), You are responsible for the accuracy, completeness, and timeliness of such Personal Data, as well as for obtaining the necessary consent or informing the individual whose Personal Data is being provided to us.",
+      "section4Title": "4. WHAT PERSONAL DATA DO WE PROCESS ABOUT YOU?",
+      "section4_1": "4.1. We process your Personal Data for the following purposes and in accordance with the following terms and conditions:",
+      "tableHeader1": "Purposes of personal data processing",
+      "tableHeader2": "Processed personal data",
+      "tableHeader3": "Legal grounds for personal data processing",
+      "tableRow1Purpose": "Creating and using an account on the Platform, and receiving other services provided via Platform, including AI services.",
+      "tableRow1Data": "Personal identification data: name, surname, date of birth, gender, citizenship, signature, government identifiers (government issued identity documents such as passport, national identification number, national identity card details, drivers' license numbers), photographs, and a video or voice recording of you, biometric data you provide to third parties who provide identity verification services to us, your status as a politically exposed person; Contact information: email address, phone number, address, country, region, proof of address; Employment information: job title, salary wage rate; Authentication data: username, security questions; Wallet information: wallet address, wallet ID.",
+      "tableRow1Legal": "Consent of the data subject (Article 6(1)(a) and 9(2)(a) of the GDPR). The processing is necessary for the conclusion and performance of the contract (Article 6(1)(b) of the GDPR); The processing is necessary for compliance with a legal obligation imposed on the controller (Article 6(1)(c) of the GDPR) in accordance with Know Your Customer (\"KYC\") obligations and Anti-Money Laundering laws and regulations.",
+      "tableRow2Purpose": "Creation and execution of agreements necessary for service provision and Blockchain operations, other internal administration.",
+      "tableRow2Data": "Name, surname, email address, phone number, position, workplace, represented person (when representing a company or another person), relationship with the represented person, individual activity data, other collaboration data.",
+      "tableRow2Legal": "The processing is necessary for the conclusion and performance of the contract (Article 6(1)(b) of the GDPR);",
+      "tableRow3Purpose": "Managing payments, accounting, debt management.",
+      "tableRow3Data": "Name of the payer / person for whom the payment is made; Personal identification number (if applicable), government identifiers; Person represented (when representing a company or another person), relationship with the person represented; Address, email address, telephone number; Amount of the payment, date of the payment, account information.",
+      "tableRow3Legal": "The processing is necessary for the conclusion and performance of the contract (Article 6(1)(b) of the GDPR); The processing is necessary for compliance with a legal obligation imposed on the controller to ensure proper financial accounting (Article 6(1)(c) of the GDPR) in accordance with the laws on payments, tax, financial accounting and reporting; The legitimate interests of the controller or third party to effectively manage financial operations and debts (Article 6(1)(f) of the GDPR)."
+    },
+    "userAgreement": {
+      "title": "Blockchain.com User Agreement",
+      "downloadPdf": "Download PDF",
+      "arbitration": "THIS AGREEMENT CONTAINS AN ARBITRATION PROVISION. IF YOU ARE ACCESSING OUR SERVICES AND WE CANNOT RESOLVE A DISPUTE THROUGH OUR USER OPERATIONS TEAM, THE DISPUTE MUST BE SETTLED IN BINDING ARBITRATION AS SET FORTH IN SECTION 17. BY ENTERING INTO THIS AGREEMENT, YOU ARE WAIVING YOUR RIGHT TO A TRIAL BY JURY AND ABILITY TO PARTICIPATE IN A CLASS ACTION.",
+      "intro": "Save as described below, this user agreement (\"Agreement\") is between the Blockchain entity identified in the chart and paragraphs below (\"Blockchain.com\", \"we\", \"us\", or \"our\") and you (and the company you work for if you are accessing the Services (as defined below) on behalf of such company) (\"you\").",
+      "entityTableUK": "UK, EEA or Switzerland Residents*",
+      "entityTableUS": "US Residents*",
+      "entityTableNigeria": "Nigeria Residents*",
+      "entityTableIM": "IM Residents*#",
+      "entityTableRest": "Rest of the World Residents*",
+      "entityUK": "Blue Cube (Malta) Limited",
+      "entityUS": "Blockchain.com, Inc.",
+      "entityNigeria": "BC Access (Nigeria) Limited",
+      "entityIM": "Blue Cube Access (Global) Limited",
+      "entityRest": "Blue Cube (Malta) Limited",
+      "footnoteStar": "* Based on your country of residence which you disclosed to us as part of your onboarding process. Terms and Conditions for all services provided by Blue Cube (Malta) Limited are available here.",
+      "footnoteHash": "# IM countries is defined to include: Afghanistan, Algeria, Angola, Barbados, Burkina Faso, Cambodia, Cameroon, Cayman Islands, China, Gibraltar, Haiti, Iraq, Jamaica, Jordan, Libya, Morocco, Mozambique, Myanmar, Nicaragua, Pakistan, Occupied Palestinian Territory, Panama, Philippines, Senegal, Somalia, South Africa, Sudan, Tanzania, Trinidad and Tobago, Turkey, Uganda, United Arab Emirates, Vanuatu and Vietnam.",
+      "rewardsEntity": "The Passive Rewards and Active Rewards (to the extent the same are available to users based on their jurisdiction of residence from time to time) are provided to users irrespective of their jurisdiction of residence by Blockchain.com (BVI) Limited. The terms pursuant to which the same are provided are set out in Section 5.1 (Passive Rewards) and Section 5.3 (Active Rewards) of this Agreement.",
+      "stakingEntity": "The Staking Services are provided to users irrespective of their jurisdiction of residence by Blockchain.com (Cayman) Limited. The terms pursuant to which the same are provided are set out in Section 5.2 (Staking Services) of this Agreement.",
+      "defiEntity": "The De-Fi Wallet is provided to users irrespective of their jurisdiction of residence by Blockchain.com (BVI) III Limited. The terms pursuant to which the same are provided are set out in Section 3 (The De-Fi Wallet and Dex Aggregator) of this Agreement. Section 3 shall be governed by the laws of the British Virgin Islands.",
+      "section1Title": "1 GENERAL",
+      "section1_1": "1.1 By accepting these terms and accessing or using the Services, you agree that you have read, understood, and accept all of the terms and conditions contained in this Agreement that apply to you, as well as our Privacy Policy, Cookie Policy, API Agreement, Law Enforcement Policy, and Trading Principles (collectively, \"Supplemental Agreements\"). The De-Fi Wallet is provided by Blockchain.com (BVI) III Limited.",
+      "section1_2": "1.2 You will see a number of capitalized terms in this Agreement. These capitalized terms have already been defined or will be defined in the sentence in which they are used or in Section 18 at the end of this Agreement.",
+      "section1_3": "1.3 This Agreement applies to all Blockchain.com services (\"Services\") that Blockchain.com may provide to you from time to time, including the Blockchain.com Interface, Blockchain.com Account, Blockchain.com Pay, Passive Rewards, Staking Services, Active Rewards, Swap, Lockbox, the Airdrop Program, Exchange, and our APIs. This Agreement does not apply to your use of the Margin product. Use of Margin is exclusively governed by the Margin Agreement available at www.blockchain.com/legal/terms.",
+      "section1_4": "1.4 You affirm that you are the older of 18 years old or the age of majority as required by your local law and have the capacity to enter into this Agreement. If you are accessing the Services on behalf of the company you work for, you also affirm you have the proper grant of authority and capacity to enter into this Agreement on behalf of such company.",
+      "section1_5": "1.5 We may change the terms of this Agreement and any Supplemental Agreement at any time without prior notice. Any changes will take effect immediately when posted (unless specifically indicated otherwise) in one of our Services (such as our website or mobile or desktop applications), and your continued use of the Services means you have accepted these changes.",
+      "section2Title": "2 ACCESSING THE SERVICES",
+      "section2_1": "2.1 We grant you a revocable, limited, non-exclusive, non-transferable license to access and use the Services. Your access and use of the Services is conditioned on your compliance with this Agreement.",
+      "section2_2": "2.2 We may provide you with credentials to access some of the Services. You are solely responsible for maintaining the security of your credentials. You agree that Blockchain.com will not be held responsible for any unauthorized access to the Services (or any harm resulting from such unauthorized access).",
+      "section2_3": "2.3 Your use of any of the Services is subject to various laws, regulations, and rules of governmental or regulatory authorities applicable to you and our Services (\"Applicable Law\"). You agree to always comply with all Applicable Law.",
+      "section2_4": "2.4 In order to use some of the Services, you will need to satisfy an onboarding process, along with the terms of our Compliance Program. By accepting our Services you agree to the following conditions in relation to our onboarding process:",
+      "section2_4a": "(a) Information required: You may be required to provide certain information and documentation, including but not limited to: network address, name, email address, residence address, telephone number, date of birth, taxpayer identification or social security number, official government-issued photo identification, and bank account information. Please see our Privacy Policy for more details.",
+      "section2_4b": "(b) Representations and warranties: You represent and warrant that all Onboarding Information you provide is accurate and complete, and you agree to update such information as necessary.",
+      "section2_4c": "(c) Timing: You must respond to any request for Onboarding Information within 14 days and update any change to the information you have provided within 10 days.",
+      "section2_4d": "(d) Delay in providing Onboarding Information: If you do not provide Onboarding Information within the required time, we may charge an administration fee of up to 1.5% of Eligible Assets held in your Blockchain.com Trading Account.",
+      "section2_4e": "(e) Failure to provide Onboarding Information: We may make the Services unavailable and you may not be able to access your funds until correct or updated Onboarding Information is provided.",
+      "section2_5": "2.5 We may communicate with you via our website, mobile or desktop applications, email address, or telephone number. By using the Services, you consent to receive such communications.",
+      "section2_6": "2.6 Fees: Blockchain.com may charge a fee for certain Service Features. We do not charge a fee for deposits. We may charge a fee for withdrawals. Please see the relevant product terms for details.",
+      "termsLinkText": "here"
+    },
+    "cookies": {
+      "lastUpdated": "LAST UPDATED: OCTOBER 2, 2024",
+      "title": "Blockchain Cookies Policy",
+      "downloadPdf": "Download PDF",
+      "section1Title": "1. PURPOSE AND SCOPE",
+      "section1_1": "We are committed to protecting the privacy of your personal data in accordance with the applicable laws, including the General Data Protection Regulation (2016/679). We value your privacy, and we only collect and use your personal data in accordance with our Privacy Policy, this Cookie Policy, and binding provisions of the law.",
+      "section1_2": "When you visit or access our websites or applications operated by us, or when you interact or engage with our content (\"Service\"), we use (and authorize third parties to use):",
+      "cookiesDef": "Cookies - small text files (composed only of letters and numbers) that a web server places on your computer or mobile device when you visit a webpage. When used, Cookies can help make our Services more user-friendly, for example, by remembering your language preferences and settings. You can find more information about Cookies at www.allaboutcookies.org. Cookies are widely used to make websites work efficiently. The use of Cookies allows you to navigate between pages smoothly. Cookies remember your preferences and make the interaction between you and the Services smoother and more satisfying;",
+      "webBeaconsDef": "Web beacons or pixel tags - small image files, usually transparent 1x1 pixel images, used to track user behavior and on-site behaviors across an organization's digital properties;",
+      "apiDef": "API - a software intermediary that allows two applications to communicate with each other;",
+      "otherTracking": "other tracking technologies.",
+      "section1_3": "In this Cookie Policy, all the above-mentioned technologies are referred to as 'Cookies'. This Cookie Policy forms an integral part of our Privacy Policy.",
+      "section1_4": "The Cookies allow us to automatically collect information about you and your online behavior, as well as your device (for example, your computer or mobile device), to enhance your navigation on our Service, prevent fraud, improve our Service performance, and customize your experience on our Service. We also use this information to collect statistics about the usage of our Service, perform analytics, deliver content which is tailored to your interests and administer services to our users, customers, and partners.",
+      "section1_5": "According to applicable legislation, we may only store Cookies on your device if they are necessary for the operation of our websites or applications. For all other types of Cookies, we need your consent.",
+      "section1_6": "You can change or withdraw your consent in the Cookie settings on our website at any time.",
+      "section1_7": "After obtaining your consent, we also allow third parties to collect information about you through Cookies.",
+      "section2Title": "2. WHY WE USE COOKIES?",
+      "section2Intro": "We use cookies to:",
+      "section2_1": "Ensure smooth performance of our Services;",
+      "section2_2": "Identify users who use Services repeatedly;",
+      "section2_3": "Promote trust and ensure the security of our Services;",
+      "section2_4": "Identify how many visitors visit our Services and how they behave on them;",
+      "section2_5": "Improve the functionality of our Services, e.g., ensure that users can find what they are looking for;",
+      "section2_6": "Identify user behavior and interests, and if the user gives their consent - use this information to offer personalized marketing content.",
+      "section3Title": "3. WHAT COOKIES DO WE USE?",
+      "section3_1": "Some Cookies that we use are allocated to your device only for the duration of your visit to the website or application, and these are called \"session based\" Cookies. These Cookies automatically expire at the end of the session - when the browser is closed. Other Cookies that we use, known as \"persistent Cookies\", consist of text files sent by a web server to a browser and are subsequently stored by the browser. They remain valid until their expiry date (unless deleted by the user before the expiry date).",
+      "section3_2": "We store Cookies when you visit or access our Services (for example, when you are visiting our website or application) - these are called \"First Party Cookies\". In addition, Cookies are run by content on our services and help us to improve our services - these are called \"Third Party Cookies\".",
+      "section3More": "More detailed information about the Cookies we use is provided below:",
+      "section3Tools": "Moreover, we use these tools:",
+      "googleAnalytics": "Google Analytics – which allows you to analyze the use of the websites or applications, compile reports, plan and predict your activity. Data collected by Google Analytics is typically stored on a Google Inc. server in the U.S. You can change your browser settings to prevent Google Analytics from analyzing information. You can also prevent Google from capturing data created by a Cookie by downloading and installing a browser plug-in from https://tools.google.com/dlpage/gaoptout?hl=en.",
+      "googleTagManager": "Google Tag Manager - Analyzes the use of the websites or applications. The data collected about your use (together with your IP address) is transmitted to and stored on a Google server in the USA. This information is used to analyze the use of the websites or applications, to compile reports on popularity and to provide other services. Google may transfer this information to third parties if required by law or if such third parties process the information on behalf of Google. Google will not associate your IP address with any other data held by Google. For more information visit https://support.google.com/tagmanager/answer/9323295?hl=en.",
+      "datadog": "Datadog - a SaaS platform that integrates and automates infrastructure monitoring, application performance monitoring, log management, real-user monitoring, and other capabilities to provide unified, real-time observability and security for our technology stack. For more information visit https://www.datadoghq.com/legal/cookies/.",
+      "firebase": "Firebase SDK - an app development platform integrated into our services, providing tools to build, grow, and monetize apps. It allows access to real-time databases, analytics, and user authentication. For more information visit https://firebase.google.com/support/privacy.",
+      "amplitude": "Amplitude - a product analytics platform integrated into our website and applications to track and analyze user interactions. It helps us understand user behavior, optimize the customer journey, and make data-driven decisions.",
+      "section4Title": "4. THIRD PARTY WEBSITES",
+      "section4_1": "Our website may display links to external service providers such as YouTube, Facebook, X (formerly Twitter), Medium, and LinkedIn. When you view content from these providers, their cookie policies apply. We do not control how Cookies are placed on third party websites, even if you are redirected to them from our website. If you click on a link on our website and are redirected to another website, you must evaluate how that third party uses Cookies.",
+      "section4Links": "Cookie policies of third-party websites: Facebook, X, LinkedIn, Medium, Google.",
+      "section5Title": "5. HOW TO MANAGE COOKIES",
+      "section5Intro": "There are several ways to manage Cookies:",
+      "section5_1": "If you wish to manage the Cookies used by us, you may select the Cookie preferences in our Cookie banner before browsing our Website.",
+      "section5_2": "In the Cookie banner you may manage all Cookies placed on our website, except Essential Cookies. The website may not function properly without the Essential Cookies.",
+      "section5_3": "To renew or change your consent or adjust Cookie preferences please click here.",
+      "clickHere": "here"
+    },
+    "lawEnforcement": {
+      "lastUpdated": "LAST UPDATED: MARCH 1, 2023",
+      "title": "BLOCKCHAIN.COM GUIDE FOR LAW ENFORCEMENT",
+      "downloadPdf": "Download PDF",
+      "section1Title": "LAW ENFORCEMENT LOCATED OUTSIDE OF THE UNITED STATES",
+      "section1_1": "Blockchain.com is only able to respond to valid requests addressed to one of its legal entities and issued by local authorities in which the addressed entity is located. The entities to which legal requests should be addressed and the countries in which they are located are as follows:",
+      "section1_list1": "Lithuania: Blockchain (LT), UAB",
+      "section1_list2": "Ireland: Blockchain Access (Ireland) Limited",
+      "section1_list3": "British Virgin Islands: Blockchain.com (BVI) Limited",
+      "section1_note": "PLEASE NOTE: If you are a law enforcement officer in a country other than those listed above you will need to make a request for mutual legal assistance (MLAT) or submit a letter rogatory to one of the above countries to request data from the associated entity. The above entities will only respond to a valid legal request issued by a local court or law enforcement agency from the country in which it is located.",
+      "section1_contact": "Law enforcement agencies in Lithuania, Ireland, or the British Virgin Islands may submit requests directly to",
+      "section2Title": "LAW ENFORCEMENT LOCATED WITHIN THE UNITED STATES:",
+      "section2_1": "Law enforcement located within the United States may send (i) a valid subpoena issued in connection with an official criminal investigation for the disclosure of basic subscriber records (defined in 18 U.S.C. § 2703(c)(2)); (ii) a valid court order; or (iii) a search warrant issued under the procedures described in the Federal Rules of Criminal Procedure or equivalent state warrant procedures upon a showing of probable cause for the disclosure, if any, addressed to Blockchain.com, Inc.",
+      "section2_2": "Blockchain.com, Inc. will accept service of documents sent to LawEnforcement@blockchain.com as a voluntary courtesy but reserves the right to object to such service in the future.",
+      "section3Title": "IF YOUR REQUEST INVOLVES IMMINENT RISK OF DEATH OR SERIOUS BODILY HARM:",
+      "section3_1": "If you are a law enforcement agent requesting information from Blockchain.com that is likely to prevent imminent death or serious bodily harm, you may contact us on an expedited basis. Together with the appropriate documents listed above, send an email to LawEnforcement@blockchain.com with \"IMMINENT RISK\" in the title. In the body of the email, include a brief attestation describing the imminent risk.",
+      "faqTitle": "FREQUENTLY ASKED QUESTIONS",
+      "faq1Q": "Does Blockchain.com respond to law enforcement information requests?",
+      "faq1A": "Yes. Blockchain.com will respond to valid law enforcement agency information requests. See above for instructions. Note that the most helpful pieces of information you can provide are a wallet identifier (e.g. 2td3t671-c54d-ds32-456t-65ftya3b24dd) or Exchange account details. Other data points, like a bitcoin address (e.g. 14eK8q8GXubF2Y9yegRyfpkVm63AsFcefb) or a transaction number (e.g. c1a3cec06316fb13bd0198afc8b15e6edc5123fc5d15383446cc9f3b43ca0734), are significantly less likely to return helpful information.",
+      "faq2Q": "I can see, using Blockchain.com's Block Explorer, that a transaction took place on the Bitcoin (or some other) blockchain. Does this necessarily mean that Blockchain.com's products or services were responsible for the transaction?",
+      "faq2A": "No. Our Block Explorer displays information from public network ledgers. Blockchain.com publishes all of its transactions on these public ledgers, but it is only one of thousands of software products and services doing so.",
+      "faq3Q": "I have a bitcoin address or transaction hash. Can Blockchain.com correlate this information with any personally identifying user information?",
+      "faq3A": "If the user simply downloaded and used Blockchain.com's non-custodial wallet, no. But if the address or hash was used in a Swap or Exchange transaction, then Blockchain Access can correlate it to the user's profile. Note, however, that Swap transactions are non-custodial. Thus, a user's Swap transaction does not link the user in Blockchain.com's records to other transactions made in the user's non-custodial wallet.",
+      "faq4Q": "I have the name, address, telephone number, or other identifying information of an individual. Can Blockchain.com correlate this information with other personally identifying information?",
+      "faq4A": "As in the answer above: If the individual is only a non-custodial wallet user, Blockchain.com is unlikely to have such information. If the individual is a user of Swap or the Exchange, Blockchain.com may be able to correlate the information with a user profile.",
+      "faq5Q": "I have the private key or backup phrase associated with a bitcoin address. What information can Blockchain.com correlate to these data points?",
+      "faq5A": "None. Blockchain.com does not know private keys or backup phrases associated with any user wallets.",
+      "faq6Q": "I have a non-custodial wallet identifier. Can Blockchain.com freeze or deliver virtual currency from that wallet?",
+      "faq6A": "No, Blockchain.com cannot access user's wallets. Blockchain.com can, however, deliver certain industry-standard log information associated with the wallet, including creation date, login time, device ID, operating system, associated email address or telephone numbers (if used for 2-factor ID), together with any encrypted wallet file backed up using Blockchain.com's servers."
+    },
+    "apiTerms": {
+      "lastUpdated": "LAST UPDATED: MARCH 6, 2019",
+      "title": "API Terms of Service",
+      "downloadPdf": "Download PDF",
+      "importantNotice": "IMPORTANT - READ CAREFULLY: This API Terms of Service (\"Agreement\") is a legal agreement between you and Blockchain. For modifications or questions, contact SUPPORT@BLOCKCHAIN.INFO.",
+      "section1Title": "1. LICENSES AND RESTRICTIONS",
+      "section1_1Title": "1. API License.",
+      "section1_1": "Subject to the terms and conditions of this Agreement, Blockchain hereby grants to you a non-exclusive, non-transferable, non-sublicense-able, limited license to use the Application Programming Interface (\"API License\") solely in accordance with this Agreement. You may do the following under this API License:",
+      "section1_list1": "Accessing information via the API (\"Database\").",
+      "section1_list2": "Retrieving public Bitcoin blockchain information (transaction history, balances, addresses, aggregate statistics).",
+      "section1_list3": "Receiving notifications about payments to specific addresses.",
+      "section1_list4": "Observing network transactions in real time.",
+      "section1_list5": "Retrieving current Bitcoin market prices.",
+      "section1_list6": "Using the API for business.",
+      "section1_list7": "Sending Bitcoin, generating addresses and private keys, and modifying address labels.",
+      "section1_list8": "Querying the Database, executing transactions, and retrieving information for \"Permitted Use\" (defined as \"Blockchain Content\" or \"Content\").",
+      "section1_list9": "Abiding by this and all other agreements with Blockchain.",
+      "section2Title": "2. General License Conditions and Restrictions.",
+      "section2_1": "You shall not use the Database or API Program with robots, spiders, scraping or other technology to access www.blockchain.com or its affiliates. You shall not distribute, facilitate, or allow access to Blockchain Content or Database from unauthorized locations, or enable third parties to copy or obtain content using unauthorized means (e.g. robots, spiders, scraping), including after termination.",
+      "section3Title": "3. Restrictions and Conditions on Use.",
+      "section3_1": "You shall not use the API Program, Database, or Blockchain Content in a manner that would disclose them to unauthorized parties or allow use in unapproved locations.",
+      "section3_2": "Specific Prohibitions: Notwithstanding anything contrary in this Agreement, you are specifically prohibited from doing any of the following:",
+      "section3_list1": "Selling, transferring, sublicensing, or disclosing keys or credentials provided by Blockchain to third parties (other than service providers).",
+      "section3_list2": "Selling, transferring, sublicensing, and/or assigning any interest in the Blockchain Content.",
+      "section3_list3": "Transmitting, facilitating, enabling, or otherwise providing the Blockchain Content or API Program to unauthorized third parties.",
+      "section3_list4": "Modifying, decompiling, or otherwise altering the API Program.",
+      "section3_list5": "Engaging in phishing attacks or any activity associated with malware.",
+      "section3_list6": "Making requests to the API that are, in Blockchain's sole discretion, excessive.",
+      "section3_list7": "Using the API to discover undocumented calls or other functionality.",
+      "section3_list8": "Using the API to discover private information about other users.",
+      "section3_list9": "Circumventing or attempting to circumvent any limitations on API requests we put in place.",
+      "section3_list10": "Commercializing (i.e., sell, rent, or lease), copying, storing or caching the Blockchain Content, other than for purposes allowed by this Agreement, or using or accessing the Database, Content or API Program inconsistently with this Agreement.",
+      "section4Title": "4. Certification.",
+      "section4_1": "Conditions for using Blockchain Content and participating in the API Program include certification requirements, responsibility for costs, re-certification, and termination for non-compliance.",
+      "section5Title": "5. Display of Blockchain Content.",
+      "section5_1": "You shall not display specific Blockchain User information in a \"Public Display.\" You may display such information in a \"Private Display.\" \"Public Display\" and \"Private Display\" are defined in this Agreement.",
+      "section6Title": "6. Prohibited Functions.",
+      "section6_1": "Unless otherwise stated, all new Blockchain User registrations shall take place on the Blockchain Site and cannot be done through the API.",
+      "section7Title": "2. CONTENT AND INTELLECTUAL PROPERTY LICENSES.",
+      "section7_1Title": "1. Content and IP Ownership.",
+      "section7_1": "Blockchain retains all intellectual property rights in its API Program, Blockchain Content, and services. No implied licenses are granted beyond this Agreement.",
+      "section7_2Title": "2. Limits on Sublicensing.",
+      "section7_2": "License rights are not sublicensable, transferable, or assignable, unless otherwise provided.",
+      "section7_3Title": "3. Uptime.",
+      "section7_3": "Blockchain does not guarantee 24-hour availability of its Site or Content.",
+      "section8Title": "3. TERM AND TERMINATION.",
+      "section8_1Title": "1. No Notice.",
+      "section8_1": "Blockchain may terminate this agreement at any time with advance notice, or without notice.",
+      "section8_2Title": "2. Survival.",
+      "section8_2": "Certain sections of this Agreement survive termination as specified herein.",
+      "section8_3Title": "3. Effects of Termination.",
+      "section8_3": "Upon termination, you will no longer log in with your Key, and all licenses terminate unless expressly surviving. You must provide proof of destruction of Blockchain Content or Customer Information within three days of termination.",
+      "section9Title": "4. SECURITY AND STABILITY.",
+      "section9_1": "Blockchain may change API Program access methods or suspend access during degradation, instability, or emergencies to minimize threats and protect the system.",
+      "section10Title": "5. DISCLAIMER OF BLOCKCHAIN WARRANTIES.",
+      "section10_1": "Access to the database and API use is provided \"AS IS\" without warranty of any kind. Blockchain disclaims all warranties and conditions, express, implied, or statutory, including implied warranties of title, non-infringement, merchantability, and fitness for a particular purpose. Blockchain does not represent or warrant that the Blockchain site shall operate without error."
+    },
+    "licenses": {
+      "lastUpdated": "LAST UPDATED: JUNE 27, 2024",
+      "title": "LICENSING - DISCLOSURES & RECEIPT",
+      "downloadPdf": "Download PDF",
+      "intro1": "Blockchain (LT), UAB (trading as Blockchain.com) is a Lithuanian Foreign Private Limited Company, with registered company number 305048386 and registered address at Upės str. 23, Vilnius, the Republic of Lithuania. Blockchain (LT), UAB is registered as a cryptoasset business for AML/CTF monitoring with the Lithuanian Financial Crime Investigation Service.",
+      "intro2": "Blockchain.com (Cayman) Limited (trading as Blockchain.com) is a Cayman Exempted Company with Limited Liability, with registered company number 384076 and registered address at 190 Elgin Avenue, George Town, Grand Cayman, KY1-9008, Cayman Islands. Blockchain.com (Cayman) Limited is registered with the Cayman Islands Monetary Authority as a Virtual Asset Service Provider.",
+      "tableJurisdiction": "Jurisdiction",
+      "tableLicense": "License",
+      "tableStateAgency": "State Agency",
+      "tableDisclosures": "Disclosures",
+      "row1Jurisdiction": "Alabama",
+      "row1License": "Money Transmitter License #825",
+      "row1StateAgency": "Alabama Securities Commission 445 Dexter Ave, Montgomery, AL 36104",
+      "row1Disclosures": "",
+      "row2Jurisdiction": "Alaska",
+      "row2License": "Money Transmitter License #AKMT-014344",
+      "row2StateAgency": "Department of Commerce, Community and Economic Development Division of Banking & Securities 550 West 7th, Suite 1850 Anchorage, Alaska 99501",
+      "row2Disclosures": "If you are an Alaska resident with an unresolved complaint regarding Blockchain.com, please contact 1-888-552-1019. You may submit a formal complaint to the State of Alaska, Division of Banking & Securities. Submit formal complaint form with supporting documents: Division of Banking & Securities PO Box 110807 Juneau, AK 99811-0807. For questions regarding formal complaints, email dbs.licensing@alaska.gov or call 907-465-2521. Please note that this license does not cover the transmission of virtual currency. Complaint form: https://www.commerce.alaska.gov/web/portals/3/pub/DBSGeneralComplaintFormupdated.pdf",
+      "row3Jurisdiction": "Arizona",
+      "row3License": "Money Transmitter License #1014569",
+      "row3StateAgency": "Arizona Department of Financial Institutions 2910 N. 44th Street, Suite 310, Phoenix, AZ 85018",
+      "row3Disclosures": "If you have a complaint, please contact Blockchain.com, Inc. at support@blockchain.com or 1-888-552-1019. If you still have an unresolved complaint regarding Blockchain.com, Inc.'s money transmission activity, you may file via the Arizona e-Licensing Portal: https://elicense.az.gov/ARDC_FileComplaint",
+      "row4Jurisdiction": "Arkansas",
+      "row4License": "Money Transmitter License #2024031",
+      "row4StateAgency": "Arkansas Securities Department, Heritage West Building, Suite 300, 201 East Markham Street, Little Rock, AR 72201-1692",
+      "row4Disclosures": "If you have a complaint, please contact Blockchain.com, Inc. at support@blockchain.com or 1-888-552-1019. If you still have an unresolved complaint regarding Blockchain.com, Inc.'s money transmission activity, you may file the completed complaint form by e-mailing ASDInfo@securities.arkansas.gov or by mailing to: 1 Commerce Way, Suite 402, Little Rock, Arkansas 72202. Telephone: (501) 324-9260. Facsimile: (501) 324-9268.",
+      "row5Jurisdiction": "Colorado",
+      "row5License": "Money Transmitters License #500303",
+      "row5StateAgency": "Colorado Division of Banking 1560 Broadway, Suite 975 Denver, CO 80202",
+      "row5Disclosures": "MO7 Customer Notice - Colorado Money Transmitters Act. If you have a complaint, please contact Blockchain.com, Inc. at support@blockchain.com or 1-888-552-1019. If you still have an unresolved complaint regarding Blockchain.com, Inc.'s money transmission activity, you may file it by contacting the Colorado Division of Banking. All consumer complaints must be submitted in writing. Do not fill out an online form; download the Complaint Form to your device and edit that version. Send the completed form and supporting documentation by regular mail, facsimile, or e-mail."
     }
   },
   "press": {
